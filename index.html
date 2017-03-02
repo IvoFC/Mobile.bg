@@ -4,265 +4,297 @@
 <head>
     <meta charset="UTF-8">
     <title>Mobile</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/font-awesome-4.6.3/css/font-awesome.css">
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a>Автомобили</a></li>
-            <li><a>Джипове</a></li>
-            <li><a>Бусове</a></li>
-            <li><a>Камиони</a></li>
-            <li><a>Мотоциклети</a></li>
-            <li><a>Селскостопански</a></li>
-            <li><a>Индустриални</a></li>
-            <li><a>Кари</a></li>
-            <li><a>Каравани</a></li>
-            <li><a>Яхти и лодки</a></li>
-            <li><a>Ремаркета</a></li>
-            <li><a>Велосипеди</a></li>
-        </ul>
-    </nav>
-    <div id="wrapper">
-        <header>
-            <a href="">Сайт №1 за Автомобили</a>
-            <img src="" alt="mobile.bg - logo">
+<nav>
+    <ul>
+        <li><a>Автомобили</a></li>
+        <li><a>Джипове</a></li>
+        <li><a>Бусове</a></li>
+        <li><a>Камиони</a></li>
+        <li><a>Мотоциклети</a></li>
+        <li><a>Селскостопански</a></li>
+        <li><a>Индустриални</a></li>
+        <li><a>Кари</a></li>
+        <li><a>Каравани</a></li>
+        <li><a>Яхти и лодки</a></li>
+        <li><a>Ремаркета</a></li>
+        <li><a>Велосипеди</a></li>
+    </ul>
+</nav>
+<div id="wrapper">
+    <header>
+        <a href="">Сайт №1 за Автомобили</a>
+        <img src="" alt="mobile.bg - logo">
 
-            <nav>
-                <ul>
-                    <li><a>Начало</a></li>
-                    <li><a>Публикуване</a></li>
-                    <li><a>Търсене</a></li>
-                    <li><a>Новини</a></li>
-                    <li><a>Застраховки</a></li>
-                    <li><a>E-mail</a></li>
-                    <li><a>Rent-a-car</a></li>
-                    <li><a>Дилъри</a></li>
-                    <li><a>Моето мобиле</a></li>
-                </ul>
-            </nav>
-        </header>
+        <nav>
+            <ul>
+                <li><a>Начало</a></li>
+                <li><a>Публикуване</a></li>
+                <li><a>Търсене</a></li>
+                <li><a>Новини</a></li>
+                <li><a>Застраховки</a></li>
+                <li><a>E-mail</a></li>
+                <li><a>Rent-a-car</a></li>
+                <li><a>Дилъри</a></li>
+                <li><a>Моето мобиле</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <section id="main-ad">
-            <h4>Обяви за работа от</h4>
-            <!--TO-DO ->Zaplata.bg - logo-->
-            <a href=""><img src="" alt=""></a>
-            <article>
-                <div>
+    <section id="main-ad">
+        <h4>Обяви за работа от</h4>
+        <!--TO-DO ->Zaplata.bg - logo-->
+        <a href=""><img src="" alt=""></a>
+        <article>
+            <div>
+                <img src="" alt="">
+                <h3>Онлайн преподавател по английски език</h3>
+            </div>
+            <p>Виж инфо за Заплата, Условия ...</p>
+        </article>
+        <article>
+            <div>
+                <img src="" alt="">
+                <h3>Онлайн преподавател по английски език</h3>
+            </div>
+            <p>Виж инфо за Заплата, Условия ...</p>
+        </article>
+        <article>
+            <div>
+                <img src="" alt="">
+                <h3>Онлайн преподавател по английски език</h3>
+            </div>
+            <p>Виж инфо за Заплата, Условия ...</p>
+        </article>
+    </section>
+    <main>
+        <section id="search">
+            <h2>Търсене в mobile.bg - Автомобили</h2>
+            <div>
+                <form action="">
+                    <label for="main-category">Основна Категория</label>
+                    <select name="main-category" id="main-category">
+                        <option selected="" value="1">Автомобили</option>
+                        <option value="2">Джипове</option>
+                        <option value="3">Бусове</option>
+                        <option value="4">Камиони</option>
+                        <option value="5">Мотоциклети</option>
+                        <option value="6">Селскостопански</option>
+                        <option value="7">Индустриални</option>
+                        <option value="8">Кари</option>
+                        <option value="9">Каравани</option>
+                        <option value="10">Яхти и Лодки</option>
+                        <option value="11">Ремаркета</option>
+                        <option value="12">Велосипеди</option>
+                    </select>
+                    <!--TO-DO ->
+                        1. Download imgs for categories.
+                        2. Changing image when change category.
+                        -->
                     <img src="" alt="">
-                    <h3>Онлайн преподавател по английски език</h3>
+                    <label for="car-brand">Марка</label>
+                    <select name="" id="car-brand">
+                        <option value="">всички</option>
+                        <option value="AC">AC</option>
+                        <option value="Acura">Acura</option>
+                        <option value="Aixam">Aixam</option>
+                        <option value="Alfa romeo">Alfa romeo</option>
+                        <option value="Aston martin">Aston martin</option>
+                        <option value="Audi">Audi</option>
+                        <option value="Austin">Austin</option>
+                        <option value="Bentley">Bentley</option>
+                        <option value="Berliner">Berliner</option>
+                        <option value="Bmw">Bmw</option>
+                        <option value="Borgward">Borgward</option>
+                        <option value="Brilliance">Brilliance</option>
+                        <option value="Bugatti">Bugatti</option>
+                        <option value="Buick">Buick</option>
+                        <option value="Cadillac">Cadillac</option>
+                        <option value="Chevrolet">Chevrolet</option>
+                        <option value="Chrysler">Chrysler</option>
+                        <option value="Citroen">Citroen</option>
+                        <option value="Corvette">Corvette</option>
+                        <option value="Dacia">Dacia</option>
+                        <option value="Daewoo">Daewoo</option>
+                        <option value="Daihatsu">Daihatsu</option>
+                        <option value="Daimler">Daimler</option>
+                        <option value="Datsun">Datsun</option>
+                        <option value="Dkw">Dkw</option>
+                        <option value="Dodge">Dodge</option>
+                        <option value="Dr">Dr</option>
+                        <option value="Eagle">Eagle</option>
+                        <option value="FSO">FSO</option>
+                        <option value="Ferrari">Ferrari</option>
+                        <option value="Fiat">Fiat</option>
+                        <option value="Ford">Ford</option>
+                        <option value="Geo">Geo</option>
+                        <option value="Great Wall">Great Wall</option>
+                        <option value="Heinkel">Heinkel</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Hyundai">Hyundai</option>
+                        <option value="Ifa">Ifa</option>
+                        <option value="Infiniti">Infiniti</option>
+                        <option value="Innocenti">Innocenti</option>
+                        <option value="Isuzu">Isuzu</option>
+                        <option value="Jaguar">Jaguar</option>
+                        <option value="Kia">Kia</option>
+                        <option value="Lada">Lada</option>
+                        <option value="Lamborghini">Lamborghini</option>
+                        <option value="Lancia">Lancia</option>
+                        <option value="Lexus">Lexus</option>
+                        <option value="Lifan">Lifan</option>
+                        <option value="Lincoln">Lincoln</option>
+                        <option value="Lotus">Lotus</option>
+                        <option value="Maserati">Maserati</option>
+                        <option value="Matra">Matra</option>
+                        <option value="Maybach">Maybach</option>
+                        <option value="Mazda">Mazda</option>
+                        <option value="McLaren">McLaren</option>
+                        <option value="Mercedes">Mercedes</option>
+                        <option value="Mercury">Mercury</option>
+                        <option value="Mg">Mg</option>
+                        <option value="Mini">Mini</option>
+                        <option value="Mitsubishi">Mitsubishi</option>
+                        <option value="Morgan">Morgan</option>
+                        <option value="Moskvich">Moskvich</option>
+                        <option value="Nissan">Nissan</option>
+                        <option value="Oldsmobile">Oldsmobile</option>
+                        <option value="Opel">Opel</option>
+                        <option value="Perodua">Perodua</option>
+                        <option value="Peugeot">Peugeot</option>
+                        <option value="Pgo">Pgo</option>
+                        <option value="Plymouth">Plymouth</option>
+                        <option value="Polonez">Polonez</option>
+                        <option value="Pontiac">Pontiac</option>
+                        <option value="Porsche">Porsche</option>
+                        <option value="Proton">Proton</option>
+                        <option value="Renault">Renault</option>
+                        <option value="Rolls-Royce">Rolls-Royce</option>
+                        <option value="Rover">Rover</option>
+                        <option value="SECMA">SECMA</option>
+                        <option value="Saab">Saab</option>
+                        <option value="Samand">Samand</option>
+                        <option value="Saturn">Saturn</option>
+                        <option value="Scion">Scion</option>
+                        <option value="Seat">Seat</option>
+                        <option value="Shatenet">Shatenet</option>
+                        <option value="Shuanghuan">Shuanghuan</option>
+                        <option value="Simca">Simca</option>
+                        <option value="Skoda">Skoda</option>
+                        <option value="Smart">Smart</option>
+                        <option value="Ssang yong">Ssang yong</option>
+                        <option value="Subaru">Subaru</option>
+                        <option value="Suzuki">Suzuki</option>
+                        <option value="Talbot">Talbot</option>
+                        <option value="Tata">Tata</option>
+                        <option value="Tavria">Tavria</option>
+                        <option value="Tazzari">Tazzari</option>
+                        <option value="Terberg">Terberg</option>
+                        <option value="Tesla">Tesla</option>
+                        <option value="Tofas">Tofas</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Trabant">Trabant</option>
+                        <option value="Triumph">Triumph</option>
+                        <option value="VROMOS">VROMOS</option>
+                        <option value="Volga">Volga</option>
+                        <option value="Volvo">Volvo</option>
+                        <option value="Vw">Vw</option>
+                        <option value="Warszawa">Warszawa</option>
+                        <option value="Wartburg">Wartburg</option>
+                        <option value="Wiesmann">Wiesmann</option>
+                        <option value="Xinshun">Xinshun</option>
+                        <option value="Zastava">Zastava</option>
+                        <option value="Zaz">Zaz</option>
+                        <option value="Други">Други</option>
+                        <option value="Победа">Победа</option>
+                        <option value="София">София</option>
+                        <option value="Чайка">Чайка</option>
+                    </select>
+                    <label for="model">Модел:</label>
+                    <select name="model" id="model">
+                        <option value="">Всички</option>
+                    </select>
+                    <label for="price">Максимална цена:</label>
+                    <input type="text" name="" value="" id="price">
+
+                    <label for="year">Година</label>
+                    <select name="" id="year">
+                        <option value="2000">2000</option>
+                        <option value="2005">2005</option>
+                        <option value="2010">2010</option>
+                    </select>
+
+                    <label for="car-engine">Двигател</label>
+                    <select name="" id="car-engine">
+                        <option value="">всички</option>
+                        <option value="Бензинов">Бензинов</option>
+                        <option value="Дизелов">Дизелов</option>
+                        <option value="Електрически">Електрически</option>
+                        <option value="Хибриден">Хибриден</option>
+                    </select>
+
+                    <label for="transmis">Скоростна кутия</label>
+                    <select name="" id="transmis">
+                        <option value="">всички</option>
+                        <option value="Ръчна">Ръчна</option>
+                        <option value="Автоматична">Автоматична</option>
+                        <option value="Полуавтоматична">Полуавтоматична</option>
+                    </select>
+
+                    <label for="">Състояние</label>
+                    <input type="checkbox" id="state" value="new" checked="checked">
+                    <label for="state">Нов</label>
+                    <input type="checkbox" id="used" value="used" checked="checked">
+                    <label for="used">Употребяван</label>
+                    <input type="checkbox" id="for-parts" value="for-parts">
+                    <label for="for-parts">На части</label>
+
+                    <a href="">Подробно Търсене</a>
+                    <button>Търси</button>
+                </form>
+            </div>
+        </section>
+        <!--Section for new -> Новини от ФАКТИ.bg-->
+        <section>
+            <h2><a href="">Новини от ФАКТИ.bg</a></h2>
+        </section>
+    </main>
+    <div id="part3">
+        <section>
+            <article class="leftCars">
+                <h1>Най-новите обяви за Автомобили</h1>
+                <div class="slideShow">
+                    <a href=""><img src="" alt=""></a>
+                    <ul>
+                        <li><a href="">Alfa Romeo 2.4</a></li>
+                        <li><a href="">4 999 лв.</a></li>
+                        <li><a href="">176000 км</a></li>
+                        <li><a href="">София</a></li>
+                        <li><a href="">22:28 часа на 02.03</a></li>
+                    </ul>
                 </div>
-                <p>Виж инфо за Заплата, Условия ...</p>
+                <a href=""><span class="carName">Mercedes C220</span><span class="carPrice">6 600 лв.,</span><span
+                        class="carKM">173000 км,</span><span class="carCity">Варна</span></a>
+                <a href=""><span class="carName">Audi S6 S6</span><span class="carPrice">10 000 лв.,</span><span
+                        class="carKM">211000 км,</span><span class="carCity">София</span></a>
+                <a href=""><span class="carName">Alfa Romeo 156 2.4</span><span class="carPrice">4 999 лв.,</span><span
+                        class="carKM">176000 км,</span><span class="carCity">София</span></a>
+                <a href=""><span class="carName">Vw Golf 1.6</span><span class="carPrice">1 300 EUR.,</span><span
+                        class="carKM">177000 км,</span><span class="carCity">Варна</span></a>
+                <a href=""><span class="carName">Seat Altea</span><span class="carPrice">9 500 лв.,</span><span
+                        class="carKM">125000 км,</span><span class="carCity">Русе</span></a>
             </article>
-            <article>
-                <div>
-                    <img src="" alt="">
-                    <h3>Онлайн преподавател по английски език</h3>
-                </div>
-                <p>Виж инфо за Заплата, Условия ...</p>
-            </article>
-            <article>
-                <div>
-                    <img src="" alt="">
-                    <h3>Онлайн преподавател по английски език</h3>
-                </div>
-                <p>Виж инфо за Заплата, Условия ...</p>
+            <article class="rightTires">
+
             </article>
         </section>
-        <main>
-            <section id="search">
-                <h2>Търсене в mobile.bg - Автомобили</h2>
-                <div>
-                    <form action="">
-                        <label for="main-category">Основна Категория</label>
-                        <select name="main-category" id="main-category">
-                                <option selected="" value="1">Автомобили</option>
-                                <option value="2">Джипове</option>
-                                <option value="3">Бусове</option>
-                                <option value="4">Камиони</option>
-                                <option value="5">Мотоциклети</option>
-                                <option value="6">Селскостопански</option>
-                                <option value="7">Индустриални</option>
-                                <option value="8">Кари</option>
-                                <option value="9">Каравани</option>
-                                <option value="10">Яхти и Лодки</option>
-                                <option value="11">Ремаркета</option>
-                                <option value="12">Велосипеди</option>
-                            </select>
-                        <!--TO-DO ->
-                            1. Download imgs for categories. 
-                            2. Changing image when change category.
-                            -->
-                        <img src="" alt="">
-                        <label for="car-brand">Марка</label>
-                        <select name="" id="car-brand">
-                                <option value="">всички</option>
-                                <option value="AC">AC</option>
-                                <option value="Acura">Acura</option>
-                                <option value="Aixam">Aixam</option>
-                                <option value="Alfa romeo">Alfa romeo</option>
-                                <option value="Aston martin">Aston martin</option>
-                                <option value="Audi">Audi</option>
-                                <option value="Austin">Austin</option>
-                                <option value="Bentley">Bentley</option>
-                                <option value="Berliner">Berliner</option>
-                                <option value="Bmw">Bmw</option>
-                                <option value="Borgward">Borgward</option>
-                                <option value="Brilliance">Brilliance</option>
-                                <option value="Bugatti">Bugatti</option>
-                                <option value="Buick">Buick</option>
-                                <option value="Cadillac">Cadillac</option>
-                                <option value="Chevrolet">Chevrolet</option>
-                                <option value="Chrysler">Chrysler</option>
-                                <option value="Citroen">Citroen</option>
-                                <option value="Corvette">Corvette</option>
-                                <option value="Dacia">Dacia</option>
-                                <option value="Daewoo">Daewoo</option>
-                                <option value="Daihatsu">Daihatsu</option>
-                                <option value="Daimler">Daimler</option>
-                                <option value="Datsun">Datsun</option>
-                                <option value="Dkw">Dkw</option>
-                                <option value="Dodge">Dodge</option>
-                                <option value="Dr">Dr</option>
-                                <option value="Eagle">Eagle</option>
-                                <option value="FSO">FSO</option>
-                                <option value="Ferrari">Ferrari</option>
-                                <option value="Fiat">Fiat</option>
-                                <option value="Ford">Ford</option>
-                                <option value="Geo">Geo</option>
-                                <option value="Great Wall">Great Wall</option>
-                                <option value="Heinkel">Heinkel</option>
-                                <option value="Honda">Honda</option>
-                                <option value="Hyundai">Hyundai</option>
-                                <option value="Ifa">Ifa</option>
-                                <option value="Infiniti">Infiniti</option>
-                                <option value="Innocenti">Innocenti</option>
-                                <option value="Isuzu">Isuzu</option>
-                                <option value="Jaguar">Jaguar</option>
-                                <option value="Kia">Kia</option>
-                                <option value="Lada">Lada</option>
-                                <option value="Lamborghini">Lamborghini</option>
-                                <option value="Lancia">Lancia</option>
-                                <option value="Lexus">Lexus</option>
-                                <option value="Lifan">Lifan</option>
-                                <option value="Lincoln">Lincoln</option>
-                                <option value="Lotus">Lotus</option>
-                                <option value="Maserati">Maserati</option>
-                                <option value="Matra">Matra</option>
-                                <option value="Maybach">Maybach</option>
-                                <option value="Mazda">Mazda</option>
-                                <option value="McLaren">McLaren</option>
-                                <option value="Mercedes">Mercedes</option>
-                                <option value="Mercury">Mercury</option>
-                                <option value="Mg">Mg</option>
-                                <option value="Mini">Mini</option>
-                                <option value="Mitsubishi">Mitsubishi</option>
-                                <option value="Morgan">Morgan</option>
-                                <option value="Moskvich">Moskvich</option>
-                                <option value="Nissan">Nissan</option>
-                                <option value="Oldsmobile">Oldsmobile</option>
-                                <option value="Opel">Opel</option>
-                                <option value="Perodua">Perodua</option>
-                                <option value="Peugeot">Peugeot</option>
-                                <option value="Pgo">Pgo</option>
-                                <option value="Plymouth">Plymouth</option>
-                                <option value="Polonez">Polonez</option>
-                                <option value="Pontiac">Pontiac</option>
-                                <option value="Porsche">Porsche</option>
-                                <option value="Proton">Proton</option>
-                                <option value="Renault">Renault</option>
-                                <option value="Rolls-Royce">Rolls-Royce</option>
-                                <option value="Rover">Rover</option>
-                                <option value="SECMA">SECMA</option>
-                                <option value="Saab">Saab</option>
-                                <option value="Samand">Samand</option>
-                                <option value="Saturn">Saturn</option>
-                                <option value="Scion">Scion</option>
-                                <option value="Seat">Seat</option>
-                                <option value="Shatenet">Shatenet</option>
-                                <option value="Shuanghuan">Shuanghuan</option>
-                                <option value="Simca">Simca</option>
-                                <option value="Skoda">Skoda</option>
-                                <option value="Smart">Smart</option>
-                                <option value="Ssang yong">Ssang yong</option>
-                                <option value="Subaru">Subaru</option>
-                                <option value="Suzuki">Suzuki</option>
-                                <option value="Talbot">Talbot</option>
-                                <option value="Tata">Tata</option>
-                                <option value="Tavria">Tavria</option>
-                                <option value="Tazzari">Tazzari</option>
-                                <option value="Terberg">Terberg</option>
-                                <option value="Tesla">Tesla</option>
-                                <option value="Tofas">Tofas</option>
-                                <option value="Toyota">Toyota</option>
-                                <option value="Trabant">Trabant</option>
-                                <option value="Triumph">Triumph</option>
-                                <option value="VROMOS">VROMOS</option>
-                                <option value="Volga">Volga</option>
-                                <option value="Volvo">Volvo</option>
-                                <option value="Vw">Vw</option>
-                                <option value="Warszawa">Warszawa</option>
-                                <option value="Wartburg">Wartburg</option>
-                                <option value="Wiesmann">Wiesmann</option>
-                                <option value="Xinshun">Xinshun</option>
-                                <option value="Zastava">Zastava</option>
-                                <option value="Zaz">Zaz</option>
-                                <option value="Други">Други</option>
-                                <option value="Победа">Победа</option>
-                                <option value="София">София</option>
-                                <option value="Чайка">Чайка</option>
-                            </select>
-                        <label for="model">Модел:</label>
-                        <select name="model" id="model">
-                                <option value="">Всички</option>
-                            </select>
-                        <label for="price">Максимална цена:</label>
-                        <input type="text" name="" value="" id="price">
-
-                        <label for="year">Година</label>
-                        <select name="" id="year">
-                                <option value="2000">2000</option>
-                                <option value="2005">2005</option>
-                                <option value="2010">2010</option>
-                            </select>
-
-                        <label for="car-engine">Двигател</label>
-                        <select name="" id="car-engine">
-                                <option value="">всички</option>
-                                <option value="Бензинов">Бензинов</option>
-                                <option value="Дизелов">Дизелов</option>
-                                <option value="Електрически">Електрически</option>
-                                <option value="Хибриден">Хибриден</option>
-                            </select>
-
-                        <label for="transmis">Скоростна кутия</label>
-                        <select name="" id="transmis">  
-                                <option value="">всички</option>
-                                <option value="Ръчна">Ръчна</option>
-                                <option value="Автоматична">Автоматична</option>
-                                <option value="Полуавтоматична">Полуавтоматична</option>
-                            </select>
-
-                        <label for="">Състояние</label>
-                        <input type="checkbox" id="state" value="new" checked="checked">
-                        <label for="state">Нов</label>
-                        <input type="checkbox" id="used" value="used" checked="checked">
-                        <label for="used">Употребяван</label>
-                        <input type="checkbox" id="for-parts" value="for-parts">
-                        <label for="for-parts">На части</label>
-
-                        <a href="">Подробно Търсене</a>
-                        <button>Търси</button>
-                    </form>
-                </div>
-            </section>
-<!--Section for new -> Новини от ФАКТИ.bg-->
-            <section>
-                <h2><a href="">Новини от ФАКТИ.bg</a></h2>
-            </section>
-        </main>
     </div>
+</div>
 </body>
 
 </html>
