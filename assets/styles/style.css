@@ -10,9 +10,9 @@ body {
 }
 
 #part3 > section {
-    display: flex;
-    flex-direction: row;
-    width: 680px;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    width: 700px;
 }
 
 #part3 > section h1 {
@@ -29,6 +29,7 @@ body {
 section .leftCars {
     width: 445px;
     margin-right: 8px;
+    float: left;
     /*border: 2px solid blue;*/
 }
 
@@ -105,6 +106,7 @@ section .leftCars {
 /*Right side Tires article*/
 
 section .rightTires {
+    float: left;
     width: 207px;
     border: 1px solid #dfdfdf;
     border-bottom: 1px solid #b1bdc9;
@@ -152,4 +154,35 @@ section .rightTires .searching {
     color: #09F;
     font-size: 13px;
     font-weight: bold;
+}
+
+/*Advertisments and Iframe mobile.bg*/
+
+section .iframeMobile {
+    display: inline-block;
+    float: right;
+    position: absolute;
+    margin: 70px 0 0 10px;
+}
+
+embed {
+    margin: 20px 10px 10px 10px;
+    padding-left: 10px;
+}
+
+#advertisements .showInfo {
+    display: inline-block;
+    position: absolute;
+    margin: 20px 0 0 25px;
+    width: 300px;
+}
+
+#advertisements .showInfo table td {
+    width: 300px;
+    /*border: 1px solid darkgray;*/
+    font-size: 12px;
+    border-collapse: separate;
+    padding: 2px;
+    text-align: center;
+    border-spacing: 10px;
 }
