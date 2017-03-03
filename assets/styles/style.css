@@ -1,0 +1,155 @@
+body {
+    /*background-color: #f1f1f1;*/
+}
+
+#wrapper {
+    width: 990px;
+    margin: auto;
+    font-family: Verdana, Geneva, sans-serif;
+    /*border: 2px solid black;*/
+}
+
+#part3 > section {
+    display: flex;
+    flex-direction: row;
+    width: 680px;
+}
+
+#part3 > section h1 {
+    height: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: #09F 3px solid;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/*Left side New cars*/
+
+section .leftCars {
+    width: 445px;
+    margin-right: 8px;
+    /*border: 2px solid blue;*/
+}
+
+.slideShow {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.slideShow > a {
+    padding-right: 10px;
+}
+
+.slideShow a {
+    text-decoration: none;
+    color: black;
+}
+
+.slideShow ul li a.model {
+    color: #09F;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.slideShow ul li a.price {
+    display: block;
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 0 5px 0;
+}
+
+.slideShow ul li a.date {
+    display: block;
+    margin-top: 27px;
+    color: #999999;
+    font-size: 13px;
+}
+
+.slideShow ~ a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-top: 1px solid gray;
+    padding: 5px;
+    font-size: 12px;
+
+}
+
+.slideShow ~ a:last-child {
+    border-bottom: 1px solid #09F;
+}
+
+.slideShow ~ a:hover {
+    color: #09F;
+}
+
+.slideShow ~ a .carName {
+    font-weight: bold;
+    margin-left: 0;
+}
+
+.slideShow ~ a span {
+    margin-left: 5px;
+}
+
+.slideShow ~ a span:last-child {
+    display: inline-block;
+    float: right;
+    text-align: right;
+    color: #999999;
+}
+
+/*Right side Tires article*/
+
+section .rightTires {
+    width: 207px;
+    border: 1px solid #dfdfdf;
+    border-bottom: 1px solid #b1bdc9;
+}
+
+section .rightTires form {
+    background-image: url("../img/gumi.jpg");
+    height: 267px;
+    padding-left: 8px;
+}
+
+section .rightTires form label {
+    font-size: 12px;
+    display: block;
+    width: 120px;
+    margin: 20px 0 2px 0;
+}
+
+section .rightTires .season {
+    width: 120px;
+}
+
+section .rightTires .sSmall {
+    width: 60px;
+}
+
+section .rightTires .brand {
+    width: 190px;
+}
+
+section .rightTires button {
+    display: block;
+    width: 184px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 40px;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #333
+}
+
+section .rightTires .searching {
+    display: inline-block;
+    margin-top: 12px;
+    color: #09F;
+    font-size: 13px;
+    font-weight: bold;
+}
