@@ -9,10 +9,88 @@ body {
     /*border: 2px solid black;*/
 }
 
+
+#topNav {
+    background-color: #09F;
+    color: white;
+    width: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.8em;
+    display:inline-block;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.menu li {
+    float: left;
+    border-left: 1px solid white;
+    padding: 5px;
+}
+
+#head {
+    color: #09F;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 0.8em;
+}
+
+#logo {
+    padding-bottom: 20px;
+}
+
+#siteNav {
+    background-color: dimgray;
+    color: white;
+    width: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1em;
+    display:inline-block;
+    border: 1px solid white;
+    text-align: center;
+}
+
+#topNav {
+    background-color: #09F;
+    color: white;
+    width: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.8em;
+    display:inline-block;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.menu li {
+    float: left;
+    border-left: 1px solid white;
+    padding: 5px;
+}
+
+#head {
+    color: #09F;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 0.8em;
+}
+
+#logo {
+    padding-bottom: 20px;
+}
+
+#siteNav {
+    background-color: dimgray;
+    color: white;
+    width: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1em;
+    display:inline-block;
+    border: 1px solid white;
+    text-align: center;
+}
+
 #search {
     float: left;
     width: 35%;
-
 }
 #search h2 {
     height: 25px;
@@ -83,7 +161,7 @@ body {
 #part3 > section h1 {
     height: 25px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     border-bottom: #09F 3px solid;
     margin-bottom: 10px;
     text-align: left;
@@ -250,4 +328,75 @@ embed {
     padding: 2px;
     text-align: center;
     border-spacing: 10px;
+    }
+
+/*Footer*/
+
+footer {
+    margin-top: 20px;
+    border-top: 1px solid #09F;
+
+}
+
+footer section .links {
+    text-align: left;
+    margin: 5px 0 0 5px;
+}
+
+footer section .links ul li {
+    display: inline-block;
+    font-size: 11px;
+    color: #999999;
+}
+
+footer section .links ul li a {
+    color: #999999;
+}
+
+footer section .footerLinks {
+    margin: 10px 0 10px 0;
+}
+
+footer section .footerLinks ul, footer section .footerLinks ul li {
+    display: inline-block;
+    font-size: 12px;
+}
+
+footer section .footerLinks ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding-right: 4px;
+}
+
+footer section .footerLinks > a {
+    padding-top: 5px;
+    float: right;
+    color: black;
+    font-size: 12px;
+}
+
+footer section .bottomFooter {
+    color: white;
+    background-color: #008FC6;
+    padding: 5px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+footer section .bottomFooter ul, footer section .bottomFooter ul li {
+    display: inline-block;
+
+}
+
+footer section .bottomFooter ul li a {
+    color: white;
+    font-weight: bold;
+    padding-right: 4px;
+    text-decoration: none;
+}
+
+footer section .bottomFooter span {
+    float: right;
+    font-size: 11px;
 }
