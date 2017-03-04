@@ -11,7 +11,7 @@ body {
 
 
 #topNav {
-    background-color: #09F;
+    background-color: #008FC6;
     width: 100%;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 0.8em;
@@ -42,6 +42,10 @@ body {
     background-color: #09F;
 }
 
+#topNav .menu {
+    display: inline-block;
+    margin: auto;
+}
 
 .menu li {
     float: left;
@@ -75,6 +79,11 @@ body {
     padding: 7px;
 }
 
+#siteNav .menu {
+    display: inline-block;
+    margin: auto;
+}
+
 #siteNav .active {
     background-color: #09F;
 }
@@ -83,18 +92,6 @@ body {
     background-color: white;
     color: black;
 }
-
-#topNav {
-    background-color: #09F;
-    color: white;
-    width: 100%;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 0.8em;
-    display:inline-block;
-    border: 1px solid white;
-    text-align: center;
-}
-
 
 #search {
     float: left;
