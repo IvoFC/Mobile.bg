@@ -9,6 +9,7 @@ body {
     /*border: 2px solid black;*/
 }
 
+
 #topNav {
     background-color: #09F;
     width: 100%;
@@ -83,11 +84,113 @@ body {
     color: black;
 }
 
+#topNav {
+    background-color: #09F;
+    color: white;
+    width: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.8em;
+    display:inline-block;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.menu li {
+    float: left;
+    border-left: 1px solid white;
+    padding: 5px;
+}
+
+#head {
+    color: #09F;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 0.8em;
+}
+
+#logo {
+    padding-bottom: 20px;
+}
+
+#siteNav {
+    background-color: dimgray;
+    color: white;
+    width: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1em;
+    display:inline-block;
+    border: 1px solid white;
+    text-align: center;
+}
+
+#search {
+    float: left;
+    width: 35%;
+}
+#search h2 {
+    height: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: #09F 3px solid;
+    margin-bottom: 10px;
+    text-align: left;
+}
+#search div {
+    border: 2px solid #09F;
+    padding: 0.5em;
+}
+
+#search #main-category {
+    width: 75%;
+    float: left;
+    margin-left: 1em;
+    margin-right: 0.5em;   
+}
+
+#search label:first-of-type {
+    width: 50%;
+}
+#search .important-label-for-cars {
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-left: 0.5em;
+}
+#search label, select {
+    float: left;
+    width: 44%;
+    margin-left: 0.3em;
+}
+#search #state-car-categories {
+    display: block;
+}
+
+#search .state {
+    float: left;
+    width: 30%;
+    color: red;
+}
+#search span {
+    float: left;
+    width: 30%;
+    font-size: 0.5em;
+}
+#search #state-car-categories {
+    clear: both;
+    width: 100%;
+}
+
+
+
+
+
+
 #part3 > section {
     /*display: flex;*/
     /*flex-direction: row;*/
     width: 700px;
 }
+
 
 #part3 > section h1 {
     height: 25px;
@@ -122,9 +225,13 @@ section .leftCars {
     color: black;
 }
 
+.slideShow ul li {
+    font-size: 14px;
+}
+
 .slideShow ul li a.model {
     color: #09F;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -133,14 +240,14 @@ section .leftCars {
     color: #000000;
     font-size: 18px;
     font-weight: bold;
-    padding: 15px 0 5px 0;
+    padding: 23px 0 5px 0;
 }
 
 .slideShow ul li a.date {
     display: block;
     margin-top: 27px;
     color: #999999;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .slideShow ~ a {
@@ -149,7 +256,7 @@ section .leftCars {
     color: black;
     border-top: 1px solid gray;
     padding: 5px;
-    font-size: 12px;
+    font-size: 11px;
 
 }
 
@@ -158,6 +265,7 @@ section .leftCars {
 }
 
 .slideShow ~ a:hover {
+    background: url("../img/lastobbgr.png") repeat-x;
     color: #09F;
 }
 
@@ -182,21 +290,21 @@ section .leftCars {
 section .rightTires {
     float: left;
     width: 207px;
-    border: 1px solid #dfdfdf;
-    border-bottom: 1px solid #b1bdc9;
 }
 
 section .rightTires form {
+    border: 1px solid #dfdfdf;
+    border-bottom: 1px solid #b1bdc9;
     background-image: url("../img/gumi.jpg");
     height: 267px;
     padding-left: 8px;
 }
 
 section .rightTires form label {
-    font-size: 12px;
+    font-size: 11px;
     display: block;
     width: 120px;
-    margin: 20px 0 2px 0;
+    margin: 15px 0 2px 0;
 }
 
 section .rightTires .season {
@@ -215,7 +323,7 @@ section .rightTires button {
     display: block;
     width: 184px;
     height: 40px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
     margin-top: 40px;
     font-family: Verdana, Geneva, sans-serif;
@@ -251,8 +359,6 @@ embed {
     width: 300px;
 }
 
-/*Info table*/
-
 #advertisements .showInfo table td {
     width: 300px;
     /*border: 1px solid darkgray;*/
@@ -261,7 +367,7 @@ embed {
     padding: 2px;
     text-align: center;
     border-spacing: 10px;
-}
+    }
 
 /*Footer*/
 

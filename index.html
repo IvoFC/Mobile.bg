@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/font-awesome-4.6.3/css/font-awesome.css">
+    <!--<link href="https://fakti.bg/rss/all.rss" rel="alternate" type="application/rss+xml" title="What's New on About.com Web Design / HTML" />-->
 </head>
-
+ 
 <body>
 <nav>
     <div id="topNav"> 
@@ -85,7 +86,8 @@
             <h2>Търсене в mobile.bg - Автомобили</h2>
             <div>
                 <form action="">
-                    <label for="main-category">Основна Категория</label>
+                    <label for="main-category" class="important-label-for-cars">Основна Категория</label>
+                    </br>
                     <select name="main-category" id="main-category">
                         <option selected="" value="1">Автомобили</option>
                         <option value="2">Джипове</option>
@@ -104,9 +106,12 @@
                         1. Download imgs for categories.
                         2. Changing image when change category.
                         -->
-                    <img src="" alt="">
-                    <label for="car-brand">Марка</label>
-                    <select name="" id="car-brand">
+                    <img src="assets/img/car-categories/p1.gif" alt="">
+                    
+                    <label for="car-brand" class="important-label-for-cars">Марка</label>
+                    <label for="model" class="important-label-for-cars">Модел:</label>
+                    </br>
+                    <select name="" id="car-brand" class="">
                         <option value="">всички</option>
                         <option value="AC">AC</option>
                         <option value="Acura">Acura</option>
@@ -223,21 +228,27 @@
                         <option value="София">София</option>
                         <option value="Чайка">Чайка</option>
                     </select>
-                    <label for="model">Модел:</label>
+                    
                     <select name="model" id="model">
                         <option value="">Всички</option>
                     </select>
-                    <label for="price">Максимална цена:</label>
-                    <input type="text" name="" value="" id="price">
 
+                    <label for="price" class="important-label-for-cars">Максимална цена:</label>
                     <label for="year">Година</label>
+                    
+                    
+                    
                     <select name="" id="year">
                         <option value="2000">2000</option>
                         <option value="2005">2005</option>
                         <option value="2010">2010</option>
                     </select>
 
+                    <input type="text" name="" value="" id="price">
+
                     <label for="car-engine">Двигател</label>
+                    <label for="transmis">Скоростна кутия</label>
+                    </br>
                     <select name="" id="car-engine">
                         <option value="">всички</option>
                         <option value="Бензинов">Бензинов</option>
@@ -245,23 +256,28 @@
                         <option value="Електрически">Електрически</option>
                         <option value="Хибриден">Хибриден</option>
                     </select>
-
-                    <label for="transmis">Скоростна кутия</label>
+                    
                     <select name="" id="transmis">
                         <option value="">всички</option>
                         <option value="Ръчна">Ръчна</option>
                         <option value="Автоматична">Автоматична</option>
                         <option value="Полуавтоматична">Полуавтоматична</option>
                     </select>
-
-                    <label for="">Състояние</label>
-                    <input type="checkbox" id="state" value="new" checked="checked">
-                    <label for="state">Нов</label>
-                    <input type="checkbox" id="used" value="used" checked="checked">
-                    <label for="used">Употребяван</label>
-                    <input type="checkbox" id="for-parts" value="for-parts">
-                    <label for="for-parts">На части</label>
-
+                    </br>
+                    <label for="state-new" class="important-label-for-cars" id="state-car-categories">Състояние</label>
+                    <span>
+                    <input type="checkbox" id="state-new" value="new" checked="checked">
+                    <label class="state" for="state">Нов</label>
+                    </span>
+                    <span>
+                    <input type="checkbox" id="state-used" value="used" checked="checked">
+                    <label class="state" for="state-used">Употребяван</label>
+                    </span>
+                    <span>
+                    <input type="checkbox" id="state-for-parts" value="for-parts">
+                    <label class="state" for="state-for-parts">На части</label>
+                    </span>
+                    
                     <a href="">Подробно Търсене</a>
                     <button>Търси</button>
                 </form>
@@ -270,6 +286,10 @@
         <!--Section for new -> Новини от ФАКТИ.bg-->
         <section>
             <h2><a href="">Новини от ФАКТИ.bg</a></h2>
+            <!--<script language="JavaScript" src="http://www.feedbucket.com/js.php?src=http%3A%2F%2Ffakti.bg%2Frss%2Fall.rss&chan=y&desc=1&date=y" type="text/javascript"></script>
+<noscript>
+<a href="http://www.feedbucket.com/">Web RSS</a> by FeedBucket.
+</noscript>-->
         </section>
     </main>
     <div id="part3">
