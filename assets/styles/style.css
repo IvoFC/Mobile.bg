@@ -191,9 +191,13 @@ section .leftCars {
     color: black;
 }
 
+.slideShow ul li {
+    font-size: 14px;
+}
+
 .slideShow ul li a.model {
     color: #09F;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -202,14 +206,14 @@ section .leftCars {
     color: #000000;
     font-size: 18px;
     font-weight: bold;
-    padding: 15px 0 5px 0;
+    padding: 23px 0 5px 0;
 }
 
 .slideShow ul li a.date {
     display: block;
     margin-top: 27px;
     color: #999999;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .slideShow ~ a {
@@ -218,7 +222,7 @@ section .leftCars {
     color: black;
     border-top: 1px solid gray;
     padding: 5px;
-    font-size: 12px;
+    font-size: 11px;
 
 }
 
@@ -227,6 +231,7 @@ section .leftCars {
 }
 
 .slideShow ~ a:hover {
+    background: url("../img/lastobbgr.png") repeat-x;
     color: #09F;
 }
 
@@ -251,21 +256,21 @@ section .leftCars {
 section .rightTires {
     float: left;
     width: 207px;
-    border: 1px solid #dfdfdf;
-    border-bottom: 1px solid #b1bdc9;
 }
 
 section .rightTires form {
+    border: 1px solid #dfdfdf;
+    border-bottom: 1px solid #b1bdc9;
     background-image: url("../img/gumi.jpg");
     height: 267px;
     padding-left: 8px;
 }
 
 section .rightTires form label {
-    font-size: 12px;
+    font-size: 11px;
     display: block;
     width: 120px;
-    margin: 20px 0 2px 0;
+    margin: 15px 0 2px 0;
 }
 
 section .rightTires .season {
@@ -284,7 +289,7 @@ section .rightTires button {
     display: block;
     width: 184px;
     height: 40px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
     margin-top: 40px;
     font-family: Verdana, Geneva, sans-serif;
