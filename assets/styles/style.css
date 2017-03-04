@@ -11,19 +11,44 @@ body {
 
 #topNav {
     background-color: #09F;
-    color: white;
     width: 100%;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 0.8em;
     display:inline-block;
     border: 1px solid white;
     text-align: center;
+    padding: 5px;
 }
+
+#topNav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+#topNav a:hover {
+    text-decoration: none;
+    color:black;
+}
+
+#siteNav a {
+    text-decoration: none;
+    color: white;
+    padding: 4px;
+}
+
+#siteNav a:hover {
+    background-color: #09F;
+}
+
 
 .menu li {
     float: left;
-    border-left: 1px solid white;
-    padding: 5px;
+    border-right: 1px solid white;
+}
+
+.menu li:last-child {
+    border-right: none;
 }
 
 #head {
@@ -46,8 +71,17 @@ body {
     display:inline-block;
     border: 1px solid white;
     text-align: center;
+    padding: 7px;
 }
 
+#siteNav .active {
+    background-color: #09F;
+}
+
+#topNav .active {
+    background-color: white;
+    color: black;
+}
 
 #part3 > section {
     /*display: flex;*/
