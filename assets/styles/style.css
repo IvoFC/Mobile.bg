@@ -9,11 +9,76 @@ body {
     /*border: 2px solid black;*/
 }
 
+#search {
+    float: left;
+    width: 35%;
+
+}
+#search h2 {
+    height: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: #09F 3px solid;
+    margin-bottom: 10px;
+    text-align: left;
+}
+#search div {
+    border: 2px solid #09F;
+    padding: 0.5em;
+}
+
+#search #main-category {
+    width: 75%;
+    float: left;
+    margin-left: 1em;
+    margin-right: 0.5em;   
+}
+
+#search label:first-of-type {
+    width: 50%;
+}
+#search .important-label-for-cars {
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-left: 0.5em;
+}
+#search label, select {
+    float: left;
+    width: 44%;
+    margin-left: 0.3em;
+}
+#search #state-car-categories {
+    display: block;
+}
+
+#search .state {
+    float: left;
+    width: 30%;
+    color: red;
+}
+#search span {
+    float: left;
+    width: 30%;
+    font-size: 0.5em;
+}
+#search #state-car-categories {
+    clear: both;
+    width: 100%;
+}
+
+
+
+
+
+
+
 #part3 > section {
     /*display: flex;*/
     /*flex-direction: row;*/
     width: 700px;
 }
+
 
 #part3 > section h1 {
     height: 25px;
