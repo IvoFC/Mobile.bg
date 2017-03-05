@@ -159,7 +159,7 @@ body {
     float: left;
     width: 35%;
 }
-#search h2 {
+#search h2, #news-section h2 {
     height: 25px;
     font-weight: bold;
     font-size: 16px;
@@ -211,11 +211,31 @@ body {
     clear: both;
     width: 100%;
 }
+ /*News section*/
+section#news-section {
+    float: left;
+    width: 35%;
+    margin-left: 2em;
+}
 
 
+section#news-section .feed-item-desc {
+    display: none;
+}
+/*
+section#news-section div#content {
+    width: 100%;
+}
+*/
 
+.rss2html-note {
+    display: none;
+}
+#content h4 a {
+    color: black;
+    padding-bottom: 2em;
 
-
+}
 
 #part3 > section {
     /*display: flex;*/
