@@ -9,13 +9,12 @@ body {
     /*border: 2px solid black;*/
 }
 
-
 #topNav {
     background-color: #008FC6;
     width: 100%;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 0.8em;
-    display:inline-block;
+    display: inline-block;
     border: 1px solid white;
     text-align: center;
     padding: 5px;
@@ -29,7 +28,7 @@ body {
 
 #topNav a:hover {
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
 #topNav .menu {
@@ -48,17 +47,18 @@ body {
     padding: 4px;
 }
 
-#bottomNav{
+#bottomNav {
     background-color: #008FC6;
     width: 100.4%;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 0.8em;
     font-weight: bold;
-    display:inline-block;
+    display: inline-block;
     border: 1px solid white;
     text-align: center;
     padding: 5px;
 }
+
 #bottomNav a {
     text-decoration: none;
     color: white;
@@ -81,11 +81,9 @@ body {
     color: black;
 }
 
-
 #siteNav a:hover {
     background-color: #09F;
 }
-
 
 .menu li {
     float: left;
@@ -113,7 +111,7 @@ body {
     width: 100%;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 1em;
-    display:inline-block;
+    display: inline-block;
     border: 1px solid white;
     border-radius: 10px 10px 0px 0px;
     text-align: center;
@@ -128,7 +126,6 @@ body {
 #siteNav .active {
     background-color: #09F;
 }
-
 
 .box {
     border: 1px solid gray;
@@ -159,11 +156,11 @@ body {
     display: none;
 }
 
-
 #search {
     float: left;
     width: 35%;
 }
+
 #search h2, #news-section h2 {
     height: 25px;
     font-weight: bold;
@@ -172,6 +169,7 @@ body {
     margin-bottom: 10px;
     text-align: left;
 }
+
 #search div {
     border: 2px solid #09F;
     padding: 0.5em;
@@ -181,23 +179,26 @@ body {
     width: 75%;
     float: left;
     margin-left: 1em;
-    margin-right: 0.5em;   
+    margin-right: 0.5em;
 }
 
 #search label:first-of-type {
     width: 50%;
 }
+
 #search .important-label-for-cars {
     display: inline-block;
     font-size: 0.8em;
     font-weight: bold;
     margin-left: 0.5em;
 }
-#search label, select {
+
+#search label, #se select {
     float: left;
     width: 44%;
     margin-left: 0.3em;
 }
+
 #search #state-car-categories {
     display: block;
 }
@@ -207,26 +208,29 @@ body {
     width: 30%;
     color: red;
 }
+
 #search span {
     float: left;
     width: 30%;
     font-size: 0.5em;
 }
+
 #search #state-car-categories {
     clear: both;
     width: 100%;
 }
- /*News section*/
+
+/*News section*/
 section#news-section {
     float: left;
     width: 35%;
     margin-left: 2em;
 }
 
-
 section#news-section .feed-item-desc {
     display: none;
 }
+
 /*
 section#news-section div#content {
     width: 100%;
@@ -236,6 +240,7 @@ section#news-section div#content {
 .rss2html-note {
     display: none;
 }
+
 #content h4 a {
     color: black;
     padding-bottom: 2em;
@@ -248,7 +253,6 @@ section#news-section div#content {
     width: 700px;
 }
 
-
 #part3 > section h1 {
     height: 25px;
     font-weight: bold;
@@ -257,6 +261,7 @@ section#news-section div#content {
     margin-bottom: 10px;
     text-align: left;
 }
+
 /*End of rss news*/
 
 /*Login and Register form*/
@@ -277,15 +282,18 @@ section#news-section div#content {
     background-color: #eff1f4;
     margin-bottom: 2em;
 }
+
 #login-section div {
     margin: 2em;
 }
+
 #login-section button {
     float: right;
     width: 30%;
     background-color: #224b8e;
     border-radius: 5px;
 }
+
 #login-register-popup {
     display: none;
 }
@@ -450,13 +458,20 @@ embed {
 
 #advertisements .showInfo table td {
     width: 300px;
-    /*border: 1px solid darkgray;*/
-    font-size: 12px;
-    border-collapse: separate;
+    border: 1px solid darkgray;
+    font-size: 11px;
     padding: 2px;
     text-align: center;
-    border-spacing: 10px;
-    }
+}
+
+#advertisements .showInfo table .l1, #advertisements .showInfo table .l2 {
+    border: none;
+    text-align: left;
+}
+
+#advertisements .showInfo table .l2 {
+    text-align: center;
+}
 
 /*Footer*/
 
