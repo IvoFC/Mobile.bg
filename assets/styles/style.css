@@ -154,6 +154,12 @@ body {
     border-top: 2px solid #09F;
 }
 
+/*Hide publish page*/
+#publishCars {
+    display: none;
+}
+
+
 #search {
     float: left;
     width: 35%;
@@ -251,6 +257,40 @@ section#news-section div#content {
     margin-bottom: 10px;
     text-align: left;
 }
+/*End of rss news*/
+
+/*Login and Register form*/
+
+#login-section {
+    float: right;
+    /*display: inline-block;*/
+    width: 25%;
+    border: 1px solid grey;
+}
+
+#login-section h3 {
+    text-align: left;
+    padding: 5px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+    background-color: #eff1f4;
+    margin-bottom: 2em;
+}
+#login-section div {
+    margin: 2em;
+}
+#login-section button {
+    float: right;
+    width: 30%;
+    background-color: #224b8e;
+    border-radius: 5px;
+}
+#login-register-popup {
+    display: none;
+}
+
+/*End of Login and Register form*/
 
 /*Left side New cars*/
 
@@ -392,10 +432,8 @@ section .rightTires .searching {
 /*Advertisments and Iframe mobile.bg*/
 
 section .iframeMobile {
-    display: inline-block;
     float: right;
-    position: absolute;
-    margin: 70px 0 0 10px;
+    width: 0%;
 }
 
 embed {
