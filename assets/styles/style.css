@@ -295,6 +295,11 @@ section#news-section div#content {
 }
 
 #login-register-popup {
+    position: fixed;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    border: 1px solid black;
     display: none;
 }
 
@@ -426,7 +431,7 @@ section .rightTires button {
     font-weight: bold;
     margin-top: 40px;
     font-family: Verdana, Geneva, sans-serif;
-    color: #333
+    color: #333;
 }
 
 section .rightTires .searching {
