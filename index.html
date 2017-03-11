@@ -705,8 +705,231 @@
             <div style="font-weight: bold">Публикуване на безплатна обява - Автомобили - Публикуване на текст <span
                     style="color: #09F">(Стъпка 1)</span></div>
             <div id="publish">
-                <form>
+                <form style="border: 1px solid #09F">
                     <div>
+                        <table id="publishTable">
+                            <tr>
+                                <td colspan="2"><label for="main-category">Основна Категория</label></td>
+                                <td colspan="6"><label for="rubrique">Рубрика</label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <select name="main-category" id="main-category">
+                                        <option selected="" value="1">Автомобили</option>
+                                        <option value="2">Джипове</option>
+                                        <option value="3">Бусове</option>
+                                        <option value="4">Камиони</option>
+                                        <option value="5">Мотоциклети</option>
+                                        <option value="6">Селскостопански</option>
+                                        <option value="7">Индустриални</option>
+                                        <option value="8">Кари</option>
+                                        <option value="9">Каравани</option>
+                                        <option value="10">Яхти и Лодки</option>
+                                        <option value="11">Ремаркета</option>
+                                        <option value="12">Велосипеди</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <img src="assets/img/p1.gif">
+                                </td>
+                                <td><input type="radio" name="rubrique" value="Автомобили"> Автомобили </td>
+                                <td><input type="radio" name="rubrique" value="Автомобили"> Части </td>
+                                <td><input type="radio" name="rubrique" value="Автомобили"> Аксесоари </td>
+                                <td><input type="radio" name="rubrique" value="Автомобили"> Гуми и джанти </td>
+                                <td><input type="radio" name="rubrique" value="Автомобили"> Услуги </td>
+                                <td><input type="radio" name="rubrique" value="Автомобили"> Купува </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="brand">Марка</label>
+                                </td>
+                                <td>Модел</td>
+                                <td>Модификация</td>
+                                <td>Тип двигател</td>
+                                <td colspan="3">Състояние</td>
+                            </tr>
+                                <tr>
+                                    <td>
+                                    <select name="brand">
+                                        <option value="0"></option>
+                                        <option value="1">Accelera</option>
+                                        <option value="2">Achilles</option>
+                                        <option value="3">Admiral</option>
+                                        <option value="4">Alliance</option>
+                                        <option value="5">America</option>
+                                        <option value="6">Atturo</option>
+                                        <option value="7">Autogrip</option>
+                                        <option value="8">Avon</option>
+                                        <option value="9">BCT</option>
+                                        <option value="10">BF Goodrich</option>
+                                        <option value="11">Barum</option>
+                                        <option value="151">Belshina</option>
+                                        <option value="12">Bridgestone</option>
+                                        <option value="13">Capitol</option>
+                                        <option value="14">Ceat</option>
+                                        <option value="15">Clear</option>
+                                        <option value="16">Continental</option>
+                                        <option value="17">Cooper</option>
+                                        <option value="18">Dayton</option>
+                                        <option value="19">Debica</option>
+                                        <option value="20">Delinte</option>
+                                        <option value="21">Dextero</option>
+                                        <option value="149">DMACK</option>
+                                        <option value="22">Dunlop</option>
+                                        <option value="23">Duro</option>
+                                        <option value="24">Durun</option>
+                                        <option value="25">Effiplus</option>
+                                        <option value="150">Esa Tecar</option>
+                                        <option value="26">Eurostone</option>
+                                        <option value="27">Falken</option>
+                                        <option value="28">Federal</option>
+                                        <option value="152">Fedima</option>
+                                        <option value="29">Firestone</option>
+                                        <option value="30">Fortuna</option>
+                                        <option value="31">Fulda</option>
+                                        <option value="32">Fullway</option>
+                                        <option value="33">GT Radial</option>
+                                        <option value="34">General</option>
+                                        <option value="35">Gislaved</option>
+                                        <option value="36">GoldenTyre</option>
+                                        <option value="37">Goodride</option>
+                                        <option value="38">Goodyear</option>
+                                        <option value="39">Gremax</option>
+                                        <option value="40">HI FLY</option>
+                                        <option value="41">Haida</option>
+                                        <option value="42">Hankook</option>
+                                        <option value="153">Hercules</option>
+                                        <option value="43">Hero</option>
+                                        <option value="44">High Performer</option>
+                                        <option value="45">Infinity</option>
+                                        <option value="46">Insa Turbo</option>
+                                        <option value="47">Interco</option>
+                                        <option value="48">Interstate</option>
+                                        <option value="49">Kelly</option>
+                                        <option value="50">Kenda</option>
+                                        <option value="51">Kinforest</option>
+                                        <option value="52">King Meiler</option>
+                                        <option value="53">Kings Tire</option>
+                                        <option value="54">Kingstar</option>
+                                        <option value="55">Kleber</option>
+                                        <option value="56">Kormoran</option>
+                                        <option value="57">Kumho</option>
+                                        <option value="58">Lassa</option>
+                                        <option value="59">Lexani</option>
+                                        <option value="60">Linglong</option>
+                                        <option value="61">Maloya</option>
+                                        <option value="62">Marangoni</option>
+                                        <option value="63">Marix</option>
+                                        <option value="64">Marshal</option>
+                                        <option value="65">Mastersteel</option>
+                                        <option value="66">Matador</option>
+                                        <option value="67">Maxtrek</option>
+                                        <option value="68">Maxxis</option>
+                                        <option value="69">Meteor</option>
+                                        <option value="70">Michelin</option>
+                                        <option value="71">Mickey Thompson</option>
+                                        <option value="72">Minerva</option>
+                                        <option value="73">Nankang</option>
+                                        <option value="74">Nexen</option>
+                                        <option value="75">Nokian</option>
+                                        <option value="76">Novex</option>
+                                        <option value="77">Pace</option>
+                                        <option value="78">Petlas</option>
+                                        <option value="79">Pirelli</option>
+                                        <option value="80">Pneumant</option>
+                                        <option value="154">PowerTrac</option>
+                                        <option value="81">Recip</option>
+                                        <option value="82">Regal</option>
+                                        <option value="83">Riken</option>
+                                        <option value="84">Roadstone</option>
+                                        <option value="85">Rockstone</option>
+                                        <option value="86">Rotalla</option>
+                                        <option value="87">Rotex</option>
+                                        <option value="88">Runway</option>
+                                        <option value="89">Sailun</option>
+                                        <option value="90">Sava</option>
+                                        <option value="91">Semperit</option>
+                                        <option value="92">Silverstone</option>
+                                        <option value="93">Sonny</option>
+                                        <option value="94">Star</option>
+                                        <option value="95">Star Performer</option>
+                                        <option value="96">Starco</option>
+                                        <option value="97">Starfire</option>
+                                        <option value="98">Starmaxx</option>
+                                        <option value="99">Stunner</option>
+                                        <option value="100">Sunew</option>
+                                        <option value="101">Sunny</option>
+                                        <option value="148">Syron</option>
+                                        <option value="102">Tigar</option>
+                                        <option value="103">Toyo</option>
+                                        <option value="104">Trayal</option>
+                                        <option value="105">Triangle</option>
+                                        <option value="106">Tyfoon</option>
+                                        <option value="107">Uniroyal</option>
+                                        <option value="108">VSP</option>
+                                        <option value="109">Viking</option>
+                                        <option value="110">Vredestein</option>
+                                        <option value="111">Wanli</option>
+                                        <option value="112">Westlake</option>
+                                        <option value="113">Winter Tact</option>
+                                        <option value="114">Yokohama</option>
+                                        <option value="115">Zeetex</option>
+                                        <option value="116">Zetum</option>
+                                        <option value="147">Други</option>
+                                    </select>
+                                    </td>
+                                    <td>
+                                        <select name="model">
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="modification">
+                                    </td>
+                                    <td>
+                                        <select name="engine_type">
+                                            <option value="1"></option>
+                                            <option value="2">Бензинов</option>
+                                            <option value="3">Дизелов</option>
+                                            <option value="4">Електрически</option>
+                                            <option value="5">Хибриден</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="radio" name="condition" value="Автомобили"> Нов </td>
+                                    <td><input type="radio" name="condition" value="Автомобили"> Употребяван </td>
+                                    <td><input type="radio" name="condition" value="Автомобили"> За части </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="power">Мощност [к.с.]</label></td>
+                                    <td><label for="euroStandard">Евростандарт</label></td>
+                                    <td colspan="2"><label for="gearBox">Скоростна кутия</label></td>
+                                    <td colspan="3">Категория</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" name="power" id="power">
+                                    </td>
+                                    <td>
+                                        <select name="euroStandard" id="euroStandard">
+                                            <option value="1"></option>
+                                            <option value="2">Евро 1</option>
+                                            <option value="3">Евро 2</option>
+                                            <option value="4">Евро 3</option>
+                                            <option value="5">Евро 4</option>
+                                            <option value="6">Евро 5</option>
+                                            <option value="7">Евро 6</option>
+                                        </select>
+                                    </td>
+                                    <td colspan="2">
+                                        <select name="gearBox" id="gearBox">
+                                            <option value="1"></option>
+                                            <option value="2">Ръчна</option>
+                                            <option value="3">Автоматична</option>
+                                            <option value="4">Полуавтоматична</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            
+                        </table>
                     </div>
                 </form>
             </div>

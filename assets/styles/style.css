@@ -156,6 +156,14 @@ body {
     display: none;
 }
 
+#publishTable td {
+    padding: 5px;
+}
+
+#publishTable {
+    font-size: 0.8em;
+}
+
 #search {
     float: left;
     width: 35%;
