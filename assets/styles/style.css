@@ -183,7 +183,7 @@ body {
     padding: 5px;
 }
 
-#publish Table {
+#publish table {
     font-size: 0.7em;
 }
 
@@ -191,6 +191,46 @@ body {
     font-weight: bold;
     color: #09F;
 }
+
+#additionalInfo {
+    display: inline-block;
+    width: 260px;
+    padding-right: 20px;
+}
+
+#additionalInfo p {
+    font-size: 0.7em;
+}
+
+
+#publishBottom {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+#publishBottom h4 {
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+#feedback label {
+    color: #09F;
+    font-weight: bold;
+}
+
+#feedback {
+    padding-right: 20px;
+}
+
+#feedback table td {
+    padding: 5px;
+}
+
+#newsPaper label{
+    font-size: 0.7em;
+}
+
 
 #search {
     float: left;
