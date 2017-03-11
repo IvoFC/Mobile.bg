@@ -299,7 +299,7 @@
         <section id="login-section">
              <h3>Вход за потребители и дилъри</h3>
             <div>
-                <h4 id="new-Register"> <a href="">Нова регистрация</a></h4>
+                <h4 id="register-button">Нова регистрация</h4>
                 <p>(отнема само 2 мин.)</p>
                 <button id="login-button">ВХОД</button>
             </div>
@@ -308,7 +308,9 @@
 
         <!--Login/Register POP-UP-->
             <div id='login-register-popup'>
-                <form id='login'>
+                <button id="showLoginForm">Login</button>
+                <button id="showRegistrationForm">Registration</button>
+                <form id='login-form'>
                     <label for="username">E-mail или Username / за дилъри /</label>
                     <input type="text" id="username">
 
@@ -320,7 +322,7 @@
 
                     <button id='submit-button'>ВХОД</button>
                 </form>
-                <form id="register">
+                <form id="register-form">
                     <h2>Регистрация с Email и парола:</h2>
                     <p>/само за частни лица/</p>
 

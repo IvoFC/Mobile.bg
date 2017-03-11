@@ -302,6 +302,12 @@ section#news-section div#content {
     border: 1px solid black;
     display: none;
 }
+#login-register-popup #register-form {
+    display: none;
+}
+ #login-register-popup #login-form {
+     display: none;
+ }
 
 /*End of Login and Register form*/
 
