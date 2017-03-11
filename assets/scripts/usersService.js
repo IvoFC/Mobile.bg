@@ -13,24 +13,32 @@ var userModel = (function(){
         addUser: function(user) {
             if(user instanceof User) {
                 users.push(user)
+                console.log(user);
             }
         },
 
         loginUser: function(username, password) {
              return users.some(function(u) {
-                 return u.username === username && u.password === password;
+                 return u.firstName === username && u.password === password;
              });
             // Returns true or false
         },
 
-        validate: function(username, password, repeatedPassword) {
+        validate: function(username, lastname, town, email, password, repeatedPassword) {
+            // Validate registration form -->
             if(users.indexOf(username) !== -1) {
                 return username;
+            } else if(lastname === '') {
+                return lastname;
+            } else if(town === '') {
+                return town;
+            } else if(email === '') {
+                return email;
             } else if(password.length < 3) {
                 return password;
             } else if(password != repeatedPassword) {
                 return repeatedPassword;
-            } else {
+            }  else {
                 return true;
             }
         }
