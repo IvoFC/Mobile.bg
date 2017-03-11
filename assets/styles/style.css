@@ -116,6 +116,7 @@ body {
     border-radius: 10px 10px 0px 0px;
     text-align: center;
     padding: 7px;
+    box-sizing: border-box;
 }
 
 #siteNav .menu {
@@ -149,11 +150,46 @@ body {
 #publish {
     border: 1px solid #09F;
     border-top: 2px solid #09F;
+    padding: 10px;
 }
+
+#publish table th{
+    text-align: left;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+
+#publishTable select {
+    width: 100%;
+}
+
+#checkBoxes {
+    display: flex;
+    flex-direction: row;
+}
+
+#checkBoxes table td{
+    padding: 0px 30px 0px 0px;
+}
+
 
 /*Hide publish page*/
 #publishCars {
     display: none;
+}
+
+#publishTable td {
+    padding: 5px;
+}
+
+#publish Table {
+    font-size: 0.7em;
+}
+
+#publishTable label {
+    font-weight: bold;
+    color: #09F;
 }
 
 #search {
@@ -302,6 +338,12 @@ section#news-section div#content {
     border: 1px solid black;
     display: none;
 }
+#login-register-popup #register-form {
+    display: none;
+}
+ #login-register-popup #login-form {
+     display: none;
+ }
 
 /*End of Login and Register form*/
 
