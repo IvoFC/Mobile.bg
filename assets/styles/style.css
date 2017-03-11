@@ -149,7 +149,24 @@ body {
 #publish {
     border: 1px solid #09F;
     border-top: 2px solid #09F;
+    padding: 10px;
 }
+
+#publish table th{
+    text-align: left;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+#checkBoxes {
+    display: flex;
+    flex-direction: row;
+}
+
+#checkBoxes table td{
+    padding: 0px 30px 0px 0px;
+}
+
 
 /*Hide publish page*/
 #publishCars {
@@ -160,8 +177,13 @@ body {
     padding: 5px;
 }
 
-#publishTable {
-    font-size: 0.8em;
+#publish Table {
+    font-size: 0.7em;
+}
+
+#publishTable label {
+    font-weight: bold;
+    color: #09F;
 }
 
 #search {
