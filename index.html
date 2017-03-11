@@ -629,7 +629,7 @@
                             <option value="147">Други
 
                         </select>
-                        <button>ТЪРСИ</button>
+                        <button>Т Ъ Р С И</button>
                         <i style="font-size: 11px" class="fa fa-angle-double-right" aria-hidden="true"></i><a
                             class="searching" href="">Подробно търсене</a>
                     </form>
@@ -707,6 +707,527 @@
                 </form>
             </div>
         </section>
+    </div>
+
+
+    <div id="search">
+        <form>
+            <table id="mainCategory">
+                <tr>
+                    <td colspan="2"><label for="main-category">Основна Категория</label></td>
+                    <td colspan="6"><label>Рубрика</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="main-category" id="main-category">
+                            <option selected="" value="1">Автомобили</option>
+                            <option value="2">Джипове</option>
+                            <option value="3">Бусове</option>
+                            <option value="4">Камиони</option>
+                            <option value="5">Мотоциклети</option>
+                            <option value="6">Селскостопански</option>
+                            <option value="7">Индустриални</option>
+                            <option value="8">Кари</option>
+                            <option value="9">Каравани</option>
+                            <option value="10">Яхти и Лодки</option>
+                            <option value="11">Ремаркета</option>
+                            <option value="12">Велосипеди</option>
+                        </select>
+                    </td>
+                    <td>
+                        <img src="assets/img/p1.gif">
+                    </td>
+                    <td><input type="radio" name="rubrique" value="Автомобили"> Автомобили</td>
+                    <td><input type="radio" name="rubrique" value="Автомобили"> Части</td>
+                    <td><input type="radio" name="rubrique" value="Автомобили"> Аксесоари</td>
+                    <td><input type="radio" name="rubrique" value="Автомобили"> Гуми и джанти</td>
+                    <td><input type="radio" name="rubrique" value="Автомобили"> Услуги</td>
+                    <td><input type="radio" name="rubrique" value="Автомобили"> Купува</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Марка</label>
+                        <select name="brand" class="brand">
+                            <option value="">Избери</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label>Модел</label>
+                        <select name="model" class="model">
+                            <option value="">Избери</option>
+                        </select>
+                    </td>
+                    <td>
+                        <p>Състояние</p>
+                        <input type="checkbox" value="Нов"><span>Нов</span>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="Употребяван"><span>Употребяван</span>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="За части"><span>За части</span>
+                    </td>
+                    <td>
+                        <button>Т Ъ Р С И</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="brand" class="brand">
+                            <option value="">Избери</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="model" class="model">
+                            <option value="">Избери</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="brand" class="brand">
+                            <option value="">Избери</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="model" class="model">
+                            <option value="">Избери</option>
+                        </select>
+                    </td>
+                    <td><label>Година на производство</label>
+                        <select name="from" id="from">
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="to" id="to">
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <td>
+                        <label>Сортиране според:</label>
+                        <select name="searchKind" id="searchKind">
+                            <option value="1">VIP/Марка/Модел/Цена</option>
+                            <option value="2">Марка/Модел/Цена</option>
+                            <option value="3">Цена</option>
+                            <option value="4">Дата на производство</option>
+                            <option value="5">Пробег</option>
+                            <option value="6">Най-новите обяви</option>
+                            <option value="7">Най-новите обяви от посл. 2 дни</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>от</span>
+                    </td>
+                    <td>
+                        <label>Цена</label>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <span>до</span>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <select name="price" id="price">
+                            <option value="1">лв.</option>
+                            <option value="2">EUR</option>
+                            <option value="3">USD</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label>Мощност от (к.с.):</label>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <label>до:</label>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <label>Категория</label>
+                        <select name="category" id="category">
+                            <option value="0">всички категории</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label>Евростандарт</label>
+                        <select name="euroStandart" id="euroStandart">
+                            <option value="0">Без значение</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Тип двигател</label>
+                        <select name="engineType" id="engineType">
+                            <option value="0">всички типове</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label>Скоростна кутия</label>
+                        <select name="transmissionBox" id="transmissionBox">
+                            <option value="0">Без значение</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label>Макс.пробег в км</label>
+                        <select name="maxMileage" id="maxMileage">
+                            <option value="0">Без значение</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label>Цвят</label>
+                        <select name="color" id="color">
+                            <option value="0">Всички цветове</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label>Регион</label>
+                        <select name="region" id="region">
+                            <option value="0">всички региони</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label>Населено място</label>
+                        <select name="city" id="city">
+                            <option value="0">всички места</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <table id="safety">
+                <tr>
+                    <th>Безопасност</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"
+                               value="GPS система за проследяване"><span>GPS система за проследяване</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Автоматичен контрол на стабилността"><span>Автоматичен контрол на стабилността</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Адаптивни предни светлини"><span>Адаптивни предни светлини</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Антиблокираща система"><span>Антиблокираща система</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"
+                               value="Въздушни възглавници - Задни"><span> Въздушни възглавници - Задни</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"
+                               value="Въздушни възглавници - Предни"><span>Въздушни възглавници - Предни</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Въздушни възглавници - Странични"><span>Въздушни възглавници - Странични</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Ел. разпределяне на спирачното усилие"><span>Ел. разпределяне на спирачното усилие</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Електронна програма за стабилизиран"><span>Електронна програма за стабилизиран</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Контрол на налягането на гумите"><span>Контрол на налягането на гумите</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Парктроник"><span>Парктроник</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Система ISOFIX"><span>Система ISOFIX</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Система за динамична устойчивост"><span>Система за динамична устойчивост</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Система за защита от пробуксуване"><span>Система за защита от пробуксуване</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Система за изсушаване на накладките"><span>Система за изсушаване на накладките</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Система за контрол на дистанцията"><span>Система за контрол на дистанцията</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Система за подпомагане на спирането"><span>Система за подпомагане на спирането</span>
+                    </td>
+                </tr>
+            </table>
+            <table id="comfort">
+                <tr>
+                    <th>Комфорт</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Auto Start Stop function"><span>Auto Start Stop function</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"
+                               value="Bluetooth \ handsfree система"><span>Bluetooth \ handsfree система</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="DVD, TV"><span>DVD, TV</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Steptronic, Tiptronic"><span>Steptronic, Tiptronic</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="USB, audio\video, IN\AUX изводи"><span>USB, audio\video, IN\AUX изводи</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"
+                               value="Адаптивно въздушно окачване"><span>Адаптивно въздушно окачване</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Безключово палене "><span>Безключово палене </span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Блокаж на диференциала"><span>Блокаж на диференциала</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Бордкомпютър"><span>Бордкомпютър</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Датчик за светлина"><span>Датчик за светлина</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Ел. Огледала"><span>Ел. Огледала</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Ел. Стъкла"><span>Ел. Стъкла</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"
+                               value="Ел. регулиране на окачването"><span>Ел. регулиране на окачването</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"
+                               value="Ел. регулиране на седалките"><span>Ел. регулиране на седалките</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Ел. усилвател на волана"><span>Ел. усилвател на волана</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Климатик"><span>Климатик</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Климатроник"><span>Климатроник</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Мултифункционален волан"><span>Мултифункционален волан</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Навигация"><span>Навигация</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Отопление на волана"><span>Отопление на волана</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Печка"><span>Печка</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"
+                               value="Подгряване на предното стъкло"><span>Подгряване на предното стъкло</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Подгряване на седалките"><span>Подгряване на седалките</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Регулиране на волана"><span>Регулиране на волана</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Сензор за дъжд"><span>Сензор за дъжд</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Серво усилвател на волана"><span>Серво усилвател на волана</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Система за измиване на фаровете"><span>Система за измиване на фаровете</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Система за контрол на скоростта"><span>Система за контрол на скоростта</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Стерео уредба"><span>Стерео уредба</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Филтър за твърди частици"><span>Филтър за твърди частици</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Хладилна жабка"><span>Хладилна жабка</span></td>
+                </tr>
+            </table>
+            <table id="misc">
+                <tr>
+                    <th>Други</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="4x4"><span>4x4</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="7 места"><span>7 места</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Buy back"><span>Buy back</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Бартер"><span>Бартер</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Газова уредба"><span>Газова уредба</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Капариран/Продаден"><span>Капариран/Продаден</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Катастрофирал"><span>Катастрофирал</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Лизинг"><span>Лизинг</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Метанова уредба"><span>Метанова уредба</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="На части"><span>На части</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Напълно обслужен"><span>Напълно обслужен</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Нов внос"><span>Нов внос</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="С право на дан. к-т"><span>С право на дан. к-т</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="С регистрация"><span>С регистрация</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Сервизна книжка"><span>Сервизна книжка</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Тунинг"><span>Тунинг</span></td>
+                </tr>
+
+                <th>Екстериор</th>
+                <tr>
+                    <td><input type="checkbox" value="2(3) врати"><span>2(3) врати</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="4(5) врати"><span>4(5) врати</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="LED фарове"><span>LED фарове</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Ксенонови фарове"><span>Ксенонови фарове</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Лето джанти"><span>Лети джанти</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Металик"><span>Металик</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Отопляеми чистачки"><span>Отопляеми чистачки</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Панорамен люк"><span>Панорамен люк</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Спойлери"><span>Спойлери</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Теглич"><span>Теглич</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Халогенни фарове"><span>Халогенни фарове</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Шибедах"><span>Шибедах</span></td>
+                </tr>
+            </table>
+            <table id="security">
+                <tr>
+                    <th>Защита</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Аларма"><span>Аларма</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Брониран"><span>Брониран</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Имобилайзер"><span>Имобилайзер</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Каско"><span>Каско</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Централно заключване"><span>Централно заключване</span></td>
+                </tr>
+                <th>Интериор</th>
+                <tr>
+                    <td><input type="checkbox" value="Велурен салон"><span>Велурен салон</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Десен волан"><span>Десен волан</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Кожен салон"><span>Кожен салон</span></td>
+                </tr>
+                <th>Специализирани</th>
+                <tr>
+                    <td><input type="checkbox" value="TAXI"><span>TAXI</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="За хора с увреждания"><span>За хора с увреждания</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Катафалка"><span>Катафалка</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Линейка"><span>Линейка</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Учебен"><span>Учебен</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="Хладилен"><span>Хладилен</span></td>
+                </tr>
+            </table>
+            <ul>
+                <li><input type="checkbox" value="Само обяви със снимка">Само обяви със снимка</li>
+                <li><input type="checkbox" value="Само обяви с видео">Само обяви с видео</li>
+            </ul>
+            <ul>
+                <li><input type="radio" value="Всички обяви"><span>Всички обяви </span></li>
+                <li><input type="radio"
+                           value="Обяви на регистрирани търговци "><span>Обяви на регистрирани търговци </span></li>
+                <li><input type="radio" value="Обяви на частни лица"><span>Обяви на частни лица</span></li>
+            </ul>
+        </form>
     </div>
 
 
