@@ -202,7 +202,7 @@ body {
     width: 35%;
 }
 
-#search h2, #news-section h2 {
+#search h2, #news-section h1 {
     height: 25px;
     font-weight: bold;
     font-size: 16px;
@@ -215,7 +215,10 @@ body {
     border: 2px solid #09F;
     padding: 0.5em;
 }
-
+/*#search input, select {
+    display: block;
+}*/
+/*
 #search #main-category {
     width: 75%;
     float: left;
@@ -226,23 +229,23 @@ body {
 #search label:first-of-type {
     width: 50%;
 }
-
+*/
 #search .important-label-for-cars {
     display: inline-block;
     font-size: 0.8em;
     font-weight: bold;
     margin-left: 0.5em;
 }
-
+/*
 #search label, #se select {
     float: left;
     width: 44%;
     margin-left: 0.3em;
 }
-
+*/
 #search #state-car-categories {
     display: block;
-}
+} /*
 
 #search .state {
     float: left;
@@ -259,34 +262,61 @@ body {
 #search #state-car-categories {
     clear: both;
     width: 100%;
-}
+}*/
+
+/*End of search box*/
+
 
 /*News section*/
-section#news-section {
+
+#news-section {
     float: left;
-    width: 35%;
-    margin-left: 2em;
+    width: 33%;
+    /* display: inline-block; */
+    margin-left: 1em;
+    border-bottom: 1px solid #09F;
+    padding-bottom: 0.4em;
+    margin-bottom: 0.5em;
 }
-
-section#news-section .feed-item-desc {
-    display: none;
+#news-section h3 {
+    float: left;
+    width: 45%;
+    font-weight: bold;
 }
-
-/*
-section#news-section div#content {
+#news-section img {
+    float: right;
+    width: 50%;
+    height: 100px;
+}
+#news-section span {
+    clear:both;
+    float: right;
+    color: grey;
+    font-size: 0.7em;
+    padding: 0.2em 0;
+}
+#news-section #more-news {
+    clear: both;
+    border-top: 1px solid black;
+}
+#news-section #more-news ul{
+    list-style-type: square;
+    width: 95%;
+    float: right;
+}
+#news-section #more-news ul li{
     width: 100%;
+    margin: 0.3em 0;
 }
-*/
-
-.rss2html-note {
-    display: none;
-}
-
-#content h4 a {
+#news-section #more-news ul li a{
+    font-size: 0.9em;
     color: black;
-    padding-bottom: 2em;
-
+    text-decoration: none;
 }
+#news-section #more-news ul li:hover {
+    text-decoration: underline;
+}
+/*End of news section*/
 
 #part3 > section {
     /*display: flex;*/
@@ -309,11 +339,12 @@ section#news-section div#content {
 
 #login-section {
     float: right;
-    /*display: inline-block;*/
-    width: 25%;
+    width: 28%;
     border: 1px solid grey;
 }
-
+#login-section #left-register-link {
+    float: left;
+}
 #login-section h3 {
     text-align: left;
     padding: 5px 8px;
@@ -324,17 +355,43 @@ section#news-section div#content {
     margin-bottom: 2em;
 }
 
-#login-section div {
-    margin: 2em;
+#login-section #left-register-link h4 {
+    text-decoration: underline;
+    color: #09419b;
+    font-weight: bold;  
+    font-size: 1em;
 }
-
+#login-section #left-register-link p {
+    font-size: 0.8em;
+}
 #login-section button {
     float: right;
     width: 30%;
+    padding: 5px;
+    margin-right: 1em;
+    color: white;
     background-color: #224b8e;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-weight: bold;
 }
-
+#login-section #login-bottom-links {
+    margin-top: 1em;
+    border-top: 1px dashed grey;
+    padding: 0.3em;
+    display: inline-block;
+}
+#login-section #login-bottom-links img {
+    float: left;
+    width: 7%;
+    margin-left: 2px;
+}
+#login-section #login-bottom-links  p {
+    float: left;
+    width: 24%;
+    font-size: 0.7em;
+    margin-left: 0.2em;
+}
+/*Styling login-register popup-->*/
 #login-register-popup {
     position: fixed;
     bottom: 0;
