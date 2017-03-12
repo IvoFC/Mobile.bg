@@ -44,7 +44,8 @@ body {
 #siteNav a {
     text-decoration: none;
     color: white;
-    padding: 4px;
+    padding: 5px;
+    height: auto;
 }
 
 #bottomNav {
@@ -105,6 +106,7 @@ body {
     padding-bottom: 20px;
 }
 
+
 #siteNav {
     background-color: dimgray;
     color: white;
@@ -147,23 +149,24 @@ body {
     background: rgba(0, 153, 255, 0.2);
 }
 
-#publish, #searching {
+#publish {
     border: 1px solid #09F;
     border-top: 2px solid #09F;
     padding: 10px;
 }
 
-#publish table th, #searching table th {
+#publish table th{
     text-align: left;
     font-weight: bold;
     padding: 10px 0px;
 }
 
-#publishTable select, #searching select {
+
+#publishTable select {
     width: 100%;
 }
 
-.checkBoxes {
+#checkBoxes {
     display: flex;
     flex-direction: row;
 }
@@ -178,24 +181,58 @@ body {
     display: none;
 }
 
-/*Hide searching page*/
-
-#searching {
-    display: none;
-}
-
-#publishTable td, #searching td {
+#publishTable td {
     padding: 5px;
 }
 
-#publish table, #searching table {
+#publish table {
     font-size: 0.7em;
 }
 
-#publishTable label, #searching label {
+#publishTable label {
     font-weight: bold;
     color: #09F;
 }
+
+#additionalInfo {
+    display: inline-block;
+    width: 260px;
+    padding-right: 20px;
+}
+
+#additionalInfo p {
+    font-size: 0.7em;
+}
+
+
+#publishBottom {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+#publishBottom h4 {
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+#feedback label {
+    color: #09F;
+    font-weight: bold;
+}
+
+#feedback {
+    padding-right: 20px;
+}
+
+#feedback table td {
+    padding: 5px;
+}
+
+#newsPaper label{
+    font-size: 0.7em;
+}
+
 
 #search {
     float: left;
@@ -594,8 +631,4 @@ footer section .bottomFooter ul li a {
 footer section .bottomFooter span {
     float: right;
     font-size: 11px;
-}
-
-#searching {
-
 }
