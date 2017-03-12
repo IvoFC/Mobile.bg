@@ -88,21 +88,21 @@
         <section id="search">
             <h2>Търсене в mobile.bg - Автомобили</h2>
             <div>
-                <form action="">
+                <form id="searchForm" action="">
                     
                     <!--TO-DO ->
                         1. Download imgs for categories.
                         2. Changing image when change category.
                         -->
 
-                        <table>
+                        <table id="mainSearch">
                             <tr>
-                                <td>
+                                <td colspan="2">
                                     <label for="main-category" class="important-label-for-cars">Основна Категория</label>
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2">
+                                <td>
                                     <select name="main-category" id="main-category">
                                         <option selected="" value="1">Автомобили</option>
                                         <option value="2">Джипове</option>
@@ -118,13 +118,20 @@
                                         <option value="12">Велосипеди</option>
                                     </select>
                                 </td>
-                                <td>
+                                <td style="text-align: center">
                                     <img src="assets/img/car-categories/p1.gif" alt=""> 
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <label for="car-brand" class="important-label-for-cars">Марка</label>
+                                </td>
+                                <td>
+                                     <label for="model" class="important-label-for-cars">Модел:</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
                                         <select name="" id="car-brand" class="">
                                             <option value="">всички</option>
                                             <option value="AC">AC</option>
@@ -244,21 +251,24 @@
                                     </select>
                                 </td>
                                 <td>
-                                     <label for="model" class="important-label-for-cars">Модел:</label>
-                                </td>
-                                <td>
                                     <select name="model" id="model">
                                     <option value="">Всички</option>
                                     </select>
                                 </td>
                             </tr>
                             <tr>
+                            <tr>
                                 <td>
-                                  <label for="price" class="important-label-for-cars">Максимална цена:</label>
+                                    <label for="price" class="important-label-for-cars">Максимална цена:</label>
+                                </td>
+                                <td>
+                                    <label for="year" class="important-label-for-cars">Година</label>
+                                </td>
+                            </tr>
+                                <td>
                                   <input type="text" name="" value="" id="price">
                                 </td>
                                 <td>
-                                     <label for="year">Година</label>
                                     <select name="" id="year">
                                         <option value="2000">2000</option>
                                         <option value="2005">2005</option>
@@ -267,8 +277,15 @@
                                 </td>
                             </tr>
                             <tr>
+                            <tr>
                                 <td>
-                                    <label for="car-engine">Двигател</label>
+                                    <label for="car-engine" class="important-label-for-cars">Двигател</label>
+                                </td>
+                                <td>
+                                    <label for="transmis" class="important-label-for-cars">Скоростна кутия</label>
+                                </td>
+                            </tr>
+                                <td>
                                     <select name="" id="car-engine">
                                         <option value="">всички</option>
                                         <option value="Бензинов">Бензинов</option>
@@ -278,7 +295,6 @@
                                     </select>
                                 </td>
                                 <td>
-                                    <label for="transmis">Скоростна кутия</label>
                                     <select name="" id="transmis">
                                         <option value="">всички</option>
                                         <option value="Ръчна">Ръчна</option>
@@ -288,12 +304,12 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td colspan="2">
                                       <label class="important-label-for-cars" id="state-car-categories">Състояние</label>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td colspan="2">
                                     <span>
                                         <input type="checkbox" id="state-new" value="new" checked="checked">
                                         <label class="state" for="state">Нов</label>
@@ -312,7 +328,7 @@
                                 <td>
                                     <a href="">Подробно Търсене</a>
                                 </td>
-                                <td>
+                                <td style="text-align: center">
                                     <button>Търси</button>
                                 </td>
                             </tr>
