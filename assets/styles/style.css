@@ -45,7 +45,7 @@ body {
     text-decoration: none;
     color: white;
     padding: 5px;
-    height: auto;
+    padding-bottom: 6px;
 }
 
 #bottomNav {
@@ -161,7 +161,9 @@ body {
     padding: 10px 0px;
 }
 
-
+#publish form{
+    padding-left: 70px;
+}
 #publishTable select {
     width: 100%;
 }
@@ -231,6 +233,15 @@ body {
 
 #newsPaper label{
     font-size: 0.7em;
+}
+
+#agreeAndSubmit span {
+    font-size: 0.7em;
+}
+
+#agreeAndSubmit {
+    display: inline-block;
+    float: right;
 }
 
 
@@ -631,8 +642,4 @@ footer section .bottomFooter ul li a {
 footer section .bottomFooter span {
     float: right;
     font-size: 11px;
-}
-
-#searching {
-    display: none;
 }
