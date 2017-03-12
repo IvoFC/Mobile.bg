@@ -246,7 +246,7 @@
                         <option value="2010">2010</option>
                     </select>
 
-                    <input type="text" name="" value="" id="price">
+                    <input type="text" name="" value="" id="priceCar">
 
                     <label for="car-engine">Двигател</label>
                     <label for="transmis">Скоростна кутия</label>
@@ -310,6 +310,7 @@
         <div id='login-register-popup'>
             <button id="showLoginForm">Login</button>
             <button id="showRegistrationForm">Registration</button>
+            <button id="close-popup">X</button>
             <form id='login-form'>
                 <label for="username">E-mail или Username / за дилъри /</label>
                 <input type="text" id="username">
@@ -1466,7 +1467,8 @@
                             
                         </div>
                         <div id="button">
-                            <input name="submit" type="button" value="ПУБЛИКУВАЙ ТЕКСТА" style="width: 230px; height: 40px; font-weight: bold;">
+                            <input id="publishButton" name="submit" type="button" value="ПУБЛИКУВАЙ ТЕКСТА"
+                                   style="width: 230px; height: 40px; font-weight: bold;">
                             <p>*След публикуване на текста ще можете да качите снимки</p>
                         </div>
 
@@ -1599,7 +1601,7 @@
                         <input type="text">
                     </td>
                     <td>
-                        <select name="price" id="price">
+                        <select name="price" id="price1">
                             <option value="1">лв.</option>
                             <option value="2">EUR</option>
                             <option value="3">USD</option>
@@ -2133,6 +2135,6 @@
 <script src="assets/scripts/userControllers.js"></script>
 <script src="assets/scripts/usersService.js"></script>
 <script src="assets/scripts/carController.js"></script>
-<script src="assets/scripts/carController.js"></script>
+<script src="assets/scripts/carService.js"></script>
 </body>
 </html>
