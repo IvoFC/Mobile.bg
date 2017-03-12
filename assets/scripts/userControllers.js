@@ -46,17 +46,20 @@
         var password = inputs[0].value.trim();
         if(userModel.loginUser(username, password)) {
             console.log('You login succesfully');
+            inputs[0].value = ''; 
+            inputs[1].value = '';
         } else {
             if(document.getElementById('error') !== inputs[0].parentElement.lastChild) {
                 var error = document.createElement('p');
                 error.id = 'error';
                 error.textContent = 'Въвели сте неправилно потребителско име или парола.';
                 inputs[0].parentElement.appendChild(error);
+                inputs[0].value = ''; 
+                inputs[1].value = '';
             }
         }
         event.preventDefault();
     }, false)
-
     // Register button in popup ->
     var finalRegisterButton = document.getElementById('submit-register-form');
     finalRegisterButton.addEventListener('click', function() {

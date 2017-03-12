@@ -10,6 +10,8 @@ var userModel = (function(){
      var users = [];
 
     return {
+        usersss: users,
+        
         addUser: function(user) {
             if(user instanceof User) {
                 users.push(user)
@@ -19,14 +21,14 @@ var userModel = (function(){
 
         loginUser: function(username, password) {
              return users.some(function(u) {
-                 return u.firstName === username && u.password === password;
+                 return (u.firstName === username || u.email === username) && u.password === password;
              });
             // Returns true or false
         },
 
         validate: function(username, lastname, town, email, password, repeatedPassword) {
             // Validate registration form -->
-            if(users.indexOf(username) !== -1) {
+            if(users.indexOf(username) !== -1 || username == '') {
                 return username;
             } else if(lastname === '') {
                 return lastname;
