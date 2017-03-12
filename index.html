@@ -695,12 +695,9 @@
         <section>
             <div class="box active">1. Публикуване на текста</div>
             <img src="assets/img/nav_arrow.gif"/>
-            <div class="box">2. Преглед на текста</div>
+            <div class="box">2. Добавяне на снимки и видео</div>
             <img src="assets/img/nav_arrow.gif"/>
-            <div class="box">3. Добавяне на снимки и видео</div>
-            <img src="assets/img/nav_arrow.gif"/>
-            <div class="box">4. Преглед на обявата</div>
-            <div class="box">Изтриване на обявата</div>
+            <div class="box">3. Публикуване на обявата</div>
         </section>
         <section>
             <div style="padding: 10px 0px"><span style="font-weight: bold">Публикуване на безплатна обява - Автомобили - Публикуване на текст</span>
@@ -1506,34 +1503,38 @@
                     <td>
                         <img src="assets/img/p1.gif">
                     </td>
-                    <td><input type="radio" name="rubrique" value="Автомобили"> Автомобили</td>
-                    <td><input type="radio" name="rubrique" value="Автомобили"> Части</td>
-                    <td><input type="radio" name="rubrique" value="Автомобили"> Аксесоари</td>
-                    <td><input type="radio" name="rubrique" value="Автомобили"> Гуми и джанти</td>
-                    <td><input type="radio" name="rubrique" value="Автомобили"> Услуги</td>
-                    <td><input type="radio" name="rubrique" value="Автомобили"> Купува</td>
+                    <td colspan="6"><input type="radio" name="rubrique" value="Автомобили"> Автомобили
+                    <input type="radio" name="rubrique" value="Автомобили"> Части
+                    <input type="radio" name="rubrique" value="Автомобили"> Аксесоари
+                    <input type="radio" name="rubrique" value="Автомобили"> Гуми и джанти
+                    <input type="radio" name="rubrique" value="Автомобили"> Услуги
+                    <input type="radio" name="rubrique" value="Автомобили"> Купува</td>
                 </tr>
                 <tr>
                     <td>
                         <label>Марка</label>
+                    </td>
+                    <td>
+                        <label>Модел</label>
+                    </td>
+                    <td>
+                        <label>Състояние</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <select name="brand" class="brand">
                             <option value="">Избери</option>
                         </select>
                     </td>
                     <td>
-                        <label>Модел</label>
                         <select name="model" class="model">
                             <option value="">Избери</option>
                         </select>
                     </td>
-                    <td>
-                        <p>Състояние</p>
+                    <td colspan="3">
                         <input type="checkbox" value="Нов"><span>Нов</span>
-                    </td>
-                    <td>
                         <input type="checkbox" value="Употребяван"><span>Употребяван</span>
-                    </td>
-                    <td>
                         <input type="checkbox" value="За части"><span>За части</span>
                     </td>
                     <td>
@@ -1551,6 +1552,10 @@
                             <option value="">Избери</option>
                         </select>
                     </td>
+                    <td colspan="2"><label>Година на производство</label>
+                    <td>
+                        <label>Сортиране според:</label>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -1558,12 +1563,13 @@
                             <option value="">Избери</option>
                         </select>
                     </td>
+                    
                     <td>
                         <select name="model" class="model">
                             <option value="">Избери</option>
                         </select>
                     </td>
-                    <td><label>Година на производство</label>
+                    <td>
                         <select name="from" id="from">
                             <option value=""></option>
                         </select>
@@ -1574,7 +1580,6 @@
                         </select>
                     </td>
                     <td>
-                        <label>Сортиране според:</label>
                         <select name="searchKind" id="searchKind">
                             <option value="1">VIP/Марка/Модел/Цена</option>
                             <option value="2">Марка/Модел/Цена</option>
@@ -1585,13 +1590,17 @@
                             <option value="7">Най-новите обяви от посл. 2 дни</option>
                         </select>
                     </td>
+                    <td><label>Мощност от (к.с.):</label></td>
+                    <td><label>до:</label></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center"><label>Цена</label></td>
                 </tr>
                 <tr>
                     <td>
                         <span>от</span>
                     </td>
                     <td>
-                        <label>Цена</label>
                         <input type="text">
                     </td>
                     <td>
@@ -1608,61 +1617,61 @@
                         </select>
                     </td>
                     <td>
-                        <label>Мощност от (к.с.):</label>
                         <input type="text">
                     </td>
                     <td>
-                        <label>до:</label>
                         <input type="text">
-                    </td>
-                    <td>
-                        <label>Категория</label>
-                        <select name="category" id="category">
-                            <option value="0">всички категории</option>
-                        </select>
-                    </td>
-                    <td>
-                        <label>Евростандарт</label>
-                        <select name="euroStandart" id="euroStandart">
-                            <option value="0">Без значение</option>
-                        </select>
                     </td>
                 </tr>
+                                <tr>
+                                    <td><label>Тип двигател</label></td>
+                                    <td><label>Скоростна кутия</label></td>
+                                    <td><label>Макс.пробег в км</label></td>
+                                    <td><label>Цвят</label></td>
+                                    <td><label>Регион</label></td>
+                                    <td><label>Населено място</label></td>
+                                    <td><label>Категория</label></td>
+                                    <td><label>Евростандарт</label></td>
+                                </tr>
                 <tr>
-                    <td>
-                        <label>Тип двигател</label>
+                    <td> 
                         <select name="engineType" id="engineType">
                             <option value="0">всички типове</option>
                         </select>
                     </td>
                     <td>
-                        <label>Скоростна кутия</label>
                         <select name="transmissionBox" id="transmissionBox">
                             <option value="0">Без значение</option>
                         </select>
                     </td>
                     <td>
-                        <label>Макс.пробег в км</label>
                         <select name="maxMileage" id="maxMileage">
                             <option value="0">Без значение</option>
                         </select>
                     </td>
                     <td>
-                        <label>Цвят</label>
                         <select name="color" id="color">
                             <option value="0">Всички цветове</option>
                         </select>
                     </td>
                     <td>
-                        <label>Регион</label>
                         <select name="region" id="region">
                             <option value="0">всички региони</option>
                         </select>
                     </td>
                     <td>
-                        <label>Населено място</label>
                         <select name="city" id="city">
                             <option value="0">всички места</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="category" id="category">
+                            <option value="0">всички категории</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="euroStandart" id="euroStandart">
+                            <option value="0">Без значение</option>
                         </select>
                     </td>
                 </tr>
@@ -2007,6 +2016,7 @@
                            value="Обяви на регистрирани търговци "><span>Обяви на регистрирани търговци </span></li>
                 <li><input type="radio" value="Обяви на частни лица"><span>Обяви на частни лица</span></li>
             </ul>
+            
         </form>
     </div>
 
