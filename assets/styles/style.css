@@ -45,7 +45,7 @@ body {
     text-decoration: none;
     color: white;
     padding: 5px;
-    height: auto;
+    padding-bottom: 6px;
 }
 
 #bottomNav {
@@ -114,7 +114,6 @@ body {
     font-family: Verdana, Geneva, sans-serif;
     font-size: 1em;
     display: inline-block;
-    border: 1px solid white;
     border-radius: 10px 10px 0px 0px;
     text-align: center;
     padding: 7px;
@@ -161,10 +160,13 @@ body {
     padding: 10px 0px;
 }
 
-
+#publish form{
+    padding-left: 70px;
+}
 #publishTable select {
     width: 100%;
 }
+
 
 #checkBoxes {
     display: flex;
@@ -172,7 +174,7 @@ body {
 }
 
 #checkBoxes table td{
-    padding: 0px 30px 0px 0px;
+    padding: 0px 20px 0px 0px;
 }
 
 
@@ -231,6 +233,15 @@ body {
 
 #newsPaper label{
     font-size: 0.7em;
+}
+
+#agreeAndSubmit span {
+    font-size: 0.7em;
+}
+
+#agreeAndSubmit {
+    display: inline-block;
+    float: right;
 }
 
 
