@@ -45,6 +45,7 @@ body {
     text-decoration: none;
     color: white;
     padding: 4px;
+    padding-bottom: 6px;
 }
 
 #bottomNav {
@@ -136,10 +137,6 @@ body {
     margin: 15px 0;
     font-size: 0.7em;
     padding: 10px;
-}
-
-.box:last-child {
-    margin-left: 80px;
 }
 
 .box.active {
