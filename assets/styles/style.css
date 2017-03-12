@@ -147,24 +147,23 @@ body {
     background: rgba(0, 153, 255, 0.2);
 }
 
-#publish {
+#publish, #searching {
     border: 1px solid #09F;
     border-top: 2px solid #09F;
     padding: 10px;
 }
 
-#publish table th{
+#publish table th, #searching table th {
     text-align: left;
     font-weight: bold;
     padding: 10px 0px;
 }
 
-
-#publishTable select {
+#publishTable select, #searching select {
     width: 100%;
 }
 
-#checkBoxes {
+.checkBoxes {
     display: flex;
     flex-direction: row;
 }
@@ -179,15 +178,21 @@ body {
     display: none;
 }
 
-#publishTable td {
+/*Hide searching page*/
+
+#searching {
+    display: none;
+}
+
+#publishTable td, #searching td {
     padding: 5px;
 }
 
-#publish Table {
+#publish table, #searching table {
     font-size: 0.7em;
 }
 
-#publishTable label {
+#publishTable label, #searching label {
     font-weight: bold;
     color: #09F;
 }
@@ -589,4 +594,8 @@ footer section .bottomFooter ul li a {
 footer section .bottomFooter span {
     float: right;
     font-size: 11px;
+}
+
+#searching {
+
 }
