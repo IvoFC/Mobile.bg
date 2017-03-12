@@ -210,6 +210,10 @@ body {
     color: #09F;
 }
 
+#publishTable {
+    margin-left: 40px;
+}
+
 #publish form {
     padding-left: 50px;
     box-sizing: border-box;
