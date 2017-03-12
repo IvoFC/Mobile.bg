@@ -23,7 +23,7 @@ body {
 #topNav a {
     text-decoration: none;
     color: white;
-    padding: 5px;
+    padding: 6px;
 }
 
 #topNav a:hover {
@@ -197,8 +197,8 @@ body {
 }
 
 #publishTable td, #searching td {
-    padding: 5px;
     padding-right: 20px;
+    padding: 5px;
 }
 
 #publish table, #searching table {
@@ -280,6 +280,25 @@ body {
     width: 100%;
 }
 
+#searching #mainCategory td {
+    padding: 5px;
+}
+
+#searching ul {
+    font-size: 0.7em;
+}
+#searching .checkBoxes td {
+    padding: 0px;
+    padding-right: 20px;
+}
+
+#searching .checkBoxes {
+    padding-left: 50px;
+}
+
+#searching {
+    padding: 20px;
+}
 /*News section*/
 section#news-section {
     float: left;
