@@ -23,7 +23,7 @@ body {
 #topNav a {
     text-decoration: none;
     color: white;
-    padding: 5px;
+    padding: 6px;
 }
 
 #topNav a:hover {
@@ -45,6 +45,7 @@ body {
     text-decoration: none;
     color: white;
     padding: 4px;
+    padding-bottom: 6px;
 }
 
 #bottomNav {
@@ -138,10 +139,6 @@ body {
     padding: 10px;
 }
 
-.box:last-child {
-    margin-left: 80px;
-}
-
 .box.active {
     border: 1px solid #09F;
     background: rgba(0, 153, 255, 0.2);
@@ -168,8 +165,23 @@ body {
     flex-direction: row;
 }
 
-#checkBoxes table td {
+.checkBoxes table td {
     padding: 0px 30px 0px 0px;
+}
+
+#button {
+    width: 290px;
+    box-sizing: border-box;
+    padding: 30px;
+    float: right;
+    display: inline-block;
+}
+
+#button p {
+    font-style: oblique;
+    color: #09F;
+    font-size: 0.7em;
+    padding: 5px;
 }
 
 
@@ -185,6 +197,7 @@ body {
 }
 
 #publishTable td, #searching td {
+    padding-right: 20px;
     padding: 5px;
 }
 
@@ -195,6 +208,16 @@ body {
 #publishTable label, #searching label {
     font-weight: bold;
     color: #09F;
+}
+
+#publishTable {
+    margin-left: 40px;
+}
+
+#publish form {
+    padding-left: 50px;
+    box-sizing: border-box;
+    display: inline-block;
 }
 
 #search {
@@ -267,6 +290,25 @@ body {
 /*End of search box*/
 
 
+#searching #mainCategory td {
+    padding: 5px;
+}
+
+#searching ul {
+    font-size: 0.7em;
+}
+#searching .checkBoxes td {
+    padding: 0px;
+    padding-right: 20px;
+}
+
+#searching .checkBoxes {
+    padding-left: 50px;
+}
+
+#searching {
+    padding: 20px;
+}
 /*News section*/
 
 #news-section {
