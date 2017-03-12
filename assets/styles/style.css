@@ -172,6 +172,21 @@ body {
     padding: 0px 30px 0px 0px;
 }
 
+#button {
+    width: 290px;
+    box-sizing: border-box;
+    padding: 30px;
+    float: right;
+    display: inline-block;
+}
+
+#button p {
+    font-style: oblique;
+    color: #09F;
+    font-size: 0.7em;
+    padding: 5px;
+}
+
 
 /*Hide publish page*/
 #publishCars {
@@ -200,6 +215,8 @@ body {
 
 #publish form {
     padding-left: 50px;
+    box-sizing: border-box;
+    display: inline-block;
 }
 
 #search {
