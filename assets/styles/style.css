@@ -42,10 +42,19 @@ body {
 }
 
 #siteNav a {
+    border: 1px solid white;
+    border-radius: 10px 10px 0px 0px;
+    background-color: dimgray;
     text-decoration: none;
     color: white;
-    padding: 4px;
-    padding-bottom: 6px;
+    padding: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    float: left;
+}
+
+#navMyMobile {
+    float: right;
 }
 
 #bottomNav {
@@ -107,23 +116,22 @@ body {
 }
 
 #siteNav {
-    background-color: dimgray;
+    margin-bottom: 0.5em;
     color: white;
     width: 100%;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 1em;
     display: inline-block;
-    border: 1px solid white;
-    border-radius: 10px 10px 0px 0px;
-    text-align: center;
-    padding: 7px;
     box-sizing: border-box;
 }
 
 #siteNav .menu {
-    display: inline-block;
+    width: 100%;
+    float: left;
     margin: auto;
 }
+
+
 
 #siteNav .active {
     background-color: #09F;
