@@ -153,7 +153,11 @@ body {
 }
 
 #mainSearch td {
-    padding: 5px 30px 0px 0px;
+    padding: 3px 10px 3px 10px;
+}
+
+#mainSearch select {
+    width: 100%;
 }
 
 #publish, #searching {
