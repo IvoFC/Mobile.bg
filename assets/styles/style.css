@@ -463,14 +463,52 @@ body {
     font-size: 0.7em;
     margin-left: 0.2em;
 }
+/*Finish styling og login and register form*/
+
 /*Styling login-register popup-->*/
 #login-register-popup {
+    padding: 2em;
     position: fixed;
-    bottom: 0;
+    top: 25%;
     left: 25%;
-    width: 50%;
+    width: 40%;
+    height: 60%;
+    border-radius: 15%;
+    background-color: white;
+    color: grey;
     border: 1px solid black;
     display: none;
+    z-index: 1;
+}
+#login-register-popup #showLoginForm, #showRegistrationForm {
+    /*display: inline-block;*/
+    padding: 1em;
+    border: 2px solid #09F;
+    border-radius: 25%;
+    color: white;
+    background-color: #224b8e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#login-register-popup #showLoginForm {
+    margin-left: 25%;
+}
+
+#login-register-popup #close-popup {
+    float: right;
+    background-color: grey;
+    color: white;
+    border-radius: 50%;
+    zoom: 2;
+}
+#login-register-popup form {
+    margin-top: 2em;
+}
+#login-register-popup form label,input {
+    display: block;
+    margin: auto;
+    text-align: center;
 }
 #login-register-popup #register-form {
     display: none;
