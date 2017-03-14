@@ -170,6 +170,10 @@ body {
     width: 100%;
 }
 
+#upload-image > img {
+    display: block;
+}
+
 #publish, #searching {
     border: 1px solid #09F;
     border-top: 2px solid #09F;
@@ -186,7 +190,7 @@ body {
     width: 100%;
 }
 
-.checkBoxes {
+.checkBoxes,  #upload-image{
     display: flex;
     flex-direction: row;
 }

@@ -1,11 +1,10 @@
-function Car(brand, model, price, engine, extras) {
+function Car(brand, model, price, engine, extras, image) {
     this.brand = brand;
     this.model = model;
     this.price = price;
     this.engine = engine;
     this.extras = extras;
-    this.images = [];
-
+    this.image = image;
 }
 
 var carManager = (function () {
