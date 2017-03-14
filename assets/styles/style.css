@@ -505,7 +505,8 @@ body {
 #login-register-popup form {
     margin-top: 2em;
 }
-#login-register-popup form label,input {
+
+#login-register-popup form label, #login-register-popup form input {
     display: block;
     margin: auto;
     text-align: center;
