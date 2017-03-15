@@ -1,8 +1,16 @@
-function Car(brand, model, price, engine, extras, image) {
+function Car(brand, model, region, gearBox, euroStand, horsePower, category, mileage, color, price, month, year, engine, extras, image) {
     this.brand = brand;
     this.model = model;
+    this.region = region;
+    this.category = category;
+    this.color = color;
     this.price = price;
+    this.dateOfMade = month + ' ' + year;
     this.engine = engine;
+    this.horsePower = horsePower;
+    this.gearBox = gearBox;
+    this.euroStandard = euroStand;
+    this.mileage = mileage;
     this.extras = extras;
     this.image = image;
 }

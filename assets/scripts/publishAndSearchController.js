@@ -117,6 +117,8 @@
         ['Чайка', '', 'М']
     ];
 
+    // Brand drop down menu
+
     var brand = '<option value=""></option> ';
 
     for (var brands = 0; brands < cars.length; brands++) {
@@ -127,6 +129,8 @@
         }
     }
     document.getElementById('brand').innerHTML = brand;
+
+    // Model drop down menu
 
     function changed() {
         var model = '';
@@ -157,6 +161,7 @@
     for (var region1 = 0; region1 < regions.length; region1++) {
         region += '<option value="' + regions[region1] + '">' + regions[region1] + '</option>'
     }
+
     document.getElementById('region1').innerHTML = region;
 
     // Color drop down:

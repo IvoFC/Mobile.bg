@@ -46,14 +46,41 @@
         var brand = getById('brand');
         brand = brand.options[brand.selectedIndex].value;
 
-        var model = getById('model');
+        var model = getById('model1');
         model = model.options[model.selectedIndex].value;
 
-        var price = getById('price');
+        var region = getById('region1');
+        region = region.options[region.selectedIndex].value;
+
+        var color = getById('color');
+        color = color.options[color.selectedIndex].value;
+
+        var month = getById('productionDate1');
+        month = month.options[month.selectedIndex].value;
+
+        var year = getById('productionDate2');
+        year = year.options[year.selectedIndex].value;
+
+        var price = getById('price2');
         price = price.value;
 
-        var engine = getById('engineType');
+        var category = getById('category1');
+        category = category.options[category.selectedIndex].value;
+
+        var engine = getById('engineType1');
         engine = engine.options[engine.selectedIndex].value;
+
+        var euroStandard = getById('euroStandard');
+        euroStandard = euroStandard.options[euroStandard.selectedIndex].value;
+
+        var gearBox = getById('gearBox');
+        gearBox = gearBox.options[gearBox.selectedIndex].value;
+
+        var mileage = getById('mileage');
+        mileage = mileage.value;
+
+        var horsePower = getById('horsePower');
+        horsePower = horsePower.value;
 
         var extras = [];
         var collectionCheckBox = document.querySelectorAll('.checkBoxes  input:checked');
@@ -61,7 +88,7 @@
             extras.push(collectionCheckBox[index].value);
         }
 
-        carManager.addCar(new Car(brand, model, price, engine, extras, imagefile));
+        carManager.addCar(new Car(brand, model, region, gearBox, euroStandard, horsePower, category, mileage, color, price, month, year, engine, extras));
 
         event.preventDefault();
     }, false);
