@@ -2,6 +2,7 @@
     var publishButton = document.querySelector(".publish");
     var searchButton = document.querySelector(".searching");
     var homeButton = document.querySelector('.homeBut');
+    var myMobileButton = document.getElementById('navMyMobile');
 
     publishButton.addEventListener('click', function (event) {
         var mainDIv = document.querySelector('#homePage');
@@ -51,5 +52,21 @@
 
         event.preventDefault();
     }, false);
+
+    myMobileButton.addEventListener('click', function(event) {
+        var mainDIv = document.querySelector('#homePage');
+        var publishPage = document.querySelector('#publishCars');
+        var searchingPage = document.querySelector('#searching');
+        var myMobilePage = document.querySelector('#my-mobile');
+
+        searchingPage.style.display = 'none';
+        publishPage.style.display = 'none';
+        mainDIv.style.display = 'none';
+        myMobilePage.style.display = 'block';
+
+        event.preventDefault();
+    }, false);
+
+    
 
 })();

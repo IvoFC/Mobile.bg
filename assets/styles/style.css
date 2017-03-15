@@ -706,6 +706,19 @@ embed {
     text-align: center;
 }
 
+/* Styling page - myMobile ->*/
+    #my-mobile, #my-mobile #show-version-for-users {
+        display: none;
+    }
+     #my-mobile #show-version-for-guests {
+         text-align: center;
+     }
+    #my-mobile #show-version-for-guests h3 {
+              font-weight: bold;
+              font-size: 1.3em;
+    }
+/*Finish with My mobile page*/
+
 /*Footer*/
 
 footer {
