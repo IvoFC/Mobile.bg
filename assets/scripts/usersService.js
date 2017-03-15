@@ -10,14 +10,7 @@ var userModel = (function(){
      var users = [];
 
     return {
-            // username: users[users.length - 1].firstName,
-        // username: (function() {
-        //     if(users.length != 0) {
-        //         return users[users.length - 1].firstName;
-        //     } else {
-        //         return false;
-        //     }
-        // })(),
+        // Get some info for current user to display it later ->            
         getUserInfo: function() {
             return users[users.length - 1].firstName;
         },
@@ -27,7 +20,7 @@ var userModel = (function(){
                 users.push(user)
             }
         },
-
+ 
         loginUser: function(username, password) {
              return users.some(function(u) {
                  return ((u.firstName === username || u.email === username) && u.password === password);
