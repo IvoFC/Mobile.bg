@@ -54,16 +54,16 @@
         }
 
         //selects
-        var inputSelects = document.querySelectorAll('#publish input[type="select"]');
+        var inputSelects = document.querySelectorAll('#publish select');
         for (var index = 0; index < inputSelects.length; index++) {
-            if(inputTexts[index].value != '') {
+            if(inputSelects[index].value != '') {
                 document.getElementById("previewSelections").innerHTML += inputSelects[index].name + ": <br/>";
                 document.getElementById("previewSelections").innerHTML += inputSelects[index].value + "<br/><br/>";
             }    
         }
 
         //input texts
-        var inputTexts = document.querySelectorAll('#publish select');
+        var inputTexts = document.querySelectorAll('#publish input[type="text"]');
         for (var index = 0; index < inputTexts.length; index++) {
             if(inputTexts[index].value != '') {
                 document.getElementById("previewSelections").innerHTML += inputTexts[index].name + ": <br/>";
