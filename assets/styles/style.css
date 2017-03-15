@@ -468,7 +468,15 @@ body {
     margin-left: 0.2em;
 }
 /*Finish styling og login and register form*/
-
+/*Styling logged users*/
+#login-section #logged-user {
+    width: 100%;
+    text-align: center;
+}
+#login-section #logged-user span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
 /*Styling login-register popup-->*/
 #login-register-popup {
     padding: 2em;

@@ -10,7 +10,17 @@ var userModel = (function(){
      var users = [];
 
     return {
-        usersss: users,
+            // username: users[users.length - 1].firstName,
+        // username: (function() {
+        //     if(users.length != 0) {
+        //         return users[users.length - 1].firstName;
+        //     } else {
+        //         return false;
+        //     }
+        // })(),
+        getUserInfo: function() {
+            return users[users.length - 1].firstName;
+        },
         
         addUser: function(user) {
             if(user instanceof User) {

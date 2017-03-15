@@ -46,6 +46,8 @@
             console.log('You login succesfully');
             inputs[0].value = ''; 
             inputs[1].value = '';
+            logged();
+
         } else {
             if(document.getElementById('error') !== inputs[0].parentElement.lastChild) {
                 var error = document.createElement('p');
