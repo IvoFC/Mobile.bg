@@ -174,7 +174,7 @@ body {
     display: block;
 }
 
-#publish, #searching {
+#publish, #searching, #mainViewPublication {
     border: 1px solid #09F;
     border-top: 2px solid #09F;
     padding: 10px;
@@ -199,21 +199,24 @@ body {
     padding: 0px 30px 0px 0px;
 }
 
-#button {
+.button {
     width: 290px;
     box-sizing: border-box;
     padding: 30px;
     float: right;
+}
+
+#backToPublishText:hover {
+    cursor: pointer;
+}
+
+#mainViewPublication {
     display: inline-block;
+    width: 100%;
 }
-
-#button p {
-    font-style: oblique;
-    color: #09F;
-    font-size: 0.7em;
-    padding: 5px;
+#viewPublication {
+    display: none;
 }
-
 
 /*Hide publish page*/
 #publishCars {

@@ -766,11 +766,9 @@
 
     <div id="publishCars">
         <section>
-            <div class="box active">1. Публикуване на текста</div>
+            <div class="box active">1. Публикуване на текста и добавяне на снимки</div>
             <img src="assets/img/nav_arrow.gif"/>
-            <div class="box">2. Добавяне на снимки и видео</div>
-            <img src="assets/img/nav_arrow.gif"/>
-            <div class="box">3. Публикуване на обявата</div>
+            <div class="box">2. Преглед на обявата</div>
         </section>
         <section>
             <div style="padding: 10px 0px"><span style="font-weight: bold">Публикуване на безплатна обява - Автомобили - Публикуване на текст</span>
@@ -806,11 +804,11 @@
                                 </td>
                                 <td colspan="6">
                                     <input type="radio" name="rubrique" value="Автомобили"> Автомобили
-                                    <input type="radio" name="rubrique" value="Автомобили"> Части
-                                    <input type="radio" name="rubrique" value="Автомобили"> Аксесоари
-                                    <input type="radio" name="rubrique" value="Автомобили"> Гуми и джанти
-                                    <input type="radio" name="rubrique" value="Автомобили"> Услуги
-                                    <input type="radio" name="rubrique" value="Автомобили"> Купува
+                                    <input type="radio" name="rubrique" value="Части"> Части
+                                    <input type="radio" name="rubrique" value="Аксесоари"> Аксесоари
+                                    <input type="radio" name="rubrique" value="Гуми и джанти"> Гуми и джанти
+                                    <input type="radio" name="rubrique" value="Услуги"> Услуги
+                                    <input type="radio" name="rubrique" value="Купува"> Купува
                                 </td>
                             </tr>
                             <tr>
@@ -841,9 +839,9 @@
                                         <option value="Хибриден">Хибриден</option>
                                     </select>
                                 </td>
-                                <td><input type="radio" name="condition" value="Автомобили"> Нов</td>
-                                <td><input type="radio" name="condition" value="Автомобили"> Употребяван</td>
-                                <td><input type="radio" name="condition" value="Автомобили"> За части</td>
+                                <td><input type="radio" name="condition" value="Нов">Нов</td>
+                                <td><input type="radio" name="condition" value="Употребяван">Употребяван</td>
+                                <td><input type="radio" name="condition" value="За части">За части</td>
                             </tr>
                             <tr>
                                 <td><label for="horsePower">Мощност [к.с.]</label></td>
@@ -1205,7 +1203,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" value="Лето джанти"><span>Лети джанти</span></td>
+                                    <td><input type="checkbox" value="Лети джанти"><span>Лети джанти</span></td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox" value="Металик"><span>Металик</span></td>
@@ -1288,14 +1286,34 @@
                                         <input type="file">
                                         <img src="" height="200">
                                  </div>
-                        <div id="button">
-                            <input id="publishButton" name="submit" type="button" value="ПУБЛИКУВАЙ ТЕКСТА"
+                        <div class="button">
+                            <input id="viewPublicationButton" name="submit" type="button" value="ПРОДЪЛЖИ КЪМ ПРЕГЛЕД"
                                    style="width: 230px; height: 40px; font-weight: bold;">
-                            <p>*След публикуване на текста ще можете да качите снимки</p>
                         </div>
 
                     </div>
                 </form>
+            </div>
+        </section>
+    </div>
+
+
+    <div id="viewPublication">
+        <section>
+            <div class="box" id="backToPublishText">1. Публикуване на текста и добавяне на снимки</div>
+            <img src="assets/img/nav_arrow.gif"/>
+            <div class="box active">2. Преглед на обявата</div>
+        </section>
+        <section>
+            <div style="padding: 10px 0px"><span style="font-weight: bold">Публикуване на безплатна обява - Автомобили - Преглед на обявата</span>
+                <span style="color: #09F; font-style: oblique;">(Стъпка 2)</span>
+            </div>
+            <div id="mainViewPublication">
+                <div id="previewSelections">
+                <div class="button">
+                                <input id="publishButton" name="submit" type="button" value="ПУБЛИКУВАЙ ОБЯВАТА"
+                                    style="width: 230px; height: 40px; font-weight: bold;">
+                </div>
             </div>
         </section>
     </div>
