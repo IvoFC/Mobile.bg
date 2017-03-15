@@ -15,34 +15,29 @@ var userModel = (function(){
         addUser: function(user) {
             if(user instanceof User) {
                 users.push(user)
-                console.log(user);
             }
         },
 
         loginUser: function(username, password) {
              return users.some(function(u) {
-                 return (u.firstName === username || u.email === username) && u.password === password;
+                 return ((u.firstName === username || u.email === username) && u.password === password);
              });
             // Returns true or false
         },
 
-        validate: function(username, lastname, town, email, password, repeatedPassword) {
+        validate: function(username, lastname, town, email) {
             // Validate registration form -->
-            if(users.indexOf(username) !== -1 || username == '') {
-                return username;
-            } else if(lastname === '') {
-                return lastname;
-            } else if(town === '') {
-                return town;
-            } else if(email === '') {
-                return email;
-            } else if(password.length < 3) {
-                return password;
-            } else if(password != repeatedPassword) {
-                return repeatedPassword;
-            }  else {
-                return true;
-            }
+            return (username !== '' && lastname !== '' && town !== '' && email !== '');
+        },
+        validateUsername: function(username) {
+            // Returns false if there isn username with that name ->
+            return users.some(function(u) {
+                 return u.firstName === username;
+             });
+        },
+
+        validatePassword: function(password, repeatedPassword) {
+            return (password.length > 5 && password === repeatedPassword);
         }
 }
 })();
