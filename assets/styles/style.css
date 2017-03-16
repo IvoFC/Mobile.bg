@@ -174,10 +174,18 @@ body {
     display: block;
 }
 
-#publish, #searching, #mainViewPublication {
+#publish, #searching, #mainViewPublication, #viewCars, #divCar {
     border: 1px solid #09F;
     border-top: 2px solid #09F;
     padding: 10px;
+}
+
+#viewCars {
+    display: none;
+}
+
+#divCar {
+    margin: 10px auto;
 }
 
 #publish table th, #searching table th {
