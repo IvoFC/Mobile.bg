@@ -12,6 +12,12 @@ function logged() {
     welcomeUser.innerHTML = "Здравейте, " + "<span>" + userModel.getUserInfo() + "</span>";
     getById('logged-user').appendChild(welcomeUser);
 
+
+    var myMobilePage = getById('navMyMobile');
+    myMobilePage.addEventListener('click', function() {
+        getById('show-version-for-guests').style.display = "none";
+        getById('show-version-for-users').style.display = "block";
+    }, false);
     // var myMobileButton = document.getElementById('navMyMobile');
     // var myMobilePageForUsers = document.querySelector('#my-mobile > show-version-for-users');
     // var myMobilePageForGuests = document.querySelector('#my-mobile > show-version-for-guests');
