@@ -1,4 +1,4 @@
-function logged() {
+function logged(username) {
     function getById(id) {
         return document.getElementById(id);
     }
@@ -18,13 +18,14 @@ function logged() {
         getById('show-version-for-guests').style.display = "none";
         getById('show-version-for-users').style.display = "block";
     }, false);
-    // var myMobileButton = document.getElementById('navMyMobile');
-    // var myMobilePageForUsers = document.querySelector('#my-mobile > show-version-for-users');
-    // var myMobilePageForGuests = document.querySelector('#my-mobile > show-version-for-guests');
-    // myMobileButton.addEventListener('click', function(){
-        // myMobilePageForGuests.style.display = 'none';
-        // myMobilePageForUsers.style.display = 'block';
-    // }, false);
-
+    
+    // Function for showing all cars for this user ->
+    (function () {
+        var allcars = carManager.getAllCarsOfCurrentUser(username);
+        getCars(allcars, getById('show-version-for-users'));
+        console.log(username);
+        console.log(allcars);
+    })();
+    
     console.log('Good for you!');
 }

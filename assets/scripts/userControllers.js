@@ -46,7 +46,7 @@
             console.log('You login succesfully');
             inputs[0].value = ''; 
             inputs[1].value = '';
-            logged();
+            logged(username);
 
         } else {
             if(document.getElementById('error') !== inputs[0].parentElement.lastChild) {

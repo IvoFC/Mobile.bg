@@ -1,10 +1,10 @@
-function getCars(cars) {
+function getCars(cars, whereToShow) {
     for (var index = 0; index < cars.length; index++) {
 
         var divCar = document.createElement('div');
         divCar.id = "divCar";
-        var viewCars = document.getElementById('viewCars');
-        viewCars.appendChild(divCar);
+        // var viewCars = document.getElementById('viewCars');
+        whereToShow.appendChild(divCar);
 
         for (var prop in cars[index]) {
             if (Object.prototype.hasOwnProperty.call(cars[index], prop)) {

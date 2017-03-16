@@ -7,7 +7,9 @@ function User(firstName, lastName, town, email, password) {
 }
 
 var userModel = (function(){
-     var users = [];
+     var users = [
+         new User("asd", "asd", "asd", "asd", "asdasd"),
+     ];
 
     return {
         // Get some info for current user to display it later ->            

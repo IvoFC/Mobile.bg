@@ -728,6 +728,22 @@ embed {
               font-weight: bold;
               font-size: 1.3em;
     }
+    #my-mobile {
+        height: 10em;
+    }
+    /*For users ->*/
+    #liked-cars-from-user, #all-cars-from-user {
+        float: left;
+        width: 45%;
+        margin-left: 2em;
+        border: 3px solid #09F;
+    }
+    #liked-cars-from-user h3, #all-cars-from-user h3 {
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1em;
+    } 
 /*Finish with My mobile page*/
 
 /*Footer*/

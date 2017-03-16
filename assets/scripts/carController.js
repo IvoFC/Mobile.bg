@@ -95,4 +95,12 @@
 
 
 
+var homePageSearchButton = document.getElementById("homepage-search-button");
+homePageSearchButton.addEventListener('click', function(event) {
+    getCars(carManager.models, document.body);
+    event.preventDefault();
+}, false);
+
+
+
 })();
