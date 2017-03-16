@@ -130,11 +130,21 @@
     }
     document.getElementById('brand').innerHTML = brand;
 
+    // Brand drop down for Search
+
+    var brandS = document.getElementsByClassName('brandS');
+
+    for (var index = 0; index < brandS.length; index++) {
+        brandS[index].innerHTML += brand;
+    }
+
     // Model drop down menu
 
-    function changed() {
+    var brand1 = document.getElementById('brand');
+    var model1 = document.getElementById('model1');
+
+    function changed(brand1, modelP) {
         var model = '';
-        var brand1 = document.getElementById('brand');
         brand1 = brand1.options[brand1.selectedIndex].value;
         var number = null;
 
@@ -145,13 +155,28 @@
 
                 } else if (brands == number && brand1 != cars[brands][models]) {
                     model += '<option value="' + cars[number][models] + '">' + cars[number][models] + '</option>';
+
+                } else if (brand1 == "") {
+                    break;
                 }
             }
         }
-        document.getElementById('model1').innerHTML = model;
+        modelP.innerHTML = model;
     }
 
-    document.getElementById('brand').addEventListener('change', changed, false);
+    brand1.addEventListener('change', function () {
+        changed(brand1, model1);
+    }, false);
+
+    // Search Model drop down
+
+    var modelS = document.getElementsByClassName('modelS');
+
+    for (let index = 0; index < brandS.length; index++) {
+        brandS[index].addEventListener('change', function () {
+            changed(brandS[index], modelS[index]);
+        }, false);
+    }
 
 
     // Region drop down:
@@ -163,6 +188,7 @@
     }
 
     document.getElementById('region1').innerHTML = region;
+    document.getElementById('regionS').innerHTML = region;
 
     // Color drop down:
 
@@ -173,6 +199,7 @@
     }
 
     document.getElementById('color').innerHTML = color;
+    document.getElementById('colorS').innerHTML = color;
 
     // Date drop down:
 
@@ -185,12 +212,29 @@
     document.getElementById("productionDate1").innerHTML = options;
 
     var years = '<option value=""></option> ';
+    var fromYears = '<option value=""></option> ';
+    var toYears = '<option value=""></option> ';
     var thisYear = new Date().getFullYear();
 
     for (var year = thisYear; year >= 1930; year--) {
         years += '<option value="' + year + '">' + year + '</option>';
+        fromYears += '<option value="' + year + '">' + "от " + +year + '</option>';
+        toYears += '<option value="' + year + '">' + "до " + year + '</option>';
     }
 
     document.getElementById("productionDate2").innerHTML = years;
+    document.getElementById("yearFrom").innerHTML = fromYears;
+    document.getElementById("yearTo").innerHTML = toYears;
+
+    //Search max mileage
+
+    var maxMile = '<option value="">Без значение</option>';
+
+    for (var mileage = 10000; mileage <= 150000; mileage += 10000) {
+        maxMile += '<option value="' + mileage + '">' + "до " + mileage + '</option>';
+    }
+
+    document.getElementById('maxMileage').innerHTML = maxMile;
 
 })();
+

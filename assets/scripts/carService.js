@@ -17,7 +17,7 @@ function Car(brand, model, region, gearBox, euroStand, horsePower, category, mil
 
 var carManager = (function () {
 
-    var cars = [new Car('BMW', 'E36', 'Варна', 'Ръчна', 'Евро 1', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', ['ABS', 'ESP']),
+    var cars = [new Car('Bmw', 'E36', 'Варна', 'Ръчна', 'Евро 1', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', ['ABS', 'ESP']),
                 new Car('Honda', 'Accord', 'София', '', '', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов')];
 
     getCars(cars);
