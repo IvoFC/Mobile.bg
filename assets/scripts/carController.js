@@ -2,6 +2,7 @@
     function getById(id) {
         return document.getElementById(id);
     }
+
     var imagefile;
     var input = document.querySelector('#upload-image > input');
     input.addEventListener('change', function () {
@@ -93,7 +94,65 @@
         event.preventDefault();
     }, false);
 
+    // Searching cars
 
+    var searchButton = getById('searchButton');
+
+    searchButton.addEventListener('click', function (event) {
+        var brand = getById('brandS');
+        brand = brand.value;
+
+        var model = getById('modelS');
+        model = model.value;
+
+        var yearFrom = getById('yearFrom');
+        yearFrom = yearFrom.value;
+
+        var yearTo = getById('yearTo');
+        yearTo = yearTo.value;
+
+        var priceStart = getById('priceFrom');
+        priceStart = priceStart.value;
+
+        var priceEnd = getById('priceTo');
+        priceEnd = priceEnd.value;
+
+        var horsePowStart = getById('horsePowerFrom');
+        horsePowStart = horsePowStart.value;
+
+        var horsePowEnd = getById('horsePowerTo');
+        horsePowEnd = horsePowEnd.value;
+
+        var engine = getById('engineTypeS');
+        engine = engine.value;
+
+        var gearBox = getById('transmissionBox');
+        gearBox = gearBox.value;
+
+        var maxMile = getById('maxMileage');
+        maxMile = maxMile.value;
+
+        var color = getById('colorS');
+        color = color.value;
+
+        var region = getById('regionS');
+        region = region.value;
+
+        var category = getById('categoryS');
+        category = category.value;
+
+        var extras = [];
+        var collectionCheckBox = document.querySelectorAll('#searching .checkBoxes  input:checked');
+        for (var index = 0; index < collectionCheckBox.length; index++) {
+            extras.push(collectionCheckBox[index].value);
+        }
+
+        var car = carManager.searchCars(yearFrom, yearTo, priceStart, priceEnd, horsePowStart, horsePowEnd, maxMile, brand, model, region, gearBox, category, color, engine, extras);
+
+        console.log(car);
+        event.preventDefault();
+
+    }, false)
 
 var homePageSearchButton = document.getElementById("homepage-search-button");
 homePageSearchButton.addEventListener('click', function(event) {

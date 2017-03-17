@@ -1333,12 +1333,12 @@
         <form>
             <table id="mainCategory">
                 <tr>
-                    <td colspan="3"><label for="main-category">Основна Категория</label></td>
+                    <td colspan="3"><label for="main-categoryS">Основна Категория</label></td>
                     <td colspan="5"><label>Рубрика</label></td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <select name="main-category" id="main-category">
+                        <select name="main-category" id="main-categoryS">
                             <option selected="" value="1">Автомобили</option>
                             <option value="2">Джипове</option>
                             <option value="3">Бусове</option>
@@ -1377,12 +1377,12 @@
                 </tr>
                 <tr>
                     <td>
-                        <select name="brand" class="brand">
+                        <select id="brandS" name="brand" class="brandS">
                             <option value="">Избери</option>
                         </select>
                     </td>
                     <td>
-                        <select name="model" class="model">
+                        <select id="modelS" name="model" class="modelS">
                             <option value="">Избери</option>
                         </select>
                     </td>
@@ -1393,17 +1393,18 @@
                         <input type="checkbox" value="За части"><span>За части</span>
                     </td>
                     <td rowspan="2">
-                        <button style="width: 150px; height: 40px;"><span style="font-weight: bold">Т Ъ Р С И</span></button>
+                        <input type="button" id="searchButton" style="width: 150px; height: 40px; font-weight: bold"
+                               value="Т Ъ Р С И">
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <select name="brand" class="brand">
+                        <select name="brand" class="brandS">
                             <option value="">Избери</option>
                         </select>
                     </td>
                     <td>
-                        <select name="model" class="model">
+                        <select name="model" class="modelS">
                             <option value="">Избери</option>
                         </select>
                     </td>
@@ -1414,25 +1415,21 @@
                 </tr>
                 <tr>
                     <td>
-                        <select name="brand" class="brand">
+                        <select name="brand" class="brandS">
                             <option value="">Избери</option>
                         </select>
                     </td>
                     
                     <td>
-                        <select name="model" class="model">
+                        <select name="model" class="modelS">
                             <option value="">Избери</option>
                         </select>
                     </td>
                     <td>
-                        <select name="from" id="from">
-                            <option value=""></option>
-                        </select>
+                        <select name="from" id="yearFrom"></select>
                     </td>
                     <td>
-                        <select name="to" id="to">
-                            <option value=""></option>
-                        </select>
+                        <select name="to" id="yearTo"></select>
                     </td>
                     <td>
                         <select name="searchKind" id="searchKind">
@@ -1454,26 +1451,26 @@
                         <label>Цена </label><span>от</span>
                     </td>
                     <td>
-                        <input type="text">
+                        <input type="text" id="priceFrom">
                     </td>
                     <td>
                         <span>до</span>
                     </td>
                     <td>
-                        <input type="text">
+                        <input type="text" id="priceTo">
                     </td>
                     <td>
-                        <select name="price" id="price1">
-                            <option value="1">лв.</option>
-                            <option value="2">EUR</option>
-                            <option value="3">USD</option>
+                        <select name="price" id="curencyS">
+                            <option value="лв.">лв.</option>
+                            <option value="EUR">EUR</option>
+                            <option value="USD">USD</option>
                         </select>
                     </td>
                     <td>
-                        <input type="text">
+                        <input type="text" id="horsePowerFrom">
                     </td>
                     <td>
-                        <input type="text">
+                        <input type="text" id="horsePowerTo">
                     </td>
                 </tr>
                                 <tr>
@@ -1486,29 +1483,34 @@
                                     <td><label>Категория</label></td>
                                 </tr>
                 <tr>
-                    <td> 
-                        <select name="engineType" id="engineType">
-                            <option value="0">всички типове</option>
+                    <td>
+                        <select name="engineType" id="engineTypeS">
+                            <option value="">всички типове</option>
+                            <option value="Бензинов">Бензинов</option>
+                            <option value="Дизелов">Дизелов</option>
+                            <option value="Електрически">Електрически</option>
+                            <option value="Хибриден">Хибриден</option>
                         </select>
                     </td>
                     <td>
                         <select name="transmissionBox" id="transmissionBox">
-                            <option value="0">Без значение</option>
+                            <option value="">Без значение</option>
+                            <option value="Ръчна">Ръчна</option>
+                            <option value="Автоматична">Автоматична</option>
+                            <option value="Полуавтоматична">Полуавтоматична</option>
                         </select>
                     </td>
                     <td>
-                        <select name="maxMileage" id="maxMileage">
-                            <option value="0">Без значение</option>
+                        <select name="maxMileage" id="maxMileage"></select>
+                    </td>
+                    <td>
+                        <select name="color" id="colorS">
+                            <option value="">Всички цветове</option>
                         </select>
                     </td>
                     <td>
-                        <select name="color" id="color">
-                            <option value="0">Всички цветове</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select name="region" id="region">
-                            <option value="0">всички региони</option>
+                        <select name="region" id="regionS">
+                            <option value="">всички региони</option>
                         </select>
                     </td>
                     <td>
@@ -1517,14 +1519,25 @@
                         </select>
                     </td>
                     <td>
-                        <select name="category" id="category">
-                            <option value="0">всички категории</option>
+                        <select name="category" id="categoryS">
+                            <option value="">всички категории</option>
+                            <option value="Ван">Ван</option>
+                            <option value="Кабрио">Кабрио</option>
+                            <option value="Катафалка">Катафалка</option>
+                            <option value="Комби">Комби</option>
+                            <option value="Купе">Купе</option>
+                            <option value="Линейка">Линейка</option>
+                            <option value="Миниван">Миниван</option>
+                            <option value="Пикап">Пикап</option>
+                            <option value="Седан">Седан</option>
+                            <option value="Стреч лимузина">Стреч лимузина</option>
+                            <option value="Хечбек">Хечбек</option>
                         </select>
                     </td>
                 </tr>
             </table>
             <div class="checkBoxes">
-                <table id="safety">
+                <table id="safetyS">
                     <tr>
                         <th>Безопасност</th>
                     </tr>
@@ -1595,7 +1608,7 @@
                         </td>
                     </tr>
                 </table>
-                <table id="comfort">
+                <table id="comfortS">
                     <tr>
                         <th>Комфорт</th>
                     </tr>
@@ -1711,7 +1724,7 @@
                         <td><input type="checkbox" value="Хладилна жабка"><span>Хладилна жабка</span></td>
                     </tr>
                 </table>
-                <table id="misc">
+                <table id="miscS">
                     <tr>
                         <th>Други</th>
                     </tr>
@@ -1802,7 +1815,7 @@
                         <td><input type="checkbox" value="Шибедах"><span>Шибедах</span></td>
                     </tr>
                 </table>
-                <table id="security">
+                <table id="securityS">
                     <tr>
                         <th>Защита</th>
                     </tr>
