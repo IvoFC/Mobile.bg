@@ -102,7 +102,6 @@
         var brand = getById('brandS');
         brand = brand.value;
 
-
         var model = getById('modelS');
         model = model.value;
 
@@ -143,31 +142,15 @@
         category = category.value;
 
         var extras = [];
-        var collectionCheckBox = document.querySelectorAll('.checkBoxesS  input:checked');
+        var collectionCheckBox = document.querySelectorAll('#searching .checkBoxes  input:checked');
         for (var index = 0; index < collectionCheckBox.length; index++) {
             extras.push(collectionCheckBox[index].value);
         }
 
-        var carForSearch = new Car(brand, model, region, gearBox, '', '', category, '', color, '', '', '', engine, extras);
-        console.log(carForSearch);
+        var car = carManager.searchCars(yearFrom, yearTo, priceStart, priceEnd, horsePowStart, horsePowEnd, maxMile, brand, model, region, gearBox, category, color, engine, extras);
 
-        function searchCar(car) {
-            var cars = carManager.cars;
-
-            for (var index = 0; index < cars.length; index++) {
-                if (priceStart != undefined && car[index].price >= priceStart &&
-                    priceEnd != undefined && car[index].price <= priceEnd &&
-                    horsePowStart != undefined && car[index].price >= horsePowStart &&
-                    priceEnd != undefined && car[index].price <= horsePowEnd) {
-
-                }
-            }
-        }
-
+        console.log(car);
         event.preventDefault();
-
-        // console.log(result);
-
 
     }, false)
 
