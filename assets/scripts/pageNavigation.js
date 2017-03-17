@@ -1,5 +1,6 @@
 (function () {
     // Get all buttons
+    var advancedSearch = document.querySelector("#advancedSearch");
     var publishButton = document.querySelector(".publish");
     var searchButton = document.querySelector(".searching");
     var homeButton = document.querySelector('.homeBut');
@@ -7,13 +8,15 @@
     var viewPublicationButton = document.getElementById('viewPublicationButton');
     var backToPublish = document.getElementById('backToPublishText');
     // Get all pages
-     var mainDIv = document.querySelector('#homePage');
-     var publishPage = document.querySelector('#publishCars');
-     var searchingPage = document.querySelector('#searching');
-     var publishPreview = document.querySelector('#viewPublication');
-     var previewSelections = document.querySelector('#previewSelections');
-     var myMobilePage = document.querySelector('#my-mobile');
-     
+    var mainDIv = document.querySelector('#homePage');
+    var publishPage = document.querySelector('#publishCars');
+    var searchingPage = document.querySelector('#searching');
+    var publishPreview = document.querySelector('#viewPublication');
+    var previewSelections = document.querySelector('#previewSelections');
+    var myMobilePage = document.querySelector('#my-mobile');
+
+    advancedSearch.addEventListener('click', goToSearch, false);
+
     publishButton.addEventListener('click', function (event) {
 
         publishButton.className = 'active';
@@ -56,12 +59,14 @@
         mainDIv.style.display = 'none';
         publishPreview.style.display = 'none';
         previewSelections.innerHTML = '';
-        myMobilePage.style.display = 'none'; 
+        myMobilePage.style.display = 'none';
 
         event.preventDefault();
     }, false);
 
-    searchButton.addEventListener('click', function (event) {
+    searchButton.addEventListener('click', goToSearch, false);
+
+    function goToSearch(event) {
         searchButton.className = 'active';
         publishButton.className = "publish";
         homeButton.className = "homeBut";
@@ -71,10 +76,10 @@
         publishPage.style.display = 'none';
         mainDIv.style.display = 'none';
         publishPreview.style.display = 'none';
-        myMobilePage.style.display = 'none';        
+        myMobilePage.style.display = 'none';
 
         event.preventDefault();
-    }, false);
+    }
 
     homeButton.addEventListener('click', function (event) {
         homeButton.className = 'active';
@@ -92,7 +97,7 @@
         event.preventDefault();
     }, false);
 
-    myMobileButton.addEventListener('click', function(event) {
+    myMobileButton.addEventListener('click', function (event) {
         searchButton.className = 'searching';
         publishButton.className = "publish";
         homeButton.className = "homeBut";
@@ -107,6 +112,6 @@
         event.preventDefault();
     }, false);
 
-    
+
 
 })();
