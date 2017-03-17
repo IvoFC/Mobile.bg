@@ -198,12 +198,12 @@ body {
     width: 100%;
 }
 
-.checkBoxes, #upload-image, .checkBoxesS {
+.checkBoxes, #upload-image {
     display: flex;
     flex-direction: row;
 }
 
-.checkBoxes table td, .checkBoxesS table td {
+.checkBoxes table td {
     padding: 0px 30px 0px 0px;
 }
 
