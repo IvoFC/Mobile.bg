@@ -1,0 +1,94 @@
+{
+    "users": [
+        {
+            "firstname": "Ivan",
+            "lastname": "Petrov",
+            "town": "Sofia",
+            "email": "ivanPetrov@gmail.com",
+            "password": "ivancho",
+            "cars": [
+                {
+                    "brand": "Honda",
+                    "model": "Accord",
+                    "region": "София",
+                    "gearBox": "Ръчна",
+                    "euroStand": "",
+                    "horsePower": 120,
+                    "category": "Седан",
+                    "mileage": "",
+                    "color": "Бордо",
+                    "price": 2800,
+                    "month": "",
+                    "year": "",
+                    "engine": "Бензинов",
+                    "extras": "",
+                    "image": "",
+                    "owner": "Ivan"
+                },
+                {
+                    "brand": "Honda",
+                    "model": "Accord",
+                    "region": "София",
+                    "gearBox": "Ръчна",
+                    "euroStand": "",
+                    "horsePower": 120,
+                    "category": "Седан",
+                    "mileage": "",
+                    "color": "Бордо",
+                    "price": 2800,
+                    "month": "",
+                    "year": "",
+                    "engine": "Бензинов",
+                    "extras": "",
+                    "image": "",
+                    "owner": "Ivan"
+                }
+            ]
+        },
+        {
+            "firstname": "Petur",
+            "lastname": "Ivanov",
+            "town": "Plovdiv",
+            "email": "petraki@abv.bg",
+            "password": "petkata29",
+            "cars": [
+                {
+                    "brand": "BMW",
+                    "model": "320",
+                    "region": "София",
+                    "gearBox": "Ръчна",
+                    "euroStand": "",
+                    "horsePower": 220,
+                    "category": "Седан",
+                    "mileage": "",
+                    "color": "Черен",
+                    "price": 1200,
+                    "month": "",
+                    "year": "",
+                    "engine": "Бензинов",
+                    "extras": "",
+                    "image": "",
+                    "owner": "Petur"
+                },
+                {
+                    "brand": "Citroen",
+                    "model": "C4",
+                    "region": "Пловдив",
+                    "gearBox": "Ръчна",
+                    "euroStand": "",
+                    "horsePower": 120,
+                    "category": "Купе",
+                    "mileage": "",
+                    "color": "Бял",
+                    "price": 2800,
+                    "month": "",
+                    "year": "",
+                    "engine": "Дизелов",
+                    "extras": "",
+                    "image": "",
+                    "owner": "Petur"
+                }
+            ]
+        }
+    ]
+}

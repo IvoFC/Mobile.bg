@@ -1,9 +1,10 @@
-function User(firstName, lastName, town, email, password) {
+function User(firstName, lastName, town, email, password, cars) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.town = town;
     this.email = email;
     this.password = password;
+    this.cars = cars;
 }
 
 var userModel = (function(){
@@ -12,6 +13,7 @@ var userModel = (function(){
      ];
 
     return {
+        peoples: users,
         // Get some info for current user to display it later ->            
         getUserInfo: function() {
             return users[users.length - 1].firstName;
