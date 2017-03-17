@@ -152,7 +152,7 @@
         console.log(car);
         event.preventDefault();
 
-    }, false)
+    }, false);
 
 var homePageSearchButton = document.getElementById("homepage-search-button");
 homePageSearchButton.addEventListener('click', function(event) {

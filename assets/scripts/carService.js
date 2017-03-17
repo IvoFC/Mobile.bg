@@ -1,11 +1,12 @@
-function Car(brand, model, region, gearBox, euroStand, horsePower, category, mileage, color, price, month, year, engine, extras, image) {
+function Car(brand, model, region, gearBox, euroStand, horsePower, category, mileage, color, price, month, year, engine, extras, image, owner) {
     this.brand = brand;
     this.model = model;
     this.region = region;
     this.category = category;
     this.color = color;
     this.price = price;
-    this.dateOfMade = month + ' ' + year;
+    this.year = year;
+    this.month = month;
     this.engine = engine;
     this.horsePower = horsePower;
     this.gearBox = gearBox;
@@ -18,9 +19,9 @@ function Car(brand, model, region, gearBox, euroStand, horsePower, category, mil
 
 var carManager = (function () {
 
-    var cars = [new Car('BMW', 'E36', 'Варна', 'Ръчна', 'Евро 1', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', ['ABS', 'ESP']),
-                new Car('Honda', 'Accord', 'София', '', '', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов'),
-                new Car('Honda', 'Accord', 'София', '', '', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', "", "", "asd")];
+    var cars = [new Car('Bmw', '320', 'Варна', 'Ръчна', 'Евро 1', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', ['GPS система за проследяване', 'ESP']),
+        new Car('Honda', 'Accord', 'София', '', '', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', []),
+        new Car('Honda', 'Accord', 'София', '', '', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', [], "", "asd")];
 
     // getCars(cars, document.body);
 
@@ -33,11 +34,11 @@ var carManager = (function () {
             }
         },
 
-        // Put all cars of current user into array
-        getAllCarsOfCurrentUser: function(user){
+        // Put all cars of current user into arrayq
+        getAllCarsOfCurrentUser: function (user) {
             var carsofUser = [];
-            for(var index = 0; index < cars.length; index++) {
-                if(cars[index].owner === user) {
+            for (var index = 0; index < cars.length; index++) {
+                if (cars[index].owner === user) {
                     carsofUser.push(cars[index]);
                 }
             }
@@ -64,39 +65,40 @@ var carManager = (function () {
                 }
             }
 
-            function compareObjects() {
-                var flag = true;
-
-                for (var item in searchModel) {
-                    if (searchModel[item] != cars[index][item]) {
-                        flag = false;
-                        break;
-                    }
-                }
-                if (flag == true) {
-                    carsSearch.push(cars[index]);
-                }
-            }
-
-            function isUndefined(param) {
-                return param != '';
-            }
-
             for (var index = 0; index < cars.length; index++) {
 
-                if (isUndefined(yearFrom) && Number(cars[index].year) >= Number(yearFrom) &&
-                    isUndefined(yearTo) && Number(cars[index].year) <= Number(yearTo) &&
-                    isUndefined(priceStart) && Number(cars[index].price) >= Number(priceStart) &&
-                    isUndefined(priceEnd) && Number(cars[index].price) <= Number(priceEnd) &&
-                    isUndefined(horsePowStart) && Number(cars[index].horsePower) >= Number(horsePowStart) &&
-                    isUndefined(horsePowEnd) && Number(cars[index].horsePower) <= Number(horsePowEnd) &&
-                    isUndefined(maxMile) && Number(cars[index].mileage) <= Number(maxMile)) {
+                if (Number(cars[index].year) >= (Number(yearFrom) || 0) &&
+                    Number(cars[index].year) <= (Number(yearTo) || 2017) &&
+                    Number(cars[index].price) >= (Number(priceStart) || 0) &&
+                    Number(cars[index].price) <= (Number(priceEnd) || 99999) &&
+                    Number(cars[index].horsePower) >= (Number(horsePowStart) || 0) &&
+                    Number(cars[index].horsePower) <= (Number(horsePowEnd) || 999) &&
+                    Number(cars[index].mileage) <= (Number(maxMile) || 9999999)) {
 
-                    compareObjects();
+                    var flag = true;
+                    var flagExtras = true;
 
-                } else if (isUndefined(yearTo) && yearTo >= cars[index].year &&
-                    isUndefined(priceEnd) && yearTo >= cars[index].price &&
-                    isUndefined(horsePowEnd)) {
+                    for (var item in searchModel) {
+                        if (searchModel[item] != cars[index][item]) {
+                            flag = false;
+                            break;
+                        }
+                    }
+                    for (var extra = 0; extra < extras.length; extra++) {
+                        if (cars[index].extras != undefined && cars[index].extras.length > 0) {
+                            console.log(cars[index].extras.length);
+                            for (var index = 0; index < cars[index].extras.length; index++) {
+                                if (extras[extra] !== cars[index].extras[index]) {
+                                    flagExtras = false;
+                                    break;
+                                }
+                            }
+                        }
+
+                    }
+                    if (flag && flagExtras) {
+                        carsSearch.push(cars[index]);
+                    }
                 }
             }
             return carsSearch;
