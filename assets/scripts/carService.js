@@ -23,8 +23,6 @@ var carManager = (function () {
         new Car('Honda', 'Accord', 'София', '', '', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', []),
         new Car('Honda', 'Accord', 'София', '', '', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', [], "", "asd")];
 
-    // getCars(cars, document.body);
-
     return {
         models: cars,
 

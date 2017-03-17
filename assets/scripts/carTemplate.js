@@ -69,7 +69,7 @@ function getCars(cars, whereToShow) {
                     for (var extra = 0; extra < cars[index].extras.length; extra++) {
                         divCar.innerHTML += cars[index].extras[extra] + ', ';
                     }
-                };
+                }
             }
         }
     }
