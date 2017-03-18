@@ -149,17 +149,18 @@
 
         var car = carManager.searchCars(yearFrom, yearTo, priceStart, priceEnd, horsePowStart, horsePowEnd, maxMile, brand, model, region, gearBox, category, color, engine, extras);
 
+        console.log(car);
+
         var divAdvancedSearch = document.getElementById("viewCarsAdvanced");
         getCars(car, viewCarsAdvanced);
-
+        
         event.preventDefault();
 
     }, false);
 
+
     var homePageSearchButton = document.getElementById("homepage-search-button");
-
     homePageSearchButton.addEventListener('click', function (event) {
-
         var brandMinSearch = getById('car-brand');
         brandMinSearch = brandMinSearch.value;
 
@@ -180,9 +181,9 @@
 
         var car = carManager.searchCars(yearMinSearch, '', '', maxPriceSearch, '', '', '', brandMinSearch, modelMinSearch, '', gearBoxMinSearch, '', '', engineMinSearch, '');
         var divHomeSearch = document.getElementById("viewCarsFromHomeSearch");
-        getCars(car, divHomeSearch);
-
+        getCars(carManager.models, divHomeSearch);
         event.preventDefault();
     }, false);
+
 
 })();
