@@ -1,4 +1,7 @@
+    var loggedIn = false;
 function logged(username) {
+
+    loggedIn = true;
     function getById(id) {
         return document.getElementById(id);
     }
@@ -7,16 +10,17 @@ function logged(username) {
     getById('login-register-popup').style.display = 'none';
     getById('left-register-link').style.display = 'none';
     getById('login-button').style.display = 'none';
+    document.getElementById("login-background").style.display = "none";
     
     var welcomeUser = document.createElement('p');
-    welcomeUser.innerHTML = "Здравейте, " + "<span>" + userModel.getUserInfo() + "</span>";
+    welcomeUser.innerHTML = "Здравейте, " + "<span>" + username + "</span>";
     getById('logged-user').appendChild(welcomeUser);
 
 
     var myMobilePage = getById('navMyMobile');
     myMobilePage.addEventListener('click', function() {
         getById('show-version-for-guests').style.display = "none";
-        getById('show-version-for-users').style.display = "block";
+        getById('show-version-for-users').style.display = "inline-block";
     }, false);
     
     // Function for showing all cars for this user ->

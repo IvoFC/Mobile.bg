@@ -11,14 +11,20 @@
     var backToPublish = document.getElementById('backToPublishText');
     // Get all pages
     var mainDIv = document.querySelector('#homePage');
+    var notLoggedIn = document.querySelector('#notLoggedIn');
     var publishPage = document.querySelector('#publishCars');
     var searchingPage = document.querySelector('#searching');
     var searchFromHome = document.querySelector('#viewCarsFromHomeSearch');
     var advancedSearch = document.querySelector('#viewCarsAdvanced');
+    var viewPage = document.querySelector('#view');
     var publishPreview = document.querySelector('#viewPublication');
     var previewSelections = document.querySelector('#previewSelections');
     var myMobilePage = document.querySelector('#my-mobile');
 
+
+    
+
+    
     advancedSearchButton.addEventListener('click', function (event) {
         searchButton.className = 'active';
         publishButton.className = "publish";
@@ -32,6 +38,8 @@
         myMobilePage.style.display = 'none';
         searchFromHome.style.display= 'none';
         advancedSearch.style.display = "block";
+        viewPage.style.display = "none";
+        notLoggedIn.style.display = "none";
 
         event.preventDefault();
 
@@ -39,19 +47,41 @@
 
     publishButton.addEventListener('click', function (event) {
 
-        publishButton.className = 'active';
-        searchButton.className = 'searching';
-        homeButton.className = 'homeBut';
-        myMobileButton.className = '';
+        if (loggedIn == true) {
 
-        searchingPage.style.display = 'none';
-        publishPage.style.display = 'block';
-        mainDIv.style.display = 'none';
-        publishPreview.style.display = 'none';
-        previewSelections.innerHTML = '';
-        myMobilePage.style.display = 'none';
-        searchFromHome.style.display= 'none';
-        advancedSearch.style.display = "none";
+            publishButton.className = 'active';
+            searchButton.className = 'searching';
+            homeButton.className = 'homeBut';
+            myMobileButton.className = '';
+
+            searchingPage.style.display = 'none';
+            publishPage.style.display = 'block';
+            mainDIv.style.display = 'none';
+            publishPreview.style.display = 'none';
+            previewSelections.innerHTML = '';
+            myMobilePage.style.display = 'none';
+            searchFromHome.style.display= 'none';
+            advancedSearch.style.display = "none";
+            viewPage.style.display = "none";
+            notLoggedIn.style.display = "none";
+        } else {
+            notLoggedIn.style.display = "block";
+
+            publishButton.className = 'active';
+            searchButton.className = 'searching';
+            homeButton.className = 'homeBut';
+            myMobileButton.className = '';
+
+            searchingPage.style.display = 'none';
+            publishPage.style.display = 'none';
+            mainDIv.style.display = 'none';
+            publishPreview.style.display = 'none';
+            previewSelections.innerHTML = '';
+            myMobilePage.style.display = 'none';
+            searchFromHome.style.display= 'none';
+            advancedSearch.style.display = "none";
+            viewPage.style.display = "none";
+        }
 
         event.preventDefault();
     }, false);
@@ -69,6 +99,8 @@
         myMobilePage.style.display = 'none';
         searchFromHome.style.display= 'none';
         advancedSearch.style.display = "none";
+        viewPage.style.display = "none";
+        notLoggedIn.style.display = "none";
 
         event.preventDefault();
     }, false);
@@ -87,6 +119,8 @@
         myMobilePage.style.display = 'none';
         searchFromHome.style.display= 'none';
         advancedSearch.style.display = "none";
+        viewPage.style.display = "none";
+        notLoggedIn.style.display = "none";
 
         event.preventDefault();
     }, false);
@@ -106,6 +140,8 @@
         myMobilePage.style.display = 'none';
         searchFromHome.style.display= 'none';
         advancedSearch.style.display = "none";
+        viewPage.style.display = "none";
+        notLoggedIn.style.display = "none";
 
         advancedSearch.innerHTML = '';
 
@@ -125,6 +161,8 @@
         myMobilePage.style.display = 'none';
         searchFromHome.style.display = 'block';
         advancedSearch.style.display = "none";
+        viewPage.style.display = "none";
+        notLoggedIn.style.display = "none";
 
         event.preventDefault();
     }, false);
@@ -143,6 +181,8 @@
         myMobilePage.style.display = 'none';
         searchFromHome.style.display = 'none';
         advancedSearch.style.display = "none";
+        viewPage.style.display = "none";
+        notLoggedIn.style.display = "none";
 
         searchFromHome.innerHTML = '';
 
@@ -158,10 +198,12 @@
         searchingPage.style.display = 'none';
         publishPage.style.display = 'none';
         mainDIv.style.display = 'none';
-        myMobilePage.style.display = 'block';
+        myMobilePage.style.display = 'inline-block';
         publishPreview.style.display = 'none';
         searchFromHome.style.display= 'none';
         advancedSearch.style.display = "none";
+        viewPage.style.display = "none";
+        notLoggedIn.style.display = "none";
 
         event.preventDefault();
     }, false);
