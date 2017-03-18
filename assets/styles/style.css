@@ -174,15 +174,12 @@ body {
     display: block;
 }
 
-#publish, #searching, #mainViewPublication, #viewCars, #divCar, #viewCarsFromHomeSearch #viewCarsAdvanced {
+#publish, #searching, #mainViewPublication, #divCar, #viewCarsFromHomeSearch #viewCarsAdvanced {
     border: 1px solid #09F;
     border-top: 2px solid #09F;
     padding: 10px;
 }
 
-#viewCars {
-    display: none;
-}
 
 #divCar {
     margin: 10px auto;

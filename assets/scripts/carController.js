@@ -153,7 +153,7 @@
 
         var divAdvancedSearch = document.getElementById("viewCarsAdvanced");
         getCars(car, viewCarsAdvanced);
-        
+
         event.preventDefault();
 
     }, false);
@@ -163,12 +163,6 @@
     homePageSearchButton.addEventListener('click', function (event) {
         var divHomeSearch = document.getElementById("viewCarsFromHomeSearch");
         getCars(carManager.models, divHomeSearch);
-        event.preventDefault();
-    }, false);
-
-    searchButton.addEventListener('click', function (event) {
-        var divAdvancedSearch = document.getElementById("viewCarsAdvanced");
-        getCars(car, viewCarsAdvanced);
         event.preventDefault();
     }, false);
 
