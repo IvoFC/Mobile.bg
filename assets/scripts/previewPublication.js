@@ -34,6 +34,7 @@ viewPublicationButton.addEventListener('click', function (event) {
             document.getElementById("previewSelections").innerHTML += checkBoxes[index].value + ", ";
         }
     }
-
+    var buttonPub = document.getElementById('publishButton');
+    buttonPub.style.display = 'block';
     event.preventDefault();
 }, false);
