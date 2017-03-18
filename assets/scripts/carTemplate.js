@@ -100,10 +100,10 @@ function getCars(cars, whereToShow) {
                 }
             }
         }
-        var viewButton = document.createElement('button');
-        viewButton.id = 'viewButton';
-        divCar.appendChild(viewButton);
-        viewButton.innerHTML = "Разгледай обявата";
+        // var viewButton = document.createElement('button');
+        // viewButton.id = 'viewButton';
+        // divCar.appendChild(viewButton);
+        // viewButton.innerHTML = "Разгледай обявата";
 
         // console.log(cars[index]);
         // if (withButtons) {
