@@ -43,6 +43,8 @@
     homeLoginButton.addEventListener('click', function(event){
         document.getElementById('login-register-popup').style.display = 'inline-block';
         document.getElementById("login-form").style.display = "block";
+                document.getElementById("login-background").style.display = "block";
+
 
         event.preventDefault();
     }, false);
@@ -51,6 +53,8 @@
     homeRegisterButton.addEventListener('click', function(){
         document.getElementById('login-register-popup').style.display = 'inline-block';
         document.getElementById("register-form").style.display = "block";
+                document.getElementById("login-background").style.display = "block";
+
     }, false);
 
 // Popup login/registration form -->
@@ -178,6 +182,7 @@
     // Closing form - button
     document.getElementById('close-popup').addEventListener('click', function(event){
         document.getElementById('login-register-popup').style.display = 'none';
+        document.getElementById("login-background").style.display = "none";
         event.preventDefault();
     }, false);
 // End of popup login registration form
