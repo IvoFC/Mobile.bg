@@ -66,10 +66,17 @@ function getCars(cars, whereToShow) {
                     name = 'Цена';
                     divCar.innerHTML += name + ': ' + value + '<br/>';
                 }
-                if (prop == 'dateOfMade' && value != undefined && value != '') {
+
+                if (prop == 'month' && value != undefined && value != '') {
                     name = 'Дата на производство';
-                    divCar.innerHTML += name + ': ' + value + '<br/>';
+                    divCar.innerHTML += name + ': ' + value;
                 }
+
+                if (prop == 'year' && value != undefined && value != '') {
+                    name = '';
+                    divCar.innerHTML += ' ' + value + '<br/>';
+                }
+                
                 if (prop == 'engine' && value != undefined && value != '') {
                     name = 'Двигател';
                     divCar.innerHTML += name + ': ' + value + '<br/>';

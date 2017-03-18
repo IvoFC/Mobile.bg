@@ -5,8 +5,8 @@ function Car(brand, model, region, gearBox, euroStand, horsePower, category, mil
     this.category = category;
     this.color = color;
     this.price = price;
-    this.year = year;
     this.month = month;
+    this.year = year;
     this.engine = engine;
     this.horsePower = horsePower;
     this.gearBox = gearBox;
