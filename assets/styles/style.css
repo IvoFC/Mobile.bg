@@ -190,9 +190,29 @@ body {
     padding: 10px;
 }
 
+.divCarText {
+    float:right;
+    width: 70%;
+}
+
+.divCar img {
+    float: left;
+}
+
+.divCar p {
+    text-align: right;
+}
+
+.divCar span {
+    color: #09F;
+    font-weight: normal;
+    font-size: 1.2em;
+}
 
 .divCar {
-    background: #dce4e8;
+    font-size: 1em;
+    /*font-weight: bold;*/
+    background: #e6eaed;
     margin: 10px auto;
     display: inline-block;
     width: 100%;
