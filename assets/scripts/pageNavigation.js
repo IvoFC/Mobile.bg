@@ -143,7 +143,7 @@
         viewPage.style.display = "none";
         notLoggedIn.style.display = "none";
 
-        advancedSearch.innerHTML = '';
+        advancedSearch.innerHTML = '<h2>Резултати от търсенето: </h2>';
 
         event.preventDefault();
     }
@@ -184,7 +184,7 @@
         viewPage.style.display = "none";
         notLoggedIn.style.display = "none";
 
-        searchFromHome.innerHTML = '';
+        searchFromHome.innerHTML = '<h2>Резултати от търсенето: </h2>';
 
         event.preventDefault();
     }, false);
