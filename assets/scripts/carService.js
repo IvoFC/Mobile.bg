@@ -19,7 +19,7 @@ function Car(brand, model, region, gearBox, euroStand, horsePower, category, mil
 
 var carManager = (function () {
 
-    var cars = [new Car('Bmw', '320', 'Варна', 'Ръчна', 'Евро 1', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', ['GPS система за проследяване', 'ESP']),
+    var cars = [new Car('Bmw', '320', 'Варна', 'Ръчна', 'Евро 1', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', ['GPS система за проследяване', 'ESP', 'Автоматичен контрол на стабилността', '4x4']),
         new Car('Honda', 'Accord', 'София', '', '', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', []),
         new Car('Honda', 'Accord', 'София', '', '', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', [], "", "asd")];
 
@@ -43,6 +43,7 @@ var carManager = (function () {
             return carsofUser;
         },
 
+        
         searchCars: function (yearFrom, yearTo, priceStart, priceEnd, horsePowStart, horsePowEnd, maxMile, brand, model, region, gearBox, category, color, engine, extras) {
             var carsSearch = [];
 
@@ -77,22 +78,23 @@ var carManager = (function () {
                     var flagExtras = true;
 
                     for (var item in searchModel) {
-                        if (searchModel[item] != cars[index][item]) {
-                            flag = false;
-                            break;
+                        if(searchModel[item] !== searchModel["extras"]) {
+                            if (searchModel[item] != cars[index][item]) {
+                                flag = false;
+                                break;
+                            }
                         }
                     }
                     for (var extra = 0; extra < extras.length; extra++) {
-                        if (cars[index].extras != undefined && cars[index].extras.length > 0) {
-                            console.log(cars[index].extras.length);
-                            for (var index = 0; index < cars[index].extras.length; index++) {
-                                if (extras[extra] !== cars[index].extras[index]) {
-                                    flagExtras = false;
-                                    break;
-                                }
+                        if (cars[index].extras == undefined || cars[index].extras.length < 1) {
+                            flagExtras = false;
+                            break;
+                        } else {
+                            if(cars[index].extras.indexOf(extras[extra]) < 0) {
+                                flagExtras = false;
+                                break;
                             }
                         }
-
                     }
                     if (flag && flagExtras) {
                         carsSearch.push(cars[index]);
