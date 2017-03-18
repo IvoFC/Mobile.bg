@@ -149,7 +149,9 @@
 
         var car = carManager.searchCars(yearFrom, yearTo, priceStart, priceEnd, horsePowStart, horsePowEnd, maxMile, brand, model, region, gearBox, category, color, engine, extras);
 
-        console.log(car);
+        var divAdvancedSearch = document.getElementById("viewCarsAdvanced");
+        getCars(car, viewCarsAdvanced);
+
         event.preventDefault();
 
     }, false);
@@ -176,10 +178,19 @@ homePageSearchButton.addEventListener('click', function(event) {
     gearBoxMinSearch = gearBoxMinSearch.value;
 
     var car = carManager.searchCars(yearMinSearch, '', '', maxPriceSearch, '', '', '', brandMinSearch, modelMinSearch, '', gearBoxMinSearch, '', '', engineMinSearch, '');
-    getCars(car, document.body);
 
-    event.preventDefault();
-}, false);
+    var homePageSearchButton = document.getElementById("homepage-search-button");
+    homePageSearchButton.addEventListener('click', function (event) {
+        var divHomeSearch = document.getElementById("viewCarsFromHomeSearch");
+        getCars(carManager.models, divHomeSearch);
+        event.preventDefault();
+    }, false);
+
+    searchButton.addEventListener('click', function (event) {
+        var divAdvancedSearch = document.getElementById("viewCarsAdvanced");
+        getCars(car, viewCarsAdvanced);
+        event.preventDefault();
+    }, false);
 
 
 

@@ -1,8 +1,10 @@
 (function () {
     // Get all buttons
-    var advancedSearch = document.querySelector("#advancedSearch");
+    
     var publishButton = document.querySelector(".publish");
     var searchButton = document.querySelector(".searching");
+    var homePageSearchButton = document.getElementById("homepage-search-button");
+    var advancedSearchButton = document.getElementById("searchButton");
     var homeButton = document.querySelector('.homeBut');
     var myMobileButton = document.querySelector('#navMyMobile > a');
     var viewPublicationButton = document.getElementById('viewPublicationButton');
@@ -11,11 +13,29 @@
     var mainDIv = document.querySelector('#homePage');
     var publishPage = document.querySelector('#publishCars');
     var searchingPage = document.querySelector('#searching');
+    var searchFromHome = document.querySelector('#viewCarsFromHomeSearch');
+    var advancedSearch = document.querySelector('#viewCarsAdvanced');
     var publishPreview = document.querySelector('#viewPublication');
     var previewSelections = document.querySelector('#previewSelections');
     var myMobilePage = document.querySelector('#my-mobile');
 
-    advancedSearch.addEventListener('click', goToSearch, false);
+    advancedSearchButton.addEventListener('click', function (event) {
+        searchButton.className = 'active';
+        publishButton.className = "publish";
+        homeButton.className = "homeBut";
+        myMobileButton.className = '';
+
+        searchingPage.style.display = 'none';
+        publishPage.style.display = 'none';
+        mainDIv.style.display = 'none';
+        publishPreview.style.display = 'none';
+        myMobilePage.style.display = 'none';
+        searchFromHome.style.display= 'none';
+        advancedSearch.style.display = "block";
+
+        event.preventDefault();
+
+}, false);
 
     publishButton.addEventListener('click', function (event) {
 
@@ -30,6 +50,8 @@
         publishPreview.style.display = 'none';
         previewSelections.innerHTML = '';
         myMobilePage.style.display = 'none';
+        searchFromHome.style.display= 'none';
+        advancedSearch.style.display = "none";
 
         event.preventDefault();
     }, false);
@@ -45,6 +67,9 @@
         mainDIv.style.display = 'none';
         publishPreview.style.display = 'block';
         myMobilePage.style.display = 'none';
+        searchFromHome.style.display= 'none';
+        advancedSearch.style.display = "none";
+
         event.preventDefault();
     }, false);
 
@@ -60,6 +85,8 @@
         publishPreview.style.display = 'none';
         previewSelections.innerHTML = '';
         myMobilePage.style.display = 'none';
+        searchFromHome.style.display= 'none';
+        advancedSearch.style.display = "none";
 
         event.preventDefault();
     }, false);
@@ -77,9 +104,30 @@
         mainDIv.style.display = 'none';
         publishPreview.style.display = 'none';
         myMobilePage.style.display = 'none';
+        searchFromHome.style.display= 'none';
+        advancedSearch.style.display = "none";
+
+        advancedSearch.innerHTML = '';
 
         event.preventDefault();
     }
+
+    homePageSearchButton.addEventListener('click', function (event){
+        searchButton.className = 'active';
+        publishButton.className = "publish";
+        homeButton.className = "homeBut";
+        myMobileButton.className = '';
+
+        searchingPage.style.display = 'none';
+        publishPage.style.display = 'none';
+        mainDIv.style.display = 'none';
+        publishPreview.style.display = 'none';
+        myMobilePage.style.display = 'none';
+        searchFromHome.style.display = 'block';
+        advancedSearch.style.display = "none";
+
+        event.preventDefault();
+    }, false);
 
     homeButton.addEventListener('click', function (event) {
         homeButton.className = 'active';
@@ -93,6 +141,10 @@
         publishPreview.style.display = 'none';
         previewSelections.innerHTML = '';
         myMobilePage.style.display = 'none';
+        searchFromHome.style.display = 'none';
+        advancedSearch.style.display = "none";
+
+        searchFromHome.innerHTML = '';
 
         event.preventDefault();
     }, false);
@@ -108,6 +160,8 @@
         mainDIv.style.display = 'none';
         myMobilePage.style.display = 'block';
         publishPreview.style.display = 'none';
+        searchFromHome.style.display= 'none';
+        advancedSearch.style.display = "none";
 
         event.preventDefault();
     }, false);
