@@ -15,9 +15,9 @@ var userModel = (function(){
     return {
         peoples: users,
         // Get some info for current user to display it later ->            
-        getUserInfo: function() {
-            return users[users.length - 1].firstName;
-        },
+        // getUserInfo: function() {
+        //     return users[users.length - 1].firstName;
+        // },
         
         addUser: function(user) {
             if(user instanceof User) {

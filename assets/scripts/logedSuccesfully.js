@@ -13,7 +13,7 @@ function logged(username) {
     document.getElementById("login-background").style.display = "none";
     
     var welcomeUser = document.createElement('p');
-    welcomeUser.innerHTML = "Здравейте, " + "<span>" + userModel.getUserInfo() + "</span>";
+    welcomeUser.innerHTML = "Здравейте, " + "<span>" + username + "</span>";
     getById('logged-user').appendChild(welcomeUser);
 
 
