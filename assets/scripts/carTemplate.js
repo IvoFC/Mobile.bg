@@ -7,7 +7,6 @@ function getCars(cars, whereToShow) {
     title.innerHTML += "Резултати от търсенето: "
     whereToShow.appendChild(title);
 
-    
 
     for (var index = 0; index < cars.length; index++) {
 
@@ -25,9 +24,9 @@ function getCars(cars, whereToShow) {
                 if (prop == 'image' && value != undefined && value != '') {
                     name = 'Снимка';
 
-                        var carImage = document.createElement('img');
-                        carImage.src = value;
-                        divCar.appendChild(carImage);
+                    var carImage = document.createElement('img');
+                    carImage.src = value;
+                    divCar.appendChild(carImage);
                 }
                 if (prop == 'brand' && value != undefined && value != '') {
                     name = 'Марка';
@@ -79,7 +78,7 @@ function getCars(cars, whereToShow) {
                     name = '';
                     divCar.innerHTML += ' ' + value + '<br/>';
                 }
-                
+
                 if (prop == 'engine' && value != undefined && value != '') {
                     name = 'Двигател';
                     divCar.innerHTML += name + ': ' + value + '<br/>';
@@ -101,3 +100,48 @@ function getCars(cars, whereToShow) {
 
     }
 }
+
+(function () {
+
+//    for slide show:
+
+    var sName = document.querySelector('#model3');
+    var sPrice = document.querySelector('#price3');
+    var sCarKM = document.querySelector('#km3');
+    var sTown = document.querySelector('#town3');
+    var sDate = document.querySelector('date');
+
+//    for cars:
+    var models = document.getElementsByClassName('carName');
+    var price = document.getElementsByClassName('carPrice');
+    var km = document.getElementsByClassName('carKM');
+    var town = document.getElementsByClassName('carCity');
+    var imgs = document.getElementsByClassName('imgS');
+    var anchors = document.getElementsByClassName("linkA");
+
+    var carsToShow = carManager.getCarsForSlideShow();
+    var images = ['assets/img/fpvip_r.gif', 'assets/img/fpvip_g.gif']
+
+    for (var index = 0; index < carsToShow.length; index++) {
+        models[index].innerHTML = carsToShow[index].brand + ' ' + carsToShow[index].model;
+        price[index].innerHTML = carsToShow[index].price + ' лв,';
+        km[index].innerHTML = carsToShow[index].mileage + ' км, ';
+        town[index].innerHTML = carsToShow[index].region;
+        imgs[index].src = images[Math.floor(Math.random() * images.length)];
+    }
+
+    function changeText(index) {
+        sName.innerHTML = models[index].innerText;
+        sPrice.innerHTML = price[index].innerText;
+        sCarKM.innerHTML = km[index].innerText;
+        sTown.innerHTML = town[index].innerText;
+    }
+
+    for (let link = 0; link < anchors.length; link++) {
+
+        anchors[link].addEventListener('mouseover', function () {
+            changeText(link);
+        }, false)
+    }
+
+})();

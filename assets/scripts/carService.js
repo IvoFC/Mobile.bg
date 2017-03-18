@@ -43,6 +43,14 @@ var carManager = (function () {
             return carsofUser;
         },
 
+        getCarsForSlideShow: function () {
+
+            var carsToShow = [];
+            for (var index = 0; index < 5; index++) {
+                carsToShow.push(cars[Math.floor(Math.random() * cars.length)]);
+            }
+            return carsToShow;
+        },
         
         searchCars: function (yearFrom, yearTo, priceStart, priceEnd, horsePowStart, horsePowEnd, maxMile, brand, model, region, gearBox, category, color, engine, extras) {
             var carsSearch = [];
