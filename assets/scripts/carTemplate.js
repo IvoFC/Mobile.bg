@@ -1,13 +1,7 @@
 function getCars(cars, whereToShow) {
-    var title = document.createElement('h2');
-    title.style.fontWeight = 'bold';
-    title.style.borderBottom = "3px solid #09F";
-    title.style.paddingBottom = "10px";
-    title.style.marginBottom = "5px";
-    title.innerHTML += "Резултати от търсенето: "
-    whereToShow.appendChild(title);
+   
 
-    
+
 
     for (var index = 0; index < cars.length; index++) {
 
@@ -79,7 +73,7 @@ function getCars(cars, whereToShow) {
                     name = '';
                     divCar.innerHTML += ' ' + value + '<br/>';
                 }
-                
+
                 if (prop == 'engine' && value != undefined && value != '') {
                     name = 'Двигател';
                     divCar.innerHTML += name + ': ' + value + '<br/>';
@@ -94,10 +88,55 @@ function getCars(cars, whereToShow) {
                 }
             }
         }
+
+        
+
+
+        //view Button Functionality
+        var publishButton = document.querySelector(".publish");
+        var searchButton = document.querySelector(".searching");
+        if(searchButton = null) {
+            searchButton = document.querySelector(".active");
+        }
+        var homePageSearchButton = document.getElementById("homepage-search-button");
+        var advancedSearchButton = document.getElementById("searchButton");
+        var homeButton = document.querySelector('.homeBut');
+        var myMobileButton = document.querySelector('#navMyMobile > a');
+        var viewPublicationButton = document.getElementById('viewPublicationButton');
+        var backToPublish = document.getElementById('backToPublishText');
+        // Get all pages
+        var mainDIv = document.querySelector('#homePage');
+        var publishPage = document.querySelector('#publishCars');
+        var searchingPage = document.querySelector('#searching');
+        var searchFromHome = document.querySelector('#viewCarsFromHomeSearch');
+        var advancedSearch = document.querySelector('#viewCarsAdvanced');
+        var viewPage = document.querySelector('#view');
+        var publishPreview = document.querySelector('#viewPublication');
+        var previewSelections = document.querySelector('#previewSelections');
+        var myMobilePage = document.querySelector('#my-mobile');
+
         var viewButton = document.createElement('button');
         viewButton.id = 'viewButton';
         divCar.appendChild(viewButton);
         viewButton.innerHTML = "Разгледай обявата";
+
+        viewButton.addEventListener('click', function (event) {
+
+            searchingPage.style.display = 'none';
+            publishPage.style.display = 'none';
+            mainDIv.style.display = 'none';
+            publishPreview.style.display = 'none';
+            myMobilePage.style.display = 'none';
+            searchFromHome.style.display = 'none';
+            advancedSearch.style.display = "none";
+            viewPage.style.display = "block";
+
+            // viewPage.innerHTML += viewButton.parentNode.innerHTML;
+
+            getCars([cars[index]], viewPage);
+
+            event.preventDefault();
+        }, false);
 
     }
 }

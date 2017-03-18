@@ -15,10 +15,15 @@
     var searchingPage = document.querySelector('#searching');
     var searchFromHome = document.querySelector('#viewCarsFromHomeSearch');
     var advancedSearch = document.querySelector('#viewCarsAdvanced');
+    var viewPage = document.querySelector('#view');
     var publishPreview = document.querySelector('#viewPublication');
     var previewSelections = document.querySelector('#previewSelections');
     var myMobilePage = document.querySelector('#my-mobile');
 
+
+    
+
+    
     advancedSearchButton.addEventListener('click', function (event) {
         searchButton.className = 'active';
         publishButton.className = "publish";
@@ -32,6 +37,7 @@
         myMobilePage.style.display = 'none';
         searchFromHome.style.display= 'none';
         advancedSearch.style.display = "block";
+        viewPage.style.display = "none";
 
         event.preventDefault();
 
@@ -52,6 +58,7 @@
         myMobilePage.style.display = 'none';
         searchFromHome.style.display= 'none';
         advancedSearch.style.display = "none";
+        viewPage.style.display = "none";
 
         event.preventDefault();
     }, false);
@@ -69,6 +76,7 @@
         myMobilePage.style.display = 'none';
         searchFromHome.style.display= 'none';
         advancedSearch.style.display = "none";
+        viewPage.style.display = "none";
 
         event.preventDefault();
     }, false);
@@ -87,6 +95,7 @@
         myMobilePage.style.display = 'none';
         searchFromHome.style.display= 'none';
         advancedSearch.style.display = "none";
+        viewPage.style.display = "none";
 
         event.preventDefault();
     }, false);
@@ -106,6 +115,7 @@
         myMobilePage.style.display = 'none';
         searchFromHome.style.display= 'none';
         advancedSearch.style.display = "none";
+        viewPage.style.display = "none";
 
         advancedSearch.innerHTML = '';
 
@@ -125,6 +135,7 @@
         myMobilePage.style.display = 'none';
         searchFromHome.style.display = 'block';
         advancedSearch.style.display = "none";
+        viewPage.style.display = "none";
 
         event.preventDefault();
     }, false);
@@ -143,6 +154,7 @@
         myMobilePage.style.display = 'none';
         searchFromHome.style.display = 'none';
         advancedSearch.style.display = "none";
+        viewPage.style.display = "none";
 
         searchFromHome.innerHTML = '';
 
@@ -162,6 +174,7 @@
         publishPreview.style.display = 'none';
         searchFromHome.style.display= 'none';
         advancedSearch.style.display = "none";
+        viewPage.style.display = "none";
 
         event.preventDefault();
     }, false);
