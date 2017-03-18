@@ -156,42 +156,33 @@
 
     }, false);
 
-var homePageSearchButton = document.getElementById("homepage-search-button");
-
-homePageSearchButton.addEventListener('click', function(event) {
-    var brandMinSearch = getById('car-brand');
-    brandMinSearch = brandMinSearch.value;
-
-    var modelMinSearch = getById('model');
-    modelMinSearch.value;
-
-    var yearMinSearch = getById('year');
-    yearMinSearch = yearMinSearch.value;
-
-    var maxPriceSearch = getById('price');
-    maxPriceSearch = maxPriceSearch.value;
-
-    var engineMinSearch = getById('car-engine');
-    engineMinSearch = engineMinSearch.value;
-
-    var gearBoxMinSearch = getById('transmis');
-    gearBoxMinSearch = gearBoxMinSearch.value;
-
-    var car = carManager.searchCars(yearMinSearch, '', '', maxPriceSearch, '', '', '', brandMinSearch, modelMinSearch, '', gearBoxMinSearch, '', '', engineMinSearch, '');
-
     var homePageSearchButton = document.getElementById("homepage-search-button");
+
     homePageSearchButton.addEventListener('click', function (event) {
+
+        var brandMinSearch = getById('car-brand');
+        brandMinSearch = brandMinSearch.value;
+
+        var modelMinSearch = getById('model');
+        modelMinSearch = modelMinSearch.value;
+
+        var yearMinSearch = getById('year');
+        yearMinSearch = yearMinSearch.value;
+
+        var maxPriceSearch = getById('price');
+        maxPriceSearch = maxPriceSearch.value;
+
+        var engineMinSearch = getById('car-engine');
+        engineMinSearch = engineMinSearch.value;
+
+        var gearBoxMinSearch = getById('transmis');
+        gearBoxMinSearch = gearBoxMinSearch.value;
+
+        var car = carManager.searchCars(yearMinSearch, '', '', maxPriceSearch, '', '', '', brandMinSearch, modelMinSearch, '', gearBoxMinSearch, '', '', engineMinSearch, '');
         var divHomeSearch = document.getElementById("viewCarsFromHomeSearch");
-        getCars(carManager.models, divHomeSearch);
+        getCars(car, divHomeSearch);
+
         event.preventDefault();
     }, false);
-
-    searchButton.addEventListener('click', function (event) {
-        var divAdvancedSearch = document.getElementById("viewCarsAdvanced");
-        getCars(car, viewCarsAdvanced);
-        event.preventDefault();
-    }, false);
-
-
 
 })();
