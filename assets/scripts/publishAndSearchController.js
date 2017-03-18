@@ -120,15 +120,18 @@
     // Brand drop down menu
 
     var brand = '<option value=""></option> ';
+    var brandMinSearch = '<option value="">всички</option> ';
 
     for (var brands = 0; brands < cars.length; brands++) {
         for (var models = 0; models < cars[brands].length; models++) {
             if (cars[brands][0] == cars[brands][models]) {
                 brand += '<option value="' + cars[brands][0] + '">' + cars[brands][0] + '</option>';
+                brandMinSearch += '<option value="' + cars[brands][0] + '">' + cars[brands][0] + '</option>';
             }
         }
     }
     document.getElementById('brand').innerHTML = brand;
+    document.getElementById('car-brand').innerHTML = brandMinSearch;
 
     // Brand drop down for Search
 
@@ -142,6 +145,8 @@
 
     var brand1 = document.getElementById('brand');
     var model1 = document.getElementById('model1');
+    var brandMinSearch = document.getElementById('car-brand');
+    var modelMinSearch = document.getElementById('model');
 
     function changed(brand1, modelP) {
         var model = '';
@@ -166,6 +171,10 @@
 
     brand1.addEventListener('change', function () {
         changed(brand1, model1);
+    }, false);
+
+    brandMinSearch.addEventListener('change', function () {
+        changed(brandMinSearch, model);
     }, false);
 
     // Search Model drop down
@@ -214,17 +223,20 @@
     var years = '<option value=""></option> ';
     var fromYears = '<option value=""></option> ';
     var toYears = '<option value=""></option> ';
+    var afterYears = '<option value="">всички</option> ';
     var thisYear = new Date().getFullYear();
 
     for (var year = thisYear; year >= 1930; year--) {
         years += '<option value="' + year + '">' + year + '</option>';
         fromYears += '<option value="' + year + '">' + "от " + +year + '</option>';
         toYears += '<option value="' + year + '">' + "до " + year + '</option>';
+        afterYears += '<option value="' + year + '">' + "след " + year + '</option>';
     }
 
     document.getElementById("productionDate2").innerHTML = years;
     document.getElementById("yearFrom").innerHTML = fromYears;
     document.getElementById("yearTo").innerHTML = toYears;
+    document.getElementById('year').innerHTML = afterYears;
 
     //Search max mileage
 

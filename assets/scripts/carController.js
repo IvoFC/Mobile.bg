@@ -155,8 +155,29 @@
     }, false);
 
 var homePageSearchButton = document.getElementById("homepage-search-button");
+
 homePageSearchButton.addEventListener('click', function(event) {
-    getCars(carManager.models, document.body);
+    var brandMinSearch = getById('car-brand');
+    brandMinSearch = brandMinSearch.value;
+
+    var modelMinSearch = getById('model');
+    modelMinSearch.value;
+
+    var yearMinSearch = getById('year');
+    yearMinSearch = yearMinSearch.value;
+
+    var maxPriceSearch = getById('price');
+    maxPriceSearch = maxPriceSearch.value;
+
+    var engineMinSearch = getById('car-engine');
+    engineMinSearch = engineMinSearch.value;
+
+    var gearBoxMinSearch = getById('transmis');
+    gearBoxMinSearch = gearBoxMinSearch.value;
+
+    var car = carManager.searchCars(yearMinSearch, '', '', maxPriceSearch, '', '', '', brandMinSearch, modelMinSearch, '', gearBoxMinSearch, '', '', engineMinSearch, '');
+    getCars(car, document.body);
+
     event.preventDefault();
 }, false);
 
