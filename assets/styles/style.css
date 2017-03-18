@@ -640,6 +640,10 @@ section .leftCars {
     margin-bottom: 5px;
 }
 
+#imageSS {
+    width: 200px;
+    height: 150px;
+}
 .slideShow > a {
     padding-right: 10px;
 }
