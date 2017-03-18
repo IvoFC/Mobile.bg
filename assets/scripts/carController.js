@@ -153,11 +153,10 @@
 
         var divAdvancedSearch = document.getElementById("viewCarsAdvanced");
         getCars(car, viewCarsAdvanced);
-        
+
         event.preventDefault();
 
     }, false);
-
 
     var homePageSearchButton = document.getElementById("homepage-search-button");
     homePageSearchButton.addEventListener('click', function (event) {
@@ -181,9 +180,8 @@
 
         var car = carManager.searchCars(yearMinSearch, '', '', maxPriceSearch, '', '', '', brandMinSearch, modelMinSearch, '', gearBoxMinSearch, '', '', engineMinSearch, '');
         var divHomeSearch = document.getElementById("viewCarsFromHomeSearch");
-        getCars(carManager.models, divHomeSearch);
+        getCars(car, divHomeSearch);
         event.preventDefault();
     }, false);
-
 
 })();
