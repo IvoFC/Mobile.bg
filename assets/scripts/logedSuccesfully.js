@@ -1,4 +1,7 @@
+    var loggedIn = false;
 function logged(username) {
+
+    loggedIn = true;
     function getById(id) {
         return document.getElementById(id);
     }
@@ -17,7 +20,7 @@ function logged(username) {
     var myMobilePage = getById('navMyMobile');
     myMobilePage.addEventListener('click', function() {
         getById('show-version-for-guests').style.display = "none";
-        getById('show-version-for-users').style.display = "block";
+        getById('show-version-for-users').style.display = "inline-block";
     }, false);
     
     // Function for showing all cars for this user ->

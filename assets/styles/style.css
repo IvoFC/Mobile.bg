@@ -175,7 +175,16 @@ body {
     display: block;
 }
 
-#publish, #searching, #mainViewPublication, #divCar, #viewCarsFromHomeSearch #viewCarsAdvanced, #view {
+#notLoggedIn {
+    display: none;
+    text-align: center;
+}
+
+#notLoggedIn h3 {
+    font-weight: bold;
+}
+
+#publish, #searching, #mainViewPublication, #divCar, #viewCarsFromHomeSearch #viewCarsAdvanced, #view, #notLoggedIn {
     border: 1px solid #09F;
     border-top: 2px solid #09F;
     padding: 10px;
@@ -770,7 +779,9 @@ embed {
 
 /* Styling page - myMobile ->*/
     #my-mobile, #my-mobile #show-version-for-users {
+        box-sizing: border-box;
         display: none;
+        padding: 10px;
     }
      #my-mobile #show-version-for-guests {
          text-align: center;
@@ -779,13 +790,15 @@ embed {
               font-weight: bold;
               font-size: 1.3em;
     }
+
     #my-mobile {
-        height: 10em;
+        min-height: 10em;
     }
     /*For users ->*/
     #liked-cars-from-user, #all-cars-from-user {
         float: left;
         width: 45%;
+        min-height: 100px;
         margin-left: 2em;
         border: 3px solid #09F;
     }
