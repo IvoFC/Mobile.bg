@@ -7,6 +7,7 @@ function logged(username) {
     getById('login-register-popup').style.display = 'none';
     getById('left-register-link').style.display = 'none';
     getById('login-button').style.display = 'none';
+    document.getElementById("login-background").style.display = "none";
     
     var welcomeUser = document.createElement('p');
     welcomeUser.innerHTML = "Здравейте, " + "<span>" + userModel.getUserInfo() + "</span>";

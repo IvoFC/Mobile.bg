@@ -106,11 +106,12 @@
         if (document.getElementById('succesfullRegistration')) {
             event.target.parentElement.removeChild(document.getElementById('succesfullRegistration'));
         }
+        
         event.preventDefault();
     }, false)
     // Register button in popup ->
     var finalRegisterButton = document.getElementById('submit-register-form');
-    finalRegisterButton.addEventListener('click', function () {
+    finalRegisterButton.addEventListener('click', function (event) {
         // Get all inputs ->
         var inputs = document.querySelectorAll('#login-register-popup #register-form > input');
         var username = inputs[0].value.trim();

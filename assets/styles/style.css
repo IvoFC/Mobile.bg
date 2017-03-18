@@ -17,6 +17,7 @@ body {
 #topNav {
     background-color: #008FC6;
     width: 100%;
+    box-sizing: border-box;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 0.8em;
     display: inline-block;
@@ -458,12 +459,14 @@ body {
     cursor: pointer;
 }
 
+
 #login-section {
     float: right;
     width: 28%;
     border: 1px solid grey;
 }
 #login-section #left-register-link {
+    padding: 6px;
     float: left;
 }
 #login-section h3 {
