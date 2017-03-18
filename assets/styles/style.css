@@ -184,14 +184,15 @@ body {
     font-weight: bold;
 }
 
-#publish, #searching, #mainViewPublication, #divCar, #viewCarsFromHomeSearch #viewCarsAdvanced, #view, #notLoggedIn {
+#publish, #searching, #mainViewPublication, .divCar, #viewCarsFromHomeSearch #viewCarsAdvanced, #view, #notLoggedIn {
     border: 1px solid #09F;
     border-top: 2px solid #09F;
     padding: 10px;
 }
 
 
-#divCar {
+.divCar {
+    background: #dce4e8;
     margin: 10px auto;
     display: inline-block;
     width: 100%;
@@ -794,6 +795,7 @@ embed {
     #my-mobile {
         min-height: 10em;
     }
+    
     /*For users ->*/
     #liked-cars-from-user, #all-cars-from-user {
         float: left;
