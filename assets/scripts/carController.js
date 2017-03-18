@@ -154,11 +154,13 @@
 
     }, false);
 
-var homePageSearchButton = document.getElementById("homepage-search-button");
-homePageSearchButton.addEventListener('click', function(event) {
-    getCars(carManager.models, document.body);
-    event.preventDefault();
-}, false);
+
+    var homePageSearchButton = document.getElementById("homepage-search-button");
+    homePageSearchButton.addEventListener('click', function (event) {
+        var divHomeSearch = document.getElementById("viewCarsFromHomeSearch");
+        getCars(carManager.models, divHomeSearch);
+        event.preventDefault();
+    }, false);
 
 
 
