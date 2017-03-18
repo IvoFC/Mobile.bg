@@ -22,7 +22,7 @@
                     "year": "",
                     "engine": "Бензинов",
                     "extras": "",
-                    "image": "",
+                    "image": "assets/img/publicated-cars/123.jpg",
                     "owner": "Ivan"
                 },
                 {
@@ -40,7 +40,7 @@
                     "year": "",
                     "engine": "Бензинов",
                     "extras": "",
-                    "image": "",
+                    "image": "assets/img/publicated-cars/123.jpg",
                     "owner": "Ivan"
                 }
             ]
@@ -67,7 +67,7 @@
                     "year": "",
                     "engine": "Бензинов",
                     "extras": "",
-                    "image": "",
+                    "image": "assets/img/publicated-cars/123.jpg",
                     "owner": "Petur"
                 },
                 {
@@ -85,7 +85,7 @@
                     "year": "",
                     "engine": "Дизелов",
                     "extras": "",
-                    "image": "",
+                    "image": "assets/img/publicated-cars/123.jpg",
                     "owner": "Petur"
                 }
             ]
