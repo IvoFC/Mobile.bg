@@ -20,11 +20,14 @@ function getCars(cars, whereToShow) {
         for (var prop in cars[index]) {
             if (Object.prototype.hasOwnProperty.call(cars[index], prop)) {
                 var value = cars[index][prop];
-
                 var name = '';
+
                 if (prop == 'image' && value != undefined && value != '') {
                     name = 'Снимка';
-                    divCar.innerHTML += name + ': ' + value + '<br/>';
+
+                        var carImage = document.createElement('img');
+                        carImage.src = value;
+                        divCar.appendChild(carImage);
                 }
                 if (prop == 'brand' && value != undefined && value != '') {
                     name = 'Марка';
@@ -66,10 +69,17 @@ function getCars(cars, whereToShow) {
                     name = 'Цена';
                     divCar.innerHTML += name + ': ' + value + '<br/>';
                 }
-                if (prop == 'dateOfMade' && value != undefined && value != '') {
+
+                if (prop == 'month' && value != undefined && value != '') {
                     name = 'Дата на производство';
-                    divCar.innerHTML += name + ': ' + value + '<br/>';
+                    divCar.innerHTML += name + ': ' + value;
                 }
+
+                if (prop == 'year' && value != undefined && value != '') {
+                    name = '';
+                    divCar.innerHTML += ' ' + value + '<br/>';
+                }
+                
                 if (prop == 'engine' && value != undefined && value != '') {
                     name = 'Двигател';
                     divCar.innerHTML += name + ': ' + value + '<br/>';

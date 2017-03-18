@@ -12,6 +12,11 @@
 
         for(let index = 0; index < user.length; index++) {
 
+            // carsOfUser[currentCar].image
+        //     var currentImage = new File(carsOfUser[currentCar].image, 'sample.txt', {
+        //     lastModified: new Date(0), // optional - default = now
+        //     type: "File" // optional - default = ''
+        // });
                 var carsOfUser = user[index].cars;
                  for(var currentCar = 0; currentCar < carsOfUser.length; currentCar++) {
                     carManager.addCar(new Car(carsOfUser[currentCar].brand, carsOfUser[currentCar].model,
