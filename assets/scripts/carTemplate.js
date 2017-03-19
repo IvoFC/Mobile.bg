@@ -1,11 +1,11 @@
 function getCars(cars, whereToShow) {
-    var title = document.createElement('h2');
-    title.style.fontWeight = 'bold';
-    title.style.borderBottom = "3px solid #09F";
-    title.style.paddingBottom = "10px";
-    title.style.marginBottom = "5px";
-    title.innerHTML += "Резултати от търсенето: "
-    whereToShow.appendChild(title);
+    // var title = document.createElement('h2');
+    // title.style.fontWeight = 'bold';
+    // title.style.borderBottom = "3px solid #09F";
+    // title.style.paddingBottom = "10px";
+    // title.style.marginBottom = "5px";
+    // title.innerHTML += "Резултати от търсенето: "
+    // whereToShow.appendChild(title);
 
 
     for (var index = 0; index < cars.length; index++) {
@@ -13,13 +13,16 @@ function getCars(cars, whereToShow) {
         var divCar = document.createElement('div');
         divCar.className = "divCar";
 
-        var divCarText = document.createElement('div');
-        divCarText.className = "divCarText";
+        var divCarText1 = document.createElement('div');
+        divCarText1.className = "divCarText";
+        var divCarText2 = document.createElement('div');
+        divCarText2.className = "divCarText";
 
 
         // var viewCars = document.getElementById('viewCars');
         whereToShow.appendChild(divCar);
-        divCar.appendChild(divCarText);
+        divCar.appendChild(divCarText2);
+        divCar.appendChild(divCarText1);
 
 
         for (var prop in cars[index]) {
@@ -29,73 +32,74 @@ function getCars(cars, whereToShow) {
 
                 if (prop == 'image' && value != undefined && value != '') {
                     name = 'Снимка';
-
+                    var imageDiv = document.createElement('div');
+                    divCar.appendChild(imageDiv);
+                    imageDiv.className = "imageDiv";
                     var carImage = document.createElement('img');
                     carImage.src = value;
-                    divCar.appendChild(carImage);
+                    imageDiv.appendChild(carImage);
                 }
+                
                 if (prop == 'brand' && value != undefined && value != '') {
                     name = 'Марка';
-                    divCarText.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
+                    divCarText1.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
                 }
                 if (prop == 'model' && value != undefined && value != '') {
                     name = 'Модел';
-                    divCarText.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
+                    divCarText1.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
                 }
                 if (prop == 'region' && value != undefined && value != '') {
                     name = 'Регион';
-                    divCarText.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
+                    divCarText2.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
                 }
                 if (prop == 'gearBox' && value != undefined && value != '') {
                     name = 'Скоростна кутия';
-                    divCarText.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
+                    divCarText2.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
                 }
                 if (prop == 'euroStandard' && value != undefined && value != '') {
                     name = 'Евро стандарт';
-                    divCarText.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
+                    divCarText2.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
                 }
                 if (prop == 'horsePower' && value != undefined && value != '') {
                     name = 'Мощност [к.с.]';
-                    divCarText.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
+                    divCarText2.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
                 }
                 if (prop == 'category' && value != undefined && value != '') {
                     name = 'Категория';
-                    divCarText.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
+                    divCarText1.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
                 }
                 if (prop == 'mileage' && value != undefined && value != '') {
                     name = 'Пробег';
-                    divCarText.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
+                    divCarText2.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
                 }
                 if (prop == 'color' && value != undefined && value != '') {
                     name = 'Цвят';
-                    divCarText.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
+                    divCarText2.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
                 }
                 if (prop == 'price' && value != undefined && value != '') {
                     name = 'Цена';
-                    divCarText.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
-                }
-
-                if (prop == 'month' && value != undefined && value != '') {
-                    name = 'Дата на производство';
-                    divCarText.innerHTML += '<p><span>' + name + ': </span>' + value + '</p>';
+                    divCarText1.innerHTML += '<p><span>' + name + ': </span>' + value + ' лв. <br/></p>';
                 }
 
                 if (prop == 'year' && value != undefined && value != '') {
-                    name = '';
-                    divCarText.innerHTML += '<p>' + ' ' + value + '<br/></p>';
+                    name = 'Година на производство';
+                    divCarText1.innerHTML += '<p><span>' + name + ': </span>' + value + '</p>';
                 }
 
                 if (prop == 'engine' && value != undefined && value != '') {
                     name = 'Двигател';
-                    divCarText.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
+                    divCarText2.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
                 }
                 if (prop == 'extras' && cars[index].extras != undefined && cars[index].extras.length > 0) {
                     name = '<br/> Екстри';
-                    divCar.innerHTML += '<p><span>' + name + ': <span>' + '</p><p>';
+                    var divExtras = document.createElement('div');
+                    divCar.appendChild(divExtras);
+                    divExtras.className = "divExtras";
+                    divExtras.innerHTML += '<span>' + name + ': </span>';
                     for (var extra = 0; extra < cars[index].extras.length; extra++) {
-                        divCar.innerHTML += cars[index].extras[extra] + ', ';
+                        divExtras.innerHTML += cars[index].extras[extra] + ', ';
                     }
-                    divCar.innerHTML += "<br/></p>";
+                    divCar.innerHTML += "<br/>";
                 }
             }
         }
