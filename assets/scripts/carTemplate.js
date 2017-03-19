@@ -1,11 +1,11 @@
 function getCars(cars, whereToShow) {
-    var title = document.createElement('h2');
-    title.style.fontWeight = 'bold';
-    title.style.borderBottom = "3px solid #09F";
-    title.style.paddingBottom = "10px";
-    title.style.marginBottom = "5px";
-    title.innerHTML += "Резултати от търсенето: "
-    whereToShow.appendChild(title);
+    // var title = document.createElement('h2');
+    // title.style.fontWeight = 'bold';
+    // title.style.borderBottom = "3px solid #09F";
+    // title.style.paddingBottom = "10px";
+    // title.style.marginBottom = "5px";
+    // title.innerHTML += "Резултати от търсенето: "
+    // whereToShow.appendChild(title);
 
 
     for (var index = 0; index < cars.length; index++) {
