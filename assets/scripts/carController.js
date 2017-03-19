@@ -75,7 +75,9 @@
         var ownerName = document.querySelector("#logged-user > p > span").textContent;
         
         var div = getById('previewSelections');
-        div.innerHTML += document.createElement('p').innerText = 'Успешно публикувахте автомобил';
+        div.innerHTML = '';
+        document.querySelector('#mainViewPublication').style.backgroundColor = "white";
+        div.innerHTML += document.createElement('h3').innerText = 'Обявата Ви беше публикувана успешно!';
 
         pubButton.style.display = 'none';
 
