@@ -197,7 +197,7 @@
                 inputs[index].value = '';
             }
             var succesfullRegistration = document.createElement('p');
-            succesfullRegistration.id = 'registrationError';
+            succesfullRegistration.id = 'succesfullRegistration';
             succesfullRegistration.textContent = 'Поздравления, Вие успешно се регистрирахте в сайта..';
             modal.appendChild(succesfullRegistration);
         }
