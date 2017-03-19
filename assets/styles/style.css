@@ -691,8 +691,8 @@ color: #09F;
     position: fixed;
     top: 15%;
     left: 33%;
-    width: 30%;
-    height: 60%;
+    width: 400px;
+    height: 500px;
     border-radius: 5%;
     background-color: white;
     color: grey;
@@ -733,10 +733,6 @@ color: #09F;
     width: 100%;
 }
 
-#loginForm table {
-    margin-top: 16%;
-    margin-bottom: 10%;
-}
 
 
 #login-form td, #register-form td {
