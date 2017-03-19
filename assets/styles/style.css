@@ -184,7 +184,7 @@ body {
     font-weight: bold;
 }
 
-#publish, #searching, #mainViewPublication, .divCar, #viewCarsFromHomeSearch #viewCarsAdvanced, #view, #notLoggedIn {
+#publish, #searching, #mainViewPublication, .divCar, #viewCarsFromHomeSearch #viewCarsAdvanced, #view, #notLoggedIn, #show-version-for-users {
     border: 1px solid #09F;
     border-top: 2px solid #09F;
     padding: 10px;
@@ -299,9 +299,99 @@ body {
 }
 
 #mainViewPublication {
+    font-size: 1em;
+    /*font-weight: bold;*/
+    background: #e6eaed;
+    margin: 10px auto;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#mainViewPublication #previewSelections {
     display: inline-block;
     width: 100%;
 }
+#mainViewPublication #previewSelections > img {
+    float: left;
+    width: 35%;
+    padding: 1em;
+}
+#mainViewPublication #previewSelections > .divCarText > span {
+    color: #09F;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+#mainViewPublication #previewSelections > img {
+    float: left;
+    width: 40%;
+}
+#mainViewPublication #previewSelections > .divCarText {
+    float: right;
+    width: 50%;
+}
+#mainViewPublication #previewSelections > .divCarText > p {
+    text-align: right;
+}
+#mainViewPublication #previewSelections > #div-car-extras {
+    display: inline-block;
+    width: 60%;
+    padding: 0.5em;
+
+}
+#mainViewPublication #previewSelections > #div-car-extras > span {
+    color: #09F;
+    font-weight: normal;
+    font-size: 1.2em;
+    border-bottom: 2px solid #09F;
+    display: block;
+    margin-bottom: 1em;
+    text-align: center;
+    padding-bottom: 0.3em;
+    font-weight: bold;
+}
+
+#mainViewPublication #previewSelections > #div-car-extras > p {
+    font-weight: bold;
+    padding: 0.3em;
+}
+
+
+
+/*
+color: #09F;
+    font-weight: normal;
+    font-size: 1.2em;
+    border-bottom: 2px solid #09F;
+    display: block;
+    margin-bottom: 1em;
+    text-align: center;
+    padding-bottom: 0.3em;*/
+/*.divCarText {
+    float:right;
+    width: 70%;
+}
+
+.divCar img {
+    float: left;
+}
+
+.divCar p {
+    text-align: right;
+}
+
+.divCar span {
+    color: #09F;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+*/
+
+
+
+
+
 #viewPublication {
     display: none;
 }
@@ -825,14 +915,20 @@ embed {
     #my-mobile, #my-mobile #show-version-for-users {
         box-sizing: border-box;
         display: none;
-        padding: 10px;
+        width: 100%;
     }
      #my-mobile #show-version-for-guests {
          text-align: center;
      }
-    #my-mobile #show-version-for-guests h3 {
+    #my-mobile #show-version-for-guests h3, #show-version-for-users h3 {
               font-weight: bold;
               font-size: 1.3em;
+    }
+
+    #show-version-for-users h3 {
+        border-bottom: 3px solid #09F;
+        padding-bottom: 5px;
+    
     }
 
     #my-mobile {
@@ -841,11 +937,14 @@ embed {
     
     /*For users ->*/
     #liked-cars-from-user, #all-cars-from-user {
-        float: left;
-        width: 45%;
-        min-height: 100px;
+        /*float: left;*/
+        width: 100%;
+        min-height: 200px;
         margin-left: 2em;
-        border: 3px solid #09F;
+        display: inline-block;
+        box-sizing: border-box;
+        margin: 10px auto;
+        /*border: 3px solid #09F;*/
     }
     #liked-cars-from-user h3, #all-cars-from-user h3 {
         text-align: center;

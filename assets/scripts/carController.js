@@ -13,6 +13,7 @@
         reader.addEventListener('load', function () {
             console.log('Picture was loaded');
             previewImage.src = reader.result;
+            previewImage.id = "preview-image";
             imagefile = reader.result;
         }, false);
 
@@ -74,11 +75,13 @@
         var ownerName = document.querySelector("#logged-user > p > span").textContent;
 
         var div = getById('previewSelections');
-        div.innerHTML += document.createElement('p').innerText = 'Успешно публикувахте автомобил';
+        div.innerHTML = '';
+        document.querySelector('#mainViewPublication').style.backgroundColor = "white";
+        div.innerHTML += document.createElement('h3').innerText = 'Обявата Ви беше публикувана успешно!';
 
         pubButton.style.display = 'none';
 
-        carManager.addCar(new Car(image, brand, model, region, gearBox, euroStandard, horsePower, category, mileage, color, price, month, year, engine, extras, ownerName));
+        carManager.addCar(new Car(brand, model, region, gearBox, euroStandard, horsePower, category, mileage, color, price, month, year, engine, extras, image, ownerName));
 
         event.preventDefault();
     }, false);
