@@ -445,7 +445,9 @@ color: #09F;
     font-weight: bold;
     color: #09F;
 }
-
+.listed-cars {
+    width: 300px;
+}
 #search {
     float: left;
     width: 35%;

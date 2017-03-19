@@ -50,6 +50,7 @@ function getCars(cars, whereToShow, canBeDeleted, unclickable) {
                     divCar.appendChild(imageDiv);
                     imageDiv.className = "imageDiv";
                     var carImage = document.createElement('img');
+                    carImage.className = "listed-cars";
                     carImage.src = value;
                     if (!unclickable) {
                         carImage.addEventListener('click', function () {
