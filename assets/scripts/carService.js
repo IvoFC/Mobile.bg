@@ -20,10 +20,7 @@ function Car(image, brand, model, region, gearBox, euroStand, horsePower, catego
 
 var carManager = (function () {
 
-    var cars = [new Car('', 'Bmw', '320', 'Варна', 'Ръчна', 'Евро 1', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', ['GPS система за проследяване', 'ESP', 'Автоматичен контрол на стабилността', '4x4']),
-        new Car('', 'Honda', 'Accord', 'София', '', '', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', []),
-        new Car('', 'Renault', 'Accord', 'София', '', '', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', [], "", "asd")];
-        //   new File(carsOfUser[currentCar].image, 'sample.txt')
+    var cars = [];
     return {
         models: cars,
 
