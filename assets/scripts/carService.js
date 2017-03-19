@@ -1,4 +1,5 @@
-function Car(brand, model, region, gearBox, euroStand, horsePower, category, mileage, color, price, month, year, engine, extras, image, owner) {
+function Car(image, brand, model, region, gearBox, euroStand, horsePower, category, mileage, color, price, month, year, engine, extras, owner) {
+    this.image = image;
     this.brand = brand;
     this.model = model;
     this.region = region;
@@ -13,15 +14,15 @@ function Car(brand, model, region, gearBox, euroStand, horsePower, category, mil
     this.euroStandard = euroStand;
     this.mileage = mileage;
     this.extras = extras;
-    this.image = image;
+
     this.owner = owner;
 }
 
 var carManager = (function () {
 
-    var cars = [new Car('Bmw', '320', 'Варна', 'Ръчна', 'Евро 1', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', ['GPS система за проследяване', 'ESP', 'Автоматичен контрол на стабилността', '4x4']),
-        new Car('Honda', 'Accord', 'София', '', '', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', []),
-        new Car('Renault', 'Accord', 'София', '', '', '102', 'Кабрио','100000', 'Син', '4500', 'декември', '2005', 'Бензинов',[], "", "asd")];
+    var cars = [new Car('', 'Bmw', '320', 'Варна', 'Ръчна', 'Евро 1', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', ['GPS система за проследяване', 'ESP', 'Автоматичен контрол на стабилността', '4x4']),
+        new Car('', 'Honda', 'Accord', 'София', '', '', '102', 'Кабрио', '100000', 'Син', '4500', 'декември', '2005', 'Бензинов', []),
+        new Car('', 'Renault', 'Accord', 'София', '', '', '102', 'Кабрио','100000', 'Син', '4500', 'декември', '2005', 'Бензинов',[], "", "asd")];
         //   new File(carsOfUser[currentCar].image, 'sample.txt')
     return {
         models: cars,

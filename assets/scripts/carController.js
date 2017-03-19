@@ -77,7 +77,7 @@
 
         pubButton.style.display = 'none';
 
-        carManager.addCar(new Car(brand, model, region, gearBox, euroStandard, horsePower, category, mileage, color, price, month, year, engine, extras, image));
+        carManager.addCar(new Car(image, brand, model, region, gearBox, euroStandard, horsePower, category, mileage, color, price, month, year, engine, extras));
 
         event.preventDefault();
     }, false);

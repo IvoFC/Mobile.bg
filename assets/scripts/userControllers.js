@@ -19,12 +19,12 @@
                 // });
                 var carsOfUser = user[index].cars;
                 for (var currentCar = 0; currentCar < carsOfUser.length; currentCar++) {
-                    carManager.addCar(new Car(carsOfUser[currentCar].brand, carsOfUser[currentCar].model,
+                    carManager.addCar(new Car(
+                        carsOfUser[currentCar].image, carsOfUser[currentCar].brand, carsOfUser[currentCar].model,
                         carsOfUser[currentCar].region, carsOfUser[currentCar].gearBox, carsOfUser[currentCar].euroStand,
                         carsOfUser[currentCar].horsePower, carsOfUser[currentCar].category, carsOfUser[currentCar].mileage,
                         carsOfUser[currentCar].color, carsOfUser[currentCar].price, carsOfUser[currentCar].month,
-                        carsOfUser[currentCar].year, carsOfUser[currentCar].engine, carsOfUser[currentCar].extras,
-                        carsOfUser[currentCar].image, carsOfUser[currentCar].owner))
+                        carsOfUser[currentCar].year, carsOfUser[currentCar].engine, carsOfUser[currentCar].extras, carsOfUser[currentCar].owner))
                 }
 
                 userModel.addUser(new User(user[index].firstname, user[index].lastname, user[index].town, user[index].email, user[index].password, user[index].cars));

@@ -191,16 +191,24 @@ body {
 }
 
 .divCarText {
-    float:right;
-    width: 70%;
+    float: right;
+    width: 34%;
+    margin-top: 0px;
+    text-align: left;
+    padding: 0px;
 }
 
-.divCar img {
-    float: left;
+#imageDiv img {
+    height: 200px;
+    width: auto;
+}
+
+.divCar .imageDiv {
+    display: inline-block;
 }
 
 .divCar p {
-    text-align: right;
+    text-align: left;
 }
 
 .divCar span {
@@ -215,8 +223,18 @@ body {
     background: #e6eaed;
     margin: 10px auto;
     display: inline-block;
+    min-height: 300px;
     width: 100%;
     box-sizing: border-box;
+    padding: 20px;
+}
+
+.divExtras {
+    position: relative;
+    left: 0%;
+    top: 10px;
+    display: inline-block;
+    width: 100%;
 }
 
 #viewCarsFromHomeSearch {
