@@ -138,59 +138,5 @@ function getCars(cars, whereToShow, canBeDeleted, unclickable) {
                 }
             }
         }
-        // var viewButton = document.createElement('button');
-        // viewButton.id = 'viewButton';
-        // divCar.appendChild(viewButton);
-        // viewButton.innerHTML = "Разгледай обявата";
-
-        // console.log(cars[index]);
-        // if (withButtons) {
-        //     //view Button Functionality
-        //     var publishButton = document.querySelector(".publish");
-        //     var searchButton = document.querySelector(".searching");
-        //     if (searchButton = null) {
-        //         searchButton = document.querySelector(".active");
-        //     }
-        //     var homePageSearchButton = document.getElementById("homepage-search-button");
-        //     var advancedSearchButton = document.getElementById("searchButton");
-        //     var homeButton = document.querySelector('.homeBut');
-        //     var myMobileButton = document.querySelector('#navMyMobile > a');
-        //     var viewPublicationButton = document.getElementById('viewPublicationButton');
-        //     var backToPublish = document.getElementById('backToPublishText');
-        //     // Get all pages
-        //     var mainDIv = document.querySelector('#homePage');
-        //     var publishPage = document.querySelector('#publishCars');
-        //     var searchingPage = document.querySelector('#searching');
-        //     var searchFromHome = document.querySelector('#viewCarsFromHomeSearch');
-        //     var advancedSearch = document.querySelector('#viewCarsAdvanced');
-        //     var viewPage = document.querySelector('#view');
-        //     var publishPreview = document.querySelector('#viewPublication');
-        //     var previewSelections = document.querySelector('#previewSelections');
-        //     var myMobilePage = document.querySelector('#my-mobile');
-
-        //     var viewButton = document.createElement('button');
-        //     viewButton.id = 'viewButton';
-        //     divCar.appendChild(viewButton);
-        //     viewButton.innerHTML = "Разгледай обявата";
-        //     viewButton.addEventListener('click', function (event) {
-
-        //         searchingPage.style.display = 'none';
-        //         publishPage.style.display = 'none';
-        //         mainDIv.style.display = 'none';
-        //         publishPreview.style.display = 'none';
-        //         myMobilePage.style.display = 'none';
-        //         searchFromHome.style.display = 'none';
-        //         advancedSearch.style.display = "none";
-        //         viewPage.style.display = "block";
-
-        //         // viewPage.innerHTML += viewButton.parentNode.innerHTML;
-        //         console.log("Kolata ti e ei taiq: ");
-        //         console.log(models[index]);
-        //         getCars([cars[index]], viewPage, false);
-
-        //         event.preventDefault();
-        //     }, false);
-
-        // }
     }
 }
