@@ -4,14 +4,27 @@ function getCars(cars, whereToShow) {
     title.style.borderBottom = "3px solid #09F";
     title.style.paddingBottom = "10px";
     title.style.marginBottom = "5px";
-    title.innerHTML += "Резултати от търсенето: "
+    title.innerHTML += "Резултати от търсенето: ";
     whereToShow.appendChild(title);
 
 
-    for (var index = 0; index < cars.length; index++) {
+    for (let index = 0; index < cars.length; index++) {
 
         var divCar = document.createElement('div');
         divCar.className = "divCar";
+        divCar.id = 'divCar' + index;
+        divCar.addEventListener('click', function () {
+            var divBackground = document.createElement('div');
+            divBackground.id = 'previewBackground';
+            divBackground.style.display = 'block';
+            var divPopUp = document.createElement('div');
+            divPopUp.id = 'previewPopUp';
+            divPopUp.style.display = 'block';
+            whereToShow.appendChild(divBackground);
+            whereToShow.appendChild(divPopUp);
+            getCars([cars[index]], divPopUp);
+
+        }, false);
 
         var divCarText1 = document.createElement('div');
         divCarText1.className = "divCarText";
@@ -39,7 +52,7 @@ function getCars(cars, whereToShow) {
                     carImage.src = value;
                     imageDiv.appendChild(carImage);
                 }
-                
+
                 if (prop == 'brand' && value != undefined && value != '') {
                     name = 'Марка';
                     divCarText1.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';

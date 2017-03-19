@@ -565,7 +565,7 @@ body {
 }
 /*Finish styling og login and register form*/
 /*Styling logged users*/
-#login-background {
+#login-background, #previewBackground {
     padding: 2em;
     position: fixed;
     top: 0%;
@@ -633,7 +633,8 @@ body {
     margin: auto;
     text-align: center;
 }
-#login-register-popup #register-form {
+
+#login-register-popup #register-form, #previewBackground, #previewPopUp {
     display: none;
 }
 
