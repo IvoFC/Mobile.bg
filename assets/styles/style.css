@@ -1091,7 +1091,7 @@ footer section .bottomFooter span {
     z-index: 2;
     position: fixed;
     top: 90px;
-    left: 8%;
+    left: 10%;
 }
 
 #previewPopUp > .divCar {
@@ -1099,7 +1099,7 @@ footer section .bottomFooter span {
     position: fixed;
     margin: auto;
     border-radius: 25px;
-    width: 70em;
+    width: 80%;
     height: 28em;
 }
 
