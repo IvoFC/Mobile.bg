@@ -789,12 +789,39 @@ color: #09F;
 }
 
 /*End of Login and Register form*/
+#searching {
+    display: none;
+}
+
+/*Preview publications*/
+
+#previewPopUp {
+    z-index: 2;
+    position: fixed;
+    top: 90px;
+    left: 10%;
+}
+
+#previewPopUp > .divCar {
+    display: block;
+    position: fixed;
+    margin: auto;
+    border-radius: 25px;
+    width: 80%;
+    height: 28em;
+}
+
+#previewPopUp > .divCar img {
+    width: 320px;
+    height: 270px;
+}
 
 /*Left side New cars*/
 
 section .leftCars {
     width: 445px;
     margin-right: 8px;
+    margin-top: 10px;
     float: left;
     /*border: 2px solid blue;*/
 }
@@ -883,6 +910,7 @@ section .leftCars {
 section .rightTires {
     float: left;
     width: 207px;
+    margin-top: 10px;
 }
 
 section .rightTires form {
@@ -1079,31 +1107,4 @@ footer section .bottomFooter ul li a {
 footer section .bottomFooter span {
     float: right;
     font-size: 11px;
-}
-
-#searching {
-    display: none;
-}
-
-/*Preview publications*/
-
-#previewPopUp {
-    z-index: 2;
-    position: fixed;
-    top: 90px;
-    left: 10%;
-}
-
-#previewPopUp > .divCar {
-    display: block;
-    position: fixed;
-    margin: auto;
-    border-radius: 25px;
-    width: 80%;
-    height: 28em;
-}
-
-#previewPopUp > .divCar img {
-    width: 320px;
-    height: 270px;
 }
