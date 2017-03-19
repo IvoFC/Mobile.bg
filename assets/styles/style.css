@@ -575,6 +575,7 @@ color: #09F;
 }
 /*End of news section*/
 
+
 #part3 > section {
     /*display: flex;*/
     /*flex-direction: row;*/
@@ -1027,4 +1028,26 @@ footer section .bottomFooter span {
 
 #searching {
     display: none;
+}
+
+/*Preview publications*/
+
+#previewPopUp {
+    z-index: 2;
+    position: fixed;
+    top: 100px;
+    left: 8%;
+}
+
+#previewPopUp > #divCar {
+    display: block;
+    position: fixed;
+    margin: auto;
+    width: 70em;
+    height: 28em;
+}
+
+#previewPopUp > #divCar img {
+    width: 320px;
+    height: 270px;
 }

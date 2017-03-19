@@ -1,4 +1,4 @@
-function getCars(cars, whereToShow) {
+function getCars(cars, whereToShow, canBeDeleted, unclickable) {
     // var title = document.createElement('h2');
     // title.style.fontWeight = 'bold';
     // title.style.borderBottom = "3px solid #09F";
@@ -12,20 +12,7 @@ function getCars(cars, whereToShow) {
 
         var divCar = document.createElement('div');
         divCar.className = "divCar";
-        divCar.id = 'divCar' + index;
-        divCar.addEventListener('click', function () {
-            var divBackground = document.createElement('div');
-            divBackground.id = 'previewBackground';
-            divBackground.style.display = 'block';
-            var divPopUp = document.createElement('div');
-            divPopUp.id = 'previewPopUp';
-            divPopUp.style.display = 'block';
-            whereToShow.appendChild(divBackground);
-            whereToShow.appendChild(divPopUp);
-            getCars([cars[index]], divPopUp);
-
-        }, false);
-
+        divCar.id = 'divCar';
         var divCarText1 = document.createElement('div');
         divCarText1.className = "divCarText";
         var divCarText2 = document.createElement('div');
@@ -50,9 +37,27 @@ function getCars(cars, whereToShow) {
                     imageDiv.className = "imageDiv";
                     var carImage = document.createElement('img');
                     carImage.src = value;
+                    if (!unclickable) {
+                        carImage.addEventListener('click', function () {
+                            var divBackground = document.createElement('div');
+                            divBackground.id = 'previewBackground';
+                            divBackground.style.display = 'block';
+                            var divPopUp = document.createElement('div');
+                            divPopUp.id = 'previewPopUp';
+                            divPopUp.style.display = 'block';
+                            divPopUp.style.position = 'fixed';
+                            divBackground.addEventListener('click', function () {
+                                divBackground.style.display = 'none';
+                                divPopUp.innerHTML = '';
+                            }, false);
+                            whereToShow.appendChild(divBackground);
+                            whereToShow.appendChild(divPopUp);
+                            getCars([cars[index]], divPopUp, false, true);
+                        }, false);
+                    }
                     imageDiv.appendChild(carImage);
                 }
-                
+
                 if (prop == 'brand' && value != undefined && value != '') {
                     name = 'Марка';
                     divCarText1.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
@@ -112,7 +117,6 @@ function getCars(cars, whereToShow) {
                     for (var extra = 0; extra < cars[index].extras.length; extra++) {
                         divExtras.innerHTML += cars[index].extras[extra] + ', ';
                     }
-                    divCar.innerHTML += "<br/>";
                 }
             }
         }

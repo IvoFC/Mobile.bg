@@ -21,9 +21,6 @@
     var publishPreview = document.querySelector('#viewPublication');
     var previewSelections = document.querySelector('#previewSelections');
     var myMobilePage = document.querySelector('#my-mobile');
-    var previewCarBackground = document.querySelector('#previewBackground');
-    var previewCarPopUp = document.querySelector('#previewPopUp');
-
 
     goToSearchButton.addEventListener('click', goToSearch, false);
 
@@ -210,10 +207,4 @@
         event.preventDefault();
     }, false);
 
-    previewCarBackground.addEventListener('click', function () {
-        previewCarBackground.style.display = 'none';
-        previewCarPopUp.innerHTML = '';
-        previewCarPopUp.style.display = 'none';
-
-    }, false)
 })();
