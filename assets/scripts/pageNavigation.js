@@ -205,6 +205,21 @@
         notLoggedIn.style.display = "none";
 
         event.preventDefault();
+
+        var myCarsDiv = document.getElementById("all-cars-from-user");
+
+        myCarsDiv.style.display = "block";
+        myCarsDiv.innerHTML = '';
+        (function () {
+            var allcars = carManager.getAllCarsOfCurrentUser(username);
+            if(allcars.length === 0) {
+                var noCars = document.createElement("H2");
+                noCars.textContent = "Все още нямате публикувани обяви.";
+                myCarsDiv.appendChild(noCars);
+            }
+            getCars(allcars, myCarsDiv, true);
+            })();
+
     }, false);
 
 })();

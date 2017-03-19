@@ -101,7 +101,7 @@
     // Login button in popup ->
     var finalLoginButton = document.getElementById('submit-button');
     finalLoginButton.addEventListener('click', function (event) {
-        var inputs = document.querySelectorAll('#login-register-popup #login-form > input');
+        var inputs = document.querySelectorAll('#login-register-popup #login-form input');
         var username = inputs[0].value.trim();
         var password = inputs[1].value.trim();
         if (userModel.loginUser(username, password)) {
@@ -130,7 +130,7 @@
     var finalRegisterButton = document.getElementById('submit-register-form');
     finalRegisterButton.addEventListener('click', function (event) {
         // Get all inputs ->
-        var inputs = document.querySelectorAll('#login-register-popup #register-form > input');
+        var inputs = document.querySelectorAll('#login-register-popup #register-form input');
         var username = inputs[0].value.trim();
         var lastname = inputs[1].value.trim();
         var town = inputs[2].value.trim();
