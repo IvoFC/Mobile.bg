@@ -1,3 +1,7 @@
+
+
+
+
 (function () {
 
     // Function for creating objects for cars and users from JSON
@@ -37,6 +41,29 @@
         }, false)
     })();
 
+        function hideErrors() {
+        if (document.getElementById('succesfullRegistration')) {
+            modal.removeChild(document.getElementById('succesfullRegistration'));
+            console.log("success");
+        };
+
+        if (document.getElementById('error')) {
+            modal.removeChild(document.getElementById('error'));
+            console.log("error");
+        }
+
+
+        if (document.getElementById('registrationError')) {
+            modal.removeChild(document.getElementById('registrationError'));
+            console.log("regerror");
+        } else if (document.getElementById('existUsername')) {
+            modal.removeChild(document.getElementById('existUsername'));
+            console.log("existusername");
+        } else if (document.getElementById('wrongPassword')) {
+            modal.removeChild(document.getElementById('wrongPassword'));
+            console.log("wrongpassword");
+        }
+    }
 
     var modal = document.getElementById('login-register-popup');
     var homeLoginButton = document.getElementById("login-button");
@@ -49,7 +76,7 @@
         popupLoginButton.className = '';
         popupLoginButton.className += "active";
         popupRegistrationButton.className = '';
-
+        hideErrors();
 
         event.preventDefault();
     }, false);
@@ -64,6 +91,8 @@
         popupRegistrationButton.className = '';
         popupRegistrationButton.className += "active";
         popupLoginButton.className = '';
+        hideErrors();
+
     }, false);
 
     // Popup login/registration form -->
@@ -75,6 +104,7 @@
         popupLoginButton.className = '';
         popupLoginButton.className += "active";
         popupRegistrationButton.className = '';
+        hideErrors();
 
         event.preventDefault();
     }, false);
@@ -88,13 +118,15 @@
         popupRegistrationButton.className += "active";
         popupLoginButton.className = '';
 
+        hideErrors();
+        
         event.preventDefault();
     }, false);
 
 
     document.getElementById('username').addEventListener('focus', function (event) {
         if (document.getElementById('error')) {
-            event.target.parentElement.removeChild(document.getElementById('error'));
+            modal.removeChild(document.getElementById('error'));
         }
     }, false)
 
@@ -111,17 +143,17 @@
             logged(username);
 
         } else {
-            if (document.getElementById('error') !== inputs[0].parentElement.lastChild) {
+            if (document.getElementById('error') !== modal.lastChild) {
                 var error = document.createElement('p');
                 error.id = 'error';
                 error.textContent = 'Въвели сте неправилно потребителско име или парола.';
-                inputs[0].parentElement.appendChild(error);
+                modal.appendChild(error);
                 inputs[0].value = '';
                 inputs[1].value = '';
             }
         }
         if (document.getElementById('succesfullRegistration')) {
-            event.target.parentElement.removeChild(document.getElementById('succesfullRegistration'));
+            modal.removeChild(document.getElementById('succesfullRegistration'));
         }
 
         event.preventDefault();
@@ -141,16 +173,16 @@
         for (var index = 0; index < inputs.length; index++) {
             inputs[index].addEventListener('focus', function (event) {
                 if (document.getElementById('registrationError')) {
-                    event.target.parentElement.removeChild(document.getElementById('registrationError'));
+                    modal.removeChild(document.getElementById('registrationError'));
                 } else if (document.getElementById('existUsername')) {
-                    event.target.parentElement.removeChild(document.getElementById('existUsername'));
+                    modal.removeChild(document.getElementById('existUsername'));
                 } else if (document.getElementById('wrongPassword')) {
-                    event.target.parentElement.removeChild(document.getElementById('wrongPassword'));
+                    modal.removeChild(document.getElementById('wrongPassword'));
                 }
             }, false)
         }
         if (document.getElementById('succesfullRegistration')) {
-            event.target.parentElement.removeChild(document.getElementById('succesfullRegistration'));
+            modal.removeChild(document.getElementById('succesfullRegistration'));
         };
 
 
@@ -167,33 +199,33 @@
             var succesfullRegistration = document.createElement('p');
             succesfullRegistration.id = 'registrationError';
             succesfullRegistration.textContent = 'Поздравления, Вие успешно се регистрирахте в сайта..';
-            inputs[0].parentElement.appendChild(succesfullRegistration);
+            modal.appendChild(succesfullRegistration);
         }
         // If there are empty fields ->
         else if (!result) {
-            if (document.getElementById('registrationError') !== inputs[0].parentElement.lastChild) {
+            if (document.getElementById('registrationError') !== modal.lastChild) {
                 var registrationError = document.createElement('p');
                 registrationError.id = 'registrationError';
                 registrationError.textContent = 'Моля въведете всички полета и опитайте отново.';
-                inputs[0].parentElement.appendChild(registrationError);
+                modal.appendChild(registrationError);
             }
         }
         // If username is not unique -> 
         else if (uniqueUsername) {
-            if (document.getElementById('existUsername') !== inputs[0].parentElement.lastChild) {
+            if (document.getElementById('existUsername') !== modal.lastChild) {
                 var existUsername = document.createElement('p');
                 existUsername.id = 'existUsername';
                 existUsername.textContent = 'Това потребителско име вече съществува. Моля опитайте отново.';
-                inputs[0].parentElement.appendChild(existUsername);
+                modal.appendChild(existUsername);
             }
         }
         // If passwords are wrong -> 
         else if (!validatePassword) {
-            if (document.getElementById('wrongPassword') !== inputs[0].parentElement.lastChild) {
+            if (document.getElementById('wrongPassword') !== modal.lastChild) {
                 var wrongPassword = document.createElement('p');
                 wrongPassword.id = 'wrongPassword';
                 wrongPassword.textContent = 'Паролата Ви трябва да съдържа повече от 5 символа. Въведените пароли трябва да бъдат еднакви.';
-                inputs[0].parentElement.appendChild(wrongPassword);
+                modal.appendChild(wrongPassword);
             }
         }
         event.preventDefault();
@@ -206,4 +238,6 @@
         event.preventDefault();
     }, false);
     // End of popup login registration form
+
+
 })();

@@ -687,13 +687,19 @@ color: #09F;
     text-transform: uppercase;
 }
 /*Styling login-register popup-->*/
+#error, #succesfullRegistration, #registrationError, #existUsername, #wrongPassword {
+    color: red;
+    font-style: oblique;
+}
+
+
 #login-register-popup {
     padding: 2em;
     position: fixed;
-    top: 15%;
+    top: 10%;
     left: 33%;
     width: 400px;
-    height: 420px;
+    height: 460px;
     border-radius: 5%;
     background-color: white;
     color: grey;
