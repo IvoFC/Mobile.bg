@@ -277,45 +277,108 @@
         </div>
 
         <div id='login-register-popup'>
-                <a href="" id="showLoginForm">Login</a>
-                <a href="" id="showRegistrationForm">Registration</a>
-                <a href="" id="close-popup">X</a>
+            <i id="close-popup" class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+            <div id="popupButtons">
+                <a href="" id="showLoginForm">Влизане</a>
+                <a href="" id="showRegistrationForm">Регистрация</a>
+            </div>
+            
+            <div id="loginForm">
                 <form id='login-form'>
-                    <label for="username">E-mail или Username / за дилъри /</label>
-                    <input type="text" id="username">
-
-                    <label for="password">Парола</label>
-                    <input type="password" id="password">
-
-                    <input type="checkbox" id="remember-me">
-                    <label for="remember-me">Запомни ме</label>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="username">E-mail или Username:</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="username">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="password">Парола:</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="password" id="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="remember-me">
+                                <label for="remember-me">Запомни ме</label>
+                            </td>
+                        </tr>
+                    </table>
 
                     <button id='submit-button'>ВХОД</button>
                 </form>
+            </div>
+            <div id="registerForm">
                 <form id="register-form">
-                    <h2>Регистрация с Email и парола:</h2>
-                    <p>/само за частни лица/</p>
-
-                    <label for="username">Име</label>
-                    <input type="text" id="username">
-
-                    <label for="lastname">Фамилия</label>
-                    <input type="text" id="lastname">
-
-                    <label for="town">Населено място</label>
-                    <input type="text" id="town">
-
-                    <label for="email">Email</label>
-                    <input type="text" id="email">
-
-                    <label for="password">Парола</label>
-                    <input type="password" id="password">
-
-                    <label for="repeat-password">Потвърди паролата</label>
-                    <input type="password" id="repeat-password">
+                    <table>
+                        <tr>
+                            <td colspan="2">
+                                <h2>Регистрация с Email и парола:</h2>
+                                <p>/само за частни лица/</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="username">Име:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="username">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="lastname">Фамилия:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="lastname">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="town">Населено място:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="town">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">Email:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="email">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="password">Парола:</label>
+                            </td>
+                            <td>
+                                <input type="password" id="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="repeat-password">Потвърди паролата:</label>
+                            </td>
+                            <td>
+                                <input type="password" id="repeat-password">
+                            </td>
+                        </tr>
+                    </table>
 
                     <button id="submit-register-form">ЗАПИШИ</button>
                 </form>
+            </div>
             </div>
 
         <!--End of Login/Register POP-UP-->
