@@ -1,4 +1,4 @@
-function getCars(cars, whereToShow) {
+function getCars(cars, whereToShow, canBeDeleted) {
     // var title = document.createElement('h2');
     // title.style.fontWeight = 'bold';
     // title.style.borderBottom = "3px solid #09F";
@@ -10,21 +10,23 @@ function getCars(cars, whereToShow) {
 
     for (let index = 0; index < cars.length; index++) {
 
+        
+
         var divCar = document.createElement('div');
         divCar.className = "divCar";
         divCar.id = 'divCar' + index;
-        divCar.addEventListener('click', function () {
-            var divBackground = document.createElement('div');
-            divBackground.id = 'previewBackground';
-            divBackground.style.display = 'block';
-            var divPopUp = document.createElement('div');
-            divPopUp.id = 'previewPopUp';
-            divPopUp.style.display = 'block';
-            whereToShow.appendChild(divBackground);
-            whereToShow.appendChild(divPopUp);
-            getCars([cars[index]], divPopUp);
+        // divCar.addEventListener('click', function () {
+        //     var divBackground = document.createElement('div');
+        //     divBackground.id = 'previewBackground';
+        //     divBackground.style.display = 'block';
+        //     var divPopUp = document.createElement('div');
+        //     divPopUp.id = 'previewPopUp';
+        //     divPopUp.style.display = 'block';
+        //     whereToShow.appendChild(divBackground);
+        //     whereToShow.appendChild(divPopUp);
+        //     getCars([cars[index]], divPopUp);
 
-        }, false);
+        // }, false);
 
         var divCarText1 = document.createElement('div');
         divCarText1.className = "divCarText";
@@ -33,10 +35,27 @@ function getCars(cars, whereToShow) {
 
 
         // var viewCars = document.getElementById('viewCars');
+            if(canBeDeleted) {
+                var deleteIcon = document.createElement("i");
+                deleteIcon.className = "fa fa-trash-o fa-3x delete-icon";
+                // <i class="fa fa-trash-o" aria-hidden="true"></i>
+                // deleteButton.className = "delete-publication-button";
+                // deleteButton.id = "delete-button" + index;
+                // deleteButton.innerHTML = "Изтриване"; 
+                deleteIcon.addEventListener("click", function() {
+                    console.log("Iztrivam ei taq obqva...");
+                    console.log(cars[index]);
+                    carManager.deleteCar(cars[index]);
+                    // divCar.parentElement.removeChild(document.getElementById("divCar" + index));
+                    // deleteButton.parentElement.parentElement.removeChild(document.getElementById("divCar" + index));
+                    document.getElementById("divCar" + index).style.display = "none";
+                }, false)
+                divCar.appendChild(deleteIcon);
+            }
+
         whereToShow.appendChild(divCar);
         divCar.appendChild(divCarText2);
         divCar.appendChild(divCarText1);
-
 
         for (var prop in cars[index]) {
             if (Object.prototype.hasOwnProperty.call(cars[index], prop)) {
@@ -103,6 +122,7 @@ function getCars(cars, whereToShow) {
                     name = 'Двигател';
                     divCarText2.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';
                 }
+                            
                 if (prop == 'extras' && cars[index].extras != undefined && cars[index].extras.length > 0) {
                     name = '<br/> Екстри';
                     var divExtras = document.createElement('div');
@@ -112,10 +132,12 @@ function getCars(cars, whereToShow) {
                     for (var extra = 0; extra < cars[index].extras.length; extra++) {
                         divExtras.innerHTML += cars[index].extras[extra] + ', ';
                     }
-                    divCar.innerHTML += "<br/>";
                 }
             }
         }
+
+
+
         // var viewButton = document.createElement('button');
         // viewButton.id = 'viewButton';
         // divCar.appendChild(viewButton);
