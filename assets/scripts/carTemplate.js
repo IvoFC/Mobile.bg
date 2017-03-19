@@ -12,7 +12,7 @@ function getCars(cars, whereToShow, canBeDeleted, unclickable) {
 
         var divCar = document.createElement('div');
         divCar.className = "divCar";
-        divCar.id = 'divCar';
+        divCar.id = 'divCar' + index;
         var divCarText1 = document.createElement('div');
         divCarText1.className = "divCarText";
         var divCarText2 = document.createElement('div');
