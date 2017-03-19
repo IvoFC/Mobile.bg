@@ -14,6 +14,10 @@ body {
     margin: 0 auto;
 }
 
+#topNav .menu a {
+    cursor: pointer;
+}
+
 #topNav {
     background-color: #008FC6;
     width: 100%;
