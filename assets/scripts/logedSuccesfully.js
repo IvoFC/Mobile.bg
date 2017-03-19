@@ -42,8 +42,8 @@ function logged(username) {
             getCars(allcars, myCarsDiv, true);
 
 
-            console.log(username);
-            console.log(allcars);
+            // console.log(username);
+            // console.log(allcars);
         })();
     }, false);
 
@@ -51,5 +51,5 @@ function logged(username) {
     // Function for showing all cars for this user ->
 
 
-    console.log('Good for you!');
+    // console.log('Good for you!');
 }

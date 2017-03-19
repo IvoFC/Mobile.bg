@@ -18,18 +18,14 @@ function getCars(cars, whereToShow, canBeDeleted, unclickable) {
         var divCarText2 = document.createElement('div');
         divCarText2.className = "divCarText";
 
-
-        // var viewCars = document.getElementById('viewCars');
             if(canBeDeleted) {
                 var deleteIcon = document.createElement("i");
                 deleteIcon.className = "fa fa-trash-o fa-3x delete-icon";
-                // <i class="fa fa-trash-o" aria-hidden="true"></i>
-                // deleteButton.className = "delete-publication-button";
-                // deleteButton.id = "delete-button" + index;
-                // deleteButton.innerHTML = "Изтриване";
                 deleteIcon.addEventListener("click", function() {
-                    console.log("Iztrivam ei taq obqva...");
-                    console.log(cars[index]);
+                    // console.log("Iztrivam ei taq obqva...");
+                    // console.log(cars[index]);
+
+                    
                     carManager.deleteCar(cars[index]);
                     // divCar.parentElement.removeChild(document.getElementById("divCar" + index));
                     // deleteButton.parentElement.parentElement.removeChild(document.getElementById("divCar" + index));

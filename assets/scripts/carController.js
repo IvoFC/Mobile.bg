@@ -6,12 +6,12 @@
     var imagefile;
     var input = document.querySelector('#upload-image > input');
     input.addEventListener('change', function () {
-        console.log('Input was changed');
+        // console.log('Input was changed');
         var previewImage = document.querySelector('#upload-image > img');
         var reader = new FileReader();
 
         reader.addEventListener('load', function () {
-            console.log('Picture was loaded');
+            // console.log('Picture was loaded');
             previewImage.src = reader.result;
             previewImage.id = "preview-image";
             imagefile = reader.result;
@@ -19,7 +19,7 @@
 
         if (input) {
             reader.readAsDataURL(input.files[0]);
-            console.log(input.files[0]);
+            // console.log(input.files[0]);
         }
     }, false);
 
@@ -77,7 +77,10 @@
         var div = getById('previewSelections');
         div.innerHTML = '';
         document.querySelector('#mainViewPublication').style.backgroundColor = "white";
-        div.innerHTML += document.createElement('h3').innerText = 'Обявата Ви беше публикувана успешно!';
+        var heading = document.createElement('h3');
+        heading.innerText = 'Обявата Ви беше публикувана успешно!';
+        heading.id = "heading-publish-text";
+        div.appendChild(heading);
 
         pubButton.style.display = 'none';
 
@@ -141,7 +144,7 @@
 
         var car = carManager.searchCars(yearFrom, yearTo, priceStart, priceEnd, horsePowStart, horsePowEnd, maxMile, brand, model, region, gearBox, category, color, engine, extras);
 
-        console.log(car);
+        // console.log(car);
 
         var divAdvancedSearch = document.getElementById("viewCarsAdvanced");
         getCars(car, viewCarsAdvanced);

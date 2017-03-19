@@ -32,10 +32,10 @@
                 }
 
                 userModel.addUser(new User(user[index].firstname, user[index].lastname, user[index].town, user[index].email, user[index].password, user[index].cars));
-                console.log("The cars of this user are: ");
-                console.log(user[index].cars);
+                // console.log("The cars of this user are: ");
+                // console.log(user[index].cars);
             }
-            console.log(allInfo);
+            // console.log(allInfo);
 
 
         }, false)
@@ -137,7 +137,7 @@
         var username = inputs[0].value.trim();
         var password = inputs[1].value.trim();
         if (userModel.loginUser(username, password)) {
-            console.log('You login succesfully');
+            // console.log('You login succesfully');
             inputs[0].value = '';
             inputs[1].value = '';
             logged(username);
