@@ -3,6 +3,7 @@
     
     var publishButton = document.querySelector(".publish");
     var searchButton = document.querySelector(".searching");
+    var goToSearchButton = document.querySelector("#advancedSearch");
     var homePageSearchButton = document.getElementById("homepage-search-button");
     var advancedSearchButton = document.getElementById("searchButton");
     var homeButton = document.querySelector('.homeBut');
@@ -23,7 +24,7 @@
 
 
     
-
+    goToSearchButton.addEventListener('click', goToSearch, false);
     
     advancedSearchButton.addEventListener('click', function (event) {
         searchButton.className = 'active';
