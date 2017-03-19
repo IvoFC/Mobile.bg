@@ -23,13 +23,24 @@ function logged(username) {
         getById('show-version-for-users').style.display = "inline-block";
     }, false);
     
-    // Function for showing all cars for this user ->
-    (function () {
+
+    var myCarsButton = getById("all-my-cars");
+    var myCarsDiv = getById("all-cars-from-user");
+    myCarsDiv.style.display = 'none';
+
+    myCarsButton.addEventListener("click", function() {
+        myCarsDiv.style.display = "block";
+        (function () {
         var allcars = carManager.getAllCarsOfCurrentUser(username);
         getCars(allcars, getById('show-version-for-users'));
         console.log(username);
         console.log(allcars);
     })();
+    }, false);
+
+
+    // Function for showing all cars for this user ->
+    
     
     console.log('Good for you!');
 }
