@@ -14,6 +14,10 @@ body {
     margin: 0 auto;
 }
 
+#topNav .menu a {
+    cursor: pointer;
+}
+
 #topNav {
     background-color: #008FC6;
     width: 100%;
@@ -192,7 +196,7 @@ body {
 
 .divCarText {
     float: right;
-    width: 34%;
+    width: 32%;
     margin-top: 0px;
     text-align: left;
     padding: 0px;
@@ -356,7 +360,11 @@ body {
     padding: 0.3em;
 }
 
-
+.delete-icon {
+    float: right;
+    cursor: pointer;
+    color: red;
+}
 
 /*
 color: #09F;
@@ -682,9 +690,9 @@ color: #09F;
 #login-register-popup {
     padding: 2em;
     position: fixed;
-    top: 25%;
-    left: 25%;
-    width: 40%;
+    top: 15%;
+    left: 33%;
+    width: 30%;
     height: 60%;
     border-radius: 5%;
     background-color: white;
@@ -693,28 +701,79 @@ color: #09F;
     display: none;
     z-index: 1;
 }
+
+#login-register-popup .active {
+    background-color: #316ccc !important;
+}
+
 #login-register-popup #showLoginForm, #showRegistrationForm {
     /*display: inline-block;*/
     padding: 1em;
     border: 2px solid #09F;
-    border-radius: 25%;
+    border-radius: 15%;
     color: white;
     background-color: #224b8e;
     font-weight: bold;
     text-decoration: none;
+    min-width: 100px;
+    display: inline-block;
+    text-align: center;
 }
 
-#login-register-popup #showLoginForm {
-    margin-left: 25%;
+#popupButtons {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 }
+
+#loginForm, #registerForm {
+    text-align: center;
+}
+
+#loginForm table, #registerForm table {
+    width: 100%;
+}
+
+#loginForm table {
+    margin-top: 16%;
+    margin-bottom: 10%;
+}
+
+
+#login-form td, #register-form td {
+    padding: 5px;
+    /*border: 1px solid black;*/
+}
+
 
 #login-register-popup #close-popup {
     float: right;
-    background-color: grey;
+    /*background-color: grey;
     color: white;
     border-radius: 50%;
-    zoom: 2;
+    zoom: 2;*/
+    
 }
+
+#login-register-popup #close-popup:hover {
+    cursor: pointer;
+    color: darkred;
+}
+
+
+
+#submit-button, #submit-register-form {
+    margin-top: 10%;
+    width: 140px;
+    height: 50px;
+    background-color: #224b8e;
+    color: white;
+    border-radius: 15%;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1em;
+}
+
 #login-register-popup form {
     margin-top: 2em;
 }

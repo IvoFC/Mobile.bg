@@ -44,6 +44,15 @@ var carManager = (function () {
             return carsofUser;
         },
 
+        deleteCar: function(car) {
+            for(var index = 0; index < cars.length; index++) {
+                if(JSON.stringify(car) === JSON.stringify(cars[index])) {
+                    cars.splice(index, 1);
+                }
+            }
+            // JSON.stringify(obj1) === JSON.stringify(obj2) 
+        },
+
         getCarsForSlideShow: function () {
 
             var carsToShow = [];

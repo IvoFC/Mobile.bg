@@ -20,6 +20,24 @@ function getCars(cars, whereToShow, canBeDeleted, unclickable) {
 
 
         // var viewCars = document.getElementById('viewCars');
+            if(canBeDeleted) {
+                var deleteIcon = document.createElement("i");
+                deleteIcon.className = "fa fa-trash-o fa-3x delete-icon";
+                // <i class="fa fa-trash-o" aria-hidden="true"></i>
+                // deleteButton.className = "delete-publication-button";
+                // deleteButton.id = "delete-button" + index;
+                // deleteButton.innerHTML = "Изтриване";
+                deleteIcon.addEventListener("click", function() {
+                    console.log("Iztrivam ei taq obqva...");
+                    console.log(cars[index]);
+                    carManager.deleteCar(cars[index]);
+                    // divCar.parentElement.removeChild(document.getElementById("divCar" + index));
+                    // deleteButton.parentElement.parentElement.removeChild(document.getElementById("divCar" + index));
+                    document.getElementById("divCar" + index).style.display = "none";
+                }, false)
+                divCar.appendChild(deleteIcon);
+            }
+
         whereToShow.appendChild(divCar);
         divCar.appendChild(divCarText2);
         divCar.appendChild(divCarText1);
@@ -57,7 +75,7 @@ function getCars(cars, whereToShow, canBeDeleted, unclickable) {
                     }
                     imageDiv.appendChild(carImage);
                 }
-
+                
                 if (prop == 'brand' && value != undefined && value != '') {
                     name = 'Марка';
                     divCarText1.innerHTML += '<p><span>' + name + ': </span>' + value + '<br/></p>';

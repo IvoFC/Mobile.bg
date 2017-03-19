@@ -46,6 +46,10 @@
         document.getElementById("register-form").style.display = "none";
         document.getElementById("login-background").style.display = "block";
 
+        popupLoginButton.className = '';
+        popupLoginButton.className += "active";
+        popupRegistrationButton.className = '';
+
 
         event.preventDefault();
     }, false);
@@ -57,6 +61,9 @@
         document.getElementById("login-form").style.display = "none";
         document.getElementById("login-background").style.display = "block";
 
+        popupRegistrationButton.className = '';
+        popupRegistrationButton.className += "active";
+        popupLoginButton.className = '';
     }, false);
 
     // Popup login/registration form -->
@@ -64,6 +71,11 @@
     popupLoginButton.addEventListener('click', function (event) {
         document.getElementById("login-form").style.display = "block";
         document.getElementById("register-form").style.display = "none";
+
+        popupLoginButton.className = '';
+        popupLoginButton.className += "active";
+        popupRegistrationButton.className = '';
+
         event.preventDefault();
     }, false);
 
@@ -71,6 +83,11 @@
     popupRegistrationButton.addEventListener('click', function (event) {
         document.getElementById("register-form").style.display = "block";
         document.getElementById("login-form").style.display = "none";
+
+        popupRegistrationButton.className = '';
+        popupRegistrationButton.className += "active";
+        popupLoginButton.className = '';
+
         event.preventDefault();
     }, false);
 
@@ -106,7 +123,7 @@
         if (document.getElementById('succesfullRegistration')) {
             event.target.parentElement.removeChild(document.getElementById('succesfullRegistration'));
         }
-        
+
         event.preventDefault();
     }, false)
     // Register button in popup ->

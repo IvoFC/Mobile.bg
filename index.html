@@ -17,18 +17,18 @@
     <div id="topNav">
         <div id="topNavWrapper">
             <ul class="menu">
-                <li><a href="" class="active">Автомобили</a></li>
-                <li><a href="">Джипове</a></li>
-                <li><a href="">Бусове</a></li>
-                <li><a href="">Камиони</a></li>
-                <li><a href="">Мотоциклети</a></li>
-                <li><a href="">Селскостопански</a></li>
-                <li><a href="">Индустриални</a></li>
-                <li><a href="">Кари</a></li>
-                <li><a href="">Каравани</a></li>
-                <li><a href="">Яхти и лодки</a></li>
-                <li><a href="">Ремаркета</a></li>
-                <li><a href="">Велосипеди</a></li>
+                <li><a class="active">Автомобили</a></li>
+                <li><a>Джипове</a></li>
+                <li><a>Бусове</a></li>
+                <li><a>Камиони</a></li>
+                <li><a>Мотоциклети</a></li>
+                <li><a>Селскостопански</a></li>
+                <li><a>Индустриални</a></li>
+                <li><a>Кари</a></li>
+                <li><a>Каравани</a></li>
+                <li><a>Яхти и лодки</a></li>
+                <li><a>Ремаркета</a></li>
+                <li><a>Велосипеди</a></li>
             </ul>
         </div>
     </div>
@@ -48,11 +48,11 @@
                     <li><a href="" class="homeBut active">Начало</a></li>
                     <li><a href="" class="publish">Публикуване</a></li>
                     <li><a href="" class="searching">Търсене</a></li>
-                    <li><a href="">Новини</a></li>
-                    <li><a href="">Застраховки</a></li>
-                    <li><a href="">E-mail</a></li>
-                    <li><a href="">Rent-a-car</a></li>
-                    <li><a href="">Дилъри</a></li>
+                    <li><a href="https://fakti.bg/avto">Новини</a></li>
+                    <li><a href="http://www.sdi.bg/onlineInsurance/">Застраховки</a></li>
+                    <li><a style="cursor: pointer">E-mail</a></li>
+                    <li><a href="https://toprentacar.bg/">Rent-a-car</a></li>
+                    <li><a style="cursor: pointer">Дилъри</a></li>
                     <li id="navMyMobile"><a href="">Моето мобиле</a></li>
                 </ul>
             </div>
@@ -241,12 +241,12 @@
                         <span>Преди 2 часа и 36 минути</span>
                         <div id="more-news">
                             <ul>
-                                <li><a href="">За командировъчните на журналистите?</a></li>
-                                <li><a href="">Най-сексуалните зодии</a></li>
-                                <li><a href="">Френски "опели" и корейски "мерцедеси"</a></li>
-                                <li><a href="">Канадската полиция застреля руснак(ВИДЕО)</a></li>
-                                <li><a href="">Студ. Идва сняг</a></li>
-                                <li><a href="">Намериха мъртва акула на необичайно място</a></li>
+                                <li><a href="https://fakti.bg/">За командировъчните на журналистите?</a></li>
+                                <li><a href="https://fakti.bg/">Най-сексуалните зодии</a></li>
+                                <li><a href="https://fakti.bg/">Френски "опели" и корейски "мерцедеси"</a></li>
+                                <li><a href="https://fakti.bg/">Канадската полиция застреля руснак(ВИДЕО)</a></li>
+                                <li><a href="https://fakti.bg/">Студ. Идва сняг</a></li>
+                                <li><a href="https://fakti.bg/">Намериха мъртва акула на необичайно място</a></li>
                             </ul>
                         </div>
         </section>
@@ -277,45 +277,108 @@
         </div>
 
         <div id='login-register-popup'>
-                <a href="" id="showLoginForm">Login</a>
-                <a href="" id="showRegistrationForm">Registration</a>
-                <a href="" id="close-popup">X</a>
+            <i id="close-popup" class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+            <div id="popupButtons">
+                <a href="" id="showLoginForm">Влизане</a>
+                <a href="" id="showRegistrationForm">Регистрация</a>
+            </div>
+            
+            <div id="loginForm">
                 <form id='login-form'>
-                    <label for="username">E-mail или Username / за дилъри /</label>
-                    <input type="text" id="username">
-
-                    <label for="password">Парола</label>
-                    <input type="password" id="password">
-
-                    <input type="checkbox" id="remember-me">
-                    <label for="remember-me">Запомни ме</label>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="username">E-mail или Username:</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="username">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="password">Парола:</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="password" id="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="remember-me">
+                                <label for="remember-me">Запомни ме</label>
+                            </td>
+                        </tr>
+                    </table>
 
                     <button id='submit-button'>ВХОД</button>
                 </form>
+            </div>
+            <div id="registerForm">
                 <form id="register-form">
-                    <h2>Регистрация с Email и парола:</h2>
-                    <p>/само за частни лица/</p>
-
-                    <label for="username">Име</label>
-                    <input type="text" id="username">
-
-                    <label for="lastname">Фамилия</label>
-                    <input type="text" id="lastname">
-
-                    <label for="town">Населено място</label>
-                    <input type="text" id="town">
-
-                    <label for="email">Email</label>
-                    <input type="text" id="email">
-
-                    <label for="password">Парола</label>
-                    <input type="password" id="password">
-
-                    <label for="repeat-password">Потвърди паролата</label>
-                    <input type="password" id="repeat-password">
+                    <table>
+                        <tr>
+                            <td colspan="2">
+                                <h2>Регистрация с Email и парола:</h2>
+                                <p>/само за частни лица/</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="username">Име:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="username">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="lastname">Фамилия:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="lastname">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="town">Населено място:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="town">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">Email:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="email">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="password">Парола:</label>
+                            </td>
+                            <td>
+                                <input type="password" id="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="repeat-password">Потвърди паролата:</label>
+                            </td>
+                            <td>
+                                <input type="password" id="repeat-password">
+                            </td>
+                        </tr>
+                    </table>
 
                     <button id="submit-register-form">ЗАПИШИ</button>
                 </form>
+            </div>
             </div>
 
         <!--End of Login/Register POP-UP-->
