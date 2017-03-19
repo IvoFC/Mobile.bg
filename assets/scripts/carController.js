@@ -71,15 +71,15 @@
         }
 
         var image = imagefile;
-
+        var ownerName = document.querySelector("#logged-user > p > span").textContent;
+        
         var div = getById('previewSelections');
         div.innerHTML += document.createElement('p').innerText = 'Успешно публикувахте автомобил';
 
         pubButton.style.display = 'none';
 
-        carManager.addCar(new Car(brand, model, region, gearBox, euroStandard, horsePower, category, mileage, color, price, month, year, engine, extras));
 
-        carManager.addCar(new Car(brand, model, region, gearBox, euroStandard, horsePower, category, mileage, color, price, month, year, engine, extras, image));
+        carManager.addCar(new Car(brand, model, region, gearBox, euroStandard, horsePower, category, mileage, color, price, month, year, engine, extras, image, ownerName));
 
         event.preventDefault();
     }, false);
