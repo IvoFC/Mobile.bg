@@ -8,9 +8,7 @@ function User(firstName, lastName, town, email, password, cars) {
 }
 
 var userModel = (function(){
-     var users = [
-         new User("asd", "asd", "asd", "asd", "asdasd"),
-     ];
+     var users = [];
 
     return {
         peoples: users,
