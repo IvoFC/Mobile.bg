@@ -27,6 +27,7 @@ function logged(username) {
     var myCarsButton = getById("all-my-cars");
     var myCarsDiv = getById("all-cars-from-user");
     myCarsDiv.style.display = 'none';
+    myCarsDiv.innerHTML = "";
 
     myCarsButton.addEventListener("click", function() {
         myCarsDiv.style.display = "block";
