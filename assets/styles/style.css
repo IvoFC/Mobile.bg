@@ -696,8 +696,13 @@ color: #09F;
     text-transform: uppercase;
 }
 /*Styling login-register popup-->*/
-#error, #succesfullRegistration, #registrationError, #existUsername, #wrongPassword {
+#error, #registrationError, #existUsername, #wrongPassword {
     color: red;
+    font-style: oblique;
+}
+
+#succesfullRegistration {
+    color: green;
     font-style: oblique;
 }
 
