@@ -22,13 +22,12 @@
     var previewSelections = document.querySelector('#previewSelections');
     var myMobilePage = document.querySelector('#my-mobile');
 
-    goToSearchButton.addEventListener('click', goToSearch, false);
-
-    advancedSearchButton.addEventListener('click', function (event) {
-        searchButton.className = 'active';
-        publishButton.className = "publish";
-        homeButton.className = "homeBut";
+    function showAndActivate(elToShow, elToActivate) {
+        searchButton.className = 'searching';
+        publishButton.className = 'publish';
+        homeButton.className = 'homeBut';
         myMobileButton.className = '';
+        elToActivate.className = 'active';
 
         searchingPage.style.display = 'none';
         publishPage.style.display = 'none';
@@ -36,190 +35,77 @@
         publishPreview.style.display = 'none';
         myMobilePage.style.display = 'none';
         searchFromHome.style.display = 'none';
-        advancedSearch.style.display = "block";
+        advancedSearch.style.display = "none";
         viewPage.style.display = "none";
         notLoggedIn.style.display = "none";
+        elToShow.style.display = "block";
+    }
 
+
+    goToSearchButton.addEventListener('click', goToSearch, false);
+
+    advancedSearchButton.addEventListener('click', function (event) {
+        showAndActivate(advancedSearch, searchButton);
         event.preventDefault();
-
     }, false);
 
     publishButton.addEventListener('click', function (event) {
-
         if (loggedIn == true) {
-
-            publishButton.className = 'active';
-            searchButton.className = 'searching';
-            homeButton.className = 'homeBut';
-            myMobileButton.className = '';
-
-            searchingPage.style.display = 'none';
-            publishPage.style.display = 'block';
-            mainDIv.style.display = 'none';
-            publishPreview.style.display = 'none';
+            showAndActivate(publishPage, publishButton);
             previewSelections.innerHTML = '';
-            myMobilePage.style.display = 'none';
-            searchFromHome.style.display = 'none';
-            advancedSearch.style.display = "none";
-            viewPage.style.display = "none";
-            notLoggedIn.style.display = "none";
         } else {
-            notLoggedIn.style.display = "block";
-
-            publishButton.className = 'active';
-            searchButton.className = 'searching';
-            homeButton.className = 'homeBut';
-            myMobileButton.className = '';
-
-            searchingPage.style.display = 'none';
-            publishPage.style.display = 'none';
-            mainDIv.style.display = 'none';
-            publishPreview.style.display = 'none';
+            showAndActivate(notLoggedIn, publishButton);
             previewSelections.innerHTML = '';
-            myMobilePage.style.display = 'none';
-            searchFromHome.style.display = 'none';
-            advancedSearch.style.display = "none";
-            viewPage.style.display = "none";
         }
-
         event.preventDefault();
     }, false);
 
     viewPublicationButton.addEventListener('click', function (event) {
-        publishButton.className = 'active';
-        searchButton.className = 'searching';
-        homeButton.className = 'homeBut';
-        myMobileButton.className = '';
-
-        searchingPage.style.display = 'none';
-        publishPage.style.display = 'none';
-        mainDIv.style.display = 'none';
-        publishPreview.style.display = 'block';
-        myMobilePage.style.display = 'none';
-        searchFromHome.style.display = 'none';
-        advancedSearch.style.display = "none";
-        viewPage.style.display = "none";
-        notLoggedIn.style.display = "none";
-
+        showAndActivate(publishPreview, publishButton);
         event.preventDefault();
     }, false);
 
     backToPublish.addEventListener('click', function (event) {
-        publishButton.className = 'active';
-        searchButton.className = 'searching';
-        homeButton.className = 'homeBut';
-        myMobileButton.className = '';
-
-        searchingPage.style.display = 'none';
-        publishPage.style.display = 'block';
-        mainDIv.style.display = 'none';
-        publishPreview.style.display = 'none';
+        showAndActivate(publishPage, publishButton);
         previewSelections.innerHTML = '';
-        myMobilePage.style.display = 'none';
-        searchFromHome.style.display = 'none';
-        advancedSearch.style.display = "none";
-        viewPage.style.display = "none";
-        notLoggedIn.style.display = "none";
-
         event.preventDefault();
     }, false);
 
     searchButton.addEventListener('click', goToSearch, false);
 
     function goToSearch(event) {
-        searchButton.className = 'active';
-        publishButton.className = "publish";
-        homeButton.className = "homeBut";
-        myMobileButton.className = '';
-
-        searchingPage.style.display = 'block';
-        publishPage.style.display = 'none';
-        mainDIv.style.display = 'none';
-        publishPreview.style.display = 'none';
-        myMobilePage.style.display = 'none';
-        searchFromHome.style.display = 'none';
-        advancedSearch.style.display = "none";
-        viewPage.style.display = "none";
-        notLoggedIn.style.display = "none";
-
+        showAndActivate(searchingPage, searchButton);
         advancedSearch.innerHTML = '';
-
         event.preventDefault();
     }
 
     homePageSearchButton.addEventListener('click', function (event) {
-        searchButton.className = 'active';
-        publishButton.className = "publish";
-        homeButton.className = "homeBut";
-        myMobileButton.className = '';
-
-        searchingPage.style.display = 'none';
-        publishPage.style.display = 'none';
-        mainDIv.style.display = 'none';
-        publishPreview.style.display = 'none';
-        myMobilePage.style.display = 'none';
-        searchFromHome.style.display = 'block';
-        advancedSearch.style.display = "none";
-        viewPage.style.display = "none";
-        notLoggedIn.style.display = "none";
-
+        showAndActivate(searchFromHome, searchButton);
         event.preventDefault();
     }, false);
 
     homeButton.addEventListener('click', function (event) {
-        homeButton.className = 'active';
-        searchButton.className = 'searching';
-        publishButton.className = "publish";
-        myMobileButton.className = '';
-
-        searchingPage.style.display = 'none';
-        publishPage.style.display = 'none';
-        mainDIv.style.display = 'block';
-        publishPreview.style.display = 'none';
-        previewSelections.innerHTML = '';
-        myMobilePage.style.display = 'none';
-        searchFromHome.style.display = 'none';
-        advancedSearch.style.display = "none";
-        viewPage.style.display = "none";
-        notLoggedIn.style.display = "none";
-
+        showAndActivate(mainDIv, homeButton);
         searchFromHome.innerHTML = '';
-
+        previewSelections.innerHTML = '';
         event.preventDefault();
     }, false);
 
     myMobileButton.addEventListener('click', function (event) {
-        searchButton.className = 'searching';
-        publishButton.className = "publish";
-        homeButton.className = "homeBut";
-        myMobileButton.className = "active";
-
-        searchingPage.style.display = 'none';
-        publishPage.style.display = 'none';
-        mainDIv.style.display = 'none';
-        myMobilePage.style.display = 'inline-block';
-        publishPreview.style.display = 'none';
-        searchFromHome.style.display = 'none';
-        advancedSearch.style.display = "none";
-        viewPage.style.display = "none";
-        notLoggedIn.style.display = "none";
-
-        event.preventDefault();
-
+        showAndActivate(myMobilePage, myMobileButton);
         var myCarsDiv = document.getElementById("all-cars-from-user");
-
         myCarsDiv.style.display = "block";
         myCarsDiv.innerHTML = '';
         (function () {
             var allcars = carManager.getAllCarsOfCurrentUser(username);
-            if(allcars.length === 0) {
+            if (allcars.length === 0) {
                 var noCars = document.createElement("H2");
                 noCars.textContent = "Все още нямате публикувани обяви.";
                 myCarsDiv.appendChild(noCars);
             }
             getCars(allcars, myCarsDiv, true);
-            })();
-
+        })();
+        event.preventDefault();
     }, false);
-
+    
 })();
