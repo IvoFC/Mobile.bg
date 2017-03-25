@@ -21,12 +21,14 @@ function Car(image, brand, model, region, gearBox, euroStand, horsePower, catego
 var carManager = (function () {
 
     var cars = [];
+    window.localStorage.setItem('cars', JSON.stringify(cars));
     return {
         models: cars,
 
         addCar: function (car) {
             if (car instanceof Car) {
                 cars.push(car);
+                window.localStorage.setItem('cars', JSON.stringify(cars));
             }
         },
 
@@ -48,6 +50,7 @@ var carManager = (function () {
                     break;
                 }
             }
+            window.localStorage.setItem('cars', JSON.stringify(cars));
             // JSON.stringify(obj1) === JSON.stringify(obj2) 
         },
 

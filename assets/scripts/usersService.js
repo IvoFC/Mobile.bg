@@ -9,7 +9,7 @@ function User(firstName, lastName, town, email, password, cars) {
 
 var userModel = (function(){
      var users = [];
-
+    window.localStorage.setItem('users', JSON.stringify(users));
     return {
         peoples: users,
         // Get some info for current user to display it later ->            
@@ -19,7 +19,8 @@ var userModel = (function(){
         
         addUser: function(user) {
             if(user instanceof User) {
-                users.push(user)
+                users.push(user);
+                window.localStorage.setItem('users', JSON.stringify(users));
             }
         },
  
