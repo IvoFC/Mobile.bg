@@ -13,7 +13,6 @@
             var allInfo = JSON.parse(xhr.responseText);
 
             var user = allInfo.users;
-            console.log()
 
             for (let index = 0; index < user.length; index++) {
 

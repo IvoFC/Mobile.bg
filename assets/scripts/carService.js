@@ -19,16 +19,32 @@ function Car(image, brand, model, region, gearBox, euroStand, horsePower, catego
 }
 
 var carManager = (function () {
-
+    var carsFromStorage = JSON.parse(window.localStorage.getItem('cars'));
     var cars = [];
-    window.localStorage.setItem('cars', JSON.stringify(cars));
+    if (Array.isArray(carsFromStorage)) {
+        cars = carsFromStorage;
+    }
     return {
         models: cars,
 
         addCar: function (car) {
             if (car instanceof Car) {
-                cars.push(car);
-                window.localStorage.setItem('cars', JSON.stringify(cars));
+                var flag = true;
+                for (var index = 0; index < cars.length; index++) {
+                    if (car.brand == cars[index].brand && car.model == cars[index].model &&
+                        car.region == cars[index].region && car.category == cars[index].category &&
+                        car.color == cars[index].color && car.price == cars[index].price &&
+                        car.year == cars[index].year && car.month == cars[index].month &&
+                        car.engine == cars[index].engine && car.horsePower == cars[index].horsePower &&
+                        car.gearBox == cars[index].gearBox && car.mileage == cars[index].mileage &&
+                        car.euroStandard == cars[index].euroStandard && car.owner == cars[index].owner) {
+                        flag = false;
+                    }
+                }
+                if (flag) {
+                    cars.push(car);
+                    window.localStorage.setItem('cars', JSON.stringify(cars));
+                }
             }
         },
 
@@ -43,9 +59,9 @@ var carManager = (function () {
             return carsofUser;
         },
 
-        deleteCar: function(car) {
-            for(var index = 0; index < cars.length; index++) {
-                if(JSON.stringify(car) === JSON.stringify(cars[index])) {
+        deleteCar: function (car) {
+            for (var index = 0; index < cars.length; index++) {
+                if (JSON.stringify(car) === JSON.stringify(cars[index])) {
                     cars.splice(index, 1);
                     break;
                 }
@@ -62,7 +78,7 @@ var carManager = (function () {
             }
             return carsToShow;
         },
-        
+
         searchCars: function (yearFrom, yearTo, priceStart, priceEnd, horsePowStart, horsePowEnd, maxMile, brand, model, region, gearBox, category, color, engine, extras) {
             var carsSearch = [];
 
@@ -97,7 +113,7 @@ var carManager = (function () {
                     var flagExtras = true;
 
                     for (var item in searchModel) {
-                        if(searchModel[item] !== searchModel["extras"]) {
+                        if (searchModel[item] !== searchModel["extras"]) {
                             if (searchModel[item] != cars[index][item]) {
                                 flag = false;
                                 break;
@@ -109,7 +125,7 @@ var carManager = (function () {
                             flagExtras = false;
                             break;
                         } else {
-                            if(cars[index].extras.indexOf(extras[extra]) < 0) {
+                            if (cars[index].extras.indexOf(extras[extra]) < 0) {
                                 flagExtras = false;
                                 break;
                             }
