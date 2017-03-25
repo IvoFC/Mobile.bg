@@ -836,6 +836,10 @@ color: #09F;
     height: 270px;
 }
 
+.imageDiv > img:hover {
+    cursor: pointer;
+}
+
 /*Left side New cars*/
 
 section .leftCars {
