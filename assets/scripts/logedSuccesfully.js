@@ -1,55 +1,48 @@
-var loggedIn = false;
-function logged(username) {
 
-    loggedIn = true;
+function changeLoggedStatus() {
+
     function getById(id) {
         return document.getElementById(id);
     }
 
-    // Hiding login-register popup and buttons.
-    getById('login-register-popup').style.display = 'none';
-    getById('left-register-link').style.display = 'none';
-    getById('login-button').style.display = 'none';
-    document.getElementById("login-background").style.display = "none";
-
-    var welcomeUser = document.createElement('p');
-    welcomeUser.innerHTML = "Здравейте, " + "<span>" + username + "</span>";
-    getById('logged-user').appendChild(welcomeUser);
 
 
-    var myMobilePage = getById('navMyMobile');
-    myMobilePage.addEventListener('click', function () {
-        getById('show-version-for-guests').style.display = "none";
-        getById('show-version-for-users').style.display = "inline-block";
-    }, false);
+     if(window.localStorage.getItem("isLogged") === "true"){
+        // Get name of current user.
+        var username = JSON.parse(window.localStorage.getItem("currentUser"));
+        username = username.firstName;
+        
+        // Hiding login-register popup and buttons.
+        getById('login-register-popup').style.display = 'none';
+        getById('left-register-link').style.display = 'none';
+        getById('login-button').style.display = 'none';
+        document.getElementById("login-background").style.display = "none";
 
+        var welcomeUser = document.createElement('p');
+        welcomeUser.innerHTML = "Здравейте, " + "<span>" + username + "</span>";
+        welcomeUser.id = "welcome-message";        
+        getById('logged-user').appendChild(welcomeUser);
 
-    var myCarsButton = getById("navMyMobile");
-    var myCarsDiv = getById("all-cars-from-user");
-    myCarsDiv.style.display = 'none';
-    myCarsDiv.innerHTML = "";
+        var exit = document.createElement('a');
+        exit.innerHTML = "Изход";
+        exit.id = "exit-from-accaunt";
+        exit.addEventListener("click", function(event) {
+            console.log("klikna me");
+            window.localStorage["currentUser"] = "";
+            console.log(window.localStorage["currentUser"]);            
+            window.localStorage["isLogged"] = false;
+            console.log( window.localStorage["isLogged"]);            
+            changeLoggedStatus();
+        }, false)
+        getById('logged-user').appendChild(exit);
 
-    myCarsButton.addEventListener("click", function () {
-        myCarsDiv.style.display = "block";
-        myCarsDiv.innerHTML = '';
-        (function () {
-            var allcars = carManager.getAllCarsOfCurrentUser(username);
-            if(allcars.length === 0) {
-                var noCars = document.createElement("H2");
-                noCars.textContent = "Все още нямате публикувани обяви.";
-                myCarsDiv.appendChild(noCars);
-            }
-            getCars(allcars, myCarsDiv, true, false);
+     }else{
+        // Enable login and registration buttons again
+        getById("left-register-link").style.display = "block";
+        getById("login-button").style.display = "block";
 
-
-            // console.log(username);
-            // console.log(allcars);
-        })();
-    }, false);
-
-
-    // Function for showing all cars for this user ->
-
-
-    // console.log('Good for you!');
+        // Delete welcome messages.
+        getById("logged-user").innerHTML = "";
+        
+     }
 }

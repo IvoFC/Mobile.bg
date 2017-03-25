@@ -695,6 +695,10 @@ color: #09F;
     font-weight: bold;
     text-transform: uppercase;
 }
+#login-section #logged-user #exit-from-accaunt {
+    cursor: pointer;
+    color: blue;
+}
 /*Styling login-register popup-->*/
 #error, #registrationError, #existUsername, #wrongPassword {
     color: red;

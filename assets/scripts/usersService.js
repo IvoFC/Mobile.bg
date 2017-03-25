@@ -8,23 +8,23 @@ function User(firstName, lastName, town, email, password, cars) {
 }
 
 var userModel = (function () {
-    var usersStorage = JSON.parse(window.localStorage.getItem('users'));
+    // var usersStorage = JSON.parse(window.localStorage.getItem('users'));
     var users = [];
-    if (Array.isArray(usersStorage)) {
-        for (var index = 0; index < usersStorage.length; index++) {
-            var flag = true;
-            for (var index1 = 0; index1 < users.length; index1++) {
-                if (usersStorage[index].firstName == users[index1].firstName &&
-                    usersStorage[index].lastName == users[index1].lastName &&
-                    usersStorage[index].email == users[index1].email) {
-                    flag = false;
-                }
-            }
-            if (flag) {
-                users.push(usersStorage[index]);
-            }
-        }
-    }
+    // if (Array.isArray(usersStorage)) {
+    //     for (var index = 0; index < usersStorage.length; index++) {
+    //         var flag = true;
+    //         for (var index1 = 0; index1 < users.length; index1++) {
+    //             if (usersStorage[index].firstName == users[index1].firstName &&
+    //                 usersStorage[index].lastName == users[index1].lastName &&
+    //                 usersStorage[index].email == users[index1].email) {
+    //                 flag = false;
+    //             }
+    //         }
+    //         if (flag) {
+    //             users.push(usersStorage[index]);
+    //         }
+    //     }
+    // }
 
     return {
         peoples: users,
@@ -36,15 +36,21 @@ var userModel = (function () {
         addUser: function (user) {
             if (user instanceof User) {
                 users.push(user);
-                window.localStorage.setItem('users', JSON.stringify(users));
+                // window.localStorage.setItem('users', JSON.stringify(users));
             }
         },
 
         loginUser: function (username, password) {
-            return users.some(function (u) {
-                return ((u.firstName === username || u.email === username) && u.password === password);
-            });
-            // Returns true or false
+            var currentUser = "";
+            users.some(function (u) {
+                if((u.firstName === username || u.email === username) && u.password === password) {                
+                    currentUser = u;
+                } 
+            })
+            if(currentUser != "") {
+                return currentUser;
+            } else return false;
+            // Returns object or false
         },
 
         validate: function (username, lastname, town, email) {
@@ -61,5 +67,18 @@ var userModel = (function () {
         validatePassword: function (password, repeatedPassword) {
             return (password.length > 5 && password === repeatedPassword);
         }
+        
+        // getUser: function(username, password) {
+            
+        // }
+
+               // getUser: function (username, password) {
+        //     for (var index = 0; index < cars.length; index++) {
+        //         if (JSON.stringify(car) === JSON.stringify(cars[index])) {
+        //             cars.splice(index, 1);
+        //             break;
+        //         }
+        //     }
+        // }
     }
 })();

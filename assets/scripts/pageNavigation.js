@@ -1,6 +1,5 @@
 (function () {
     // Get all buttons
-
     var publishButton = document.querySelector(".publish");
     var searchButton = document.querySelector(".searching");
     var goToSearchButton = document.querySelector("#advancedSearch");
@@ -21,6 +20,13 @@
     var publishPreview = document.querySelector('#viewPublication');
     var previewSelections = document.querySelector('#previewSelections');
     var myMobilePage = document.querySelector('#my-mobile');
+    var myMobilePageForGuests = document.querySelector('#show-version-for-guests');
+    var myMobilePageForUsers = document.querySelector('#show-version-for-users');
+
+    
+    // getById('show-version-for-users').style.display = "inline-block";
+
+
 
     function showAndActivate(elToShow, elToActivate) {
         searchButton.className = 'searching';
@@ -50,7 +56,7 @@
     }, false);
 
     publishButton.addEventListener('click', function (event) {
-        if (loggedIn == true) {
+        if (window.localStorage.getItem("isLogged") === "true") {
             showAndActivate(publishPage, publishButton);
             previewSelections.innerHTML = '';
         } else {
@@ -92,22 +98,42 @@
     }, false);
 
     myMobileButton.addEventListener('click', function (event) {
+            showAndActivate(myMobilePage, myMobileButton);
 
-        showAndActivate(myMobilePage, myMobileButton);
-        var myCarsDiv = document.getElementById("all-cars-from-user");
-        myCarsDiv.style.display = "block";
-        myCarsDiv.innerHTML = '';
-        (function () {
-            var allcars = carManager.getAllCarsOfCurrentUser(username);
-            if (allcars.length === 0) {
-                var noCars = document.createElement("H2");
-                noCars.textContent = "Все още нямате публикувани обяви.";
-                myCarsDiv.appendChild(noCars);
-            }
-            getCars(allcars, myCarsDiv, true);
-        })();
+        if (window.localStorage.getItem("isLogged") === "true") {
+            myMobilePageForUsers.style.display = "block";
+            myMobilePageForGuests.style.display = "none";
+            // showAndActivate(myMobilePage, myMobileButton);
+            var myCarsDiv = document.getElementById("all-cars-from-user");
+            myCarsDiv.style.display = "block";
+            myCarsDiv.innerHTML = '';
+
+            (function () {
+                // Current username
+                if (window.localStorage.getItem("currentUser") !== "") {
+                    var username = JSON.parse(window.localStorage.getItem("currentUser"));
+                    username = username.firstName;
+                }
+                var allcars = carManager.getAllCarsOfCurrentUser(username);
+                if (allcars.length === 0) {
+                    var noCars = document.createElement("H2");
+                    noCars.textContent = "Все още нямате публикувани обяви.";
+                    myCarsDiv.appendChild(noCars);
+                }
+                getCars(allcars, myCarsDiv, true, false);
+            })();
+        } else {
+            myMobilePageForGuests.style.display = "block";
+            myMobilePageForUsers.style.display = "none";
+            
+
+            // showAndActivate(myMobilePageForGuests, myMobileButton);
+
+            previewSelections.innerHTML = '';
+        }
+
         event.preventDefault();
 
     }, false);
-    
+
 })();

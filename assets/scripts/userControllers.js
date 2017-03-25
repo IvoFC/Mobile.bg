@@ -1,3 +1,14 @@
+// Check if somebody is already signed in.
+if(window.localStorage.getItem("isLogged") === null) {
+    window.localStorage.setItem("isLogged", "false");
+}else if(window.localStorage.getItem("isLogged") === "true") {
+    changeLoggedStatus();
+}
+if(window.localStorage.getItem("currentUser") === null) {
+    window.localStorage.setItem("currentUser", "");
+}
+// window.localStorage.setItem("currentUser", "");
+// console.log(window.localStorage.getItem("isLogged"));
 
 
 
@@ -137,10 +148,16 @@
         var username = inputs[0].value.trim();
         var password = inputs[1].value.trim();
         if (userModel.loginUser(username, password)) {
+        console.log(userModel.loginUser(username, password));            
             // console.log('You login succesfully');
+            // window.localStorage.setItem()
+            window.localStorage["currentUser"] = JSON.stringify((userModel.loginUser(username, password)));
+            window.localStorage["isLogged"] = true;
+            
             inputs[0].value = '';
             inputs[1].value = '';
-            logged(username);
+            
+            changeLoggedStatus();
 
         } else {
             if (document.getElementById('error') !== modal.lastChild) {
