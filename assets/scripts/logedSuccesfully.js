@@ -39,7 +39,7 @@ function logged(username) {
                 noCars.textContent = "Все още нямате публикувани обяви.";
                 myCarsDiv.appendChild(noCars);
             }
-            getCars(allcars, myCarsDiv, true);
+            getCars(allcars, myCarsDiv, true, false);
 
 
             // console.log(username);

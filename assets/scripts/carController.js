@@ -147,7 +147,7 @@
         // console.log(car);
 
         var divAdvancedSearch = document.getElementById("viewCarsAdvanced");
-        getCars(car, viewCarsAdvanced);
+        getCars(car, viewCarsAdvanced, false, false);
 
         event.preventDefault();
 
@@ -175,7 +175,7 @@
 
         var car = carManager.searchCars(yearMinSearch, '', '', maxPriceSearch, '', '', '', brandMinSearch, modelMinSearch, '', gearBoxMinSearch, '', '', engineMinSearch, '');
         var divHomeSearch = document.getElementById("viewCarsFromHomeSearch");
-        getCars(car, divHomeSearch);
+        getCars(car, divHomeSearch, false, false);
         event.preventDefault();
     }, false);
 

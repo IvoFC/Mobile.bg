@@ -21,15 +21,17 @@ function getCars(cars, whereToShow, canBeDeleted, unclickable) {
             if(canBeDeleted) {
                 var deleteIcon = document.createElement("i");
                 deleteIcon.className = "fa fa-trash-o fa-3x delete-icon";
+                deleteIcon.id = "delete-icon" + index;
                 deleteIcon.addEventListener("click", function() {
-                    // console.log("Iztrivam ei taq obqva...");
-                    // console.log(cars[index]);
+                    console.log("Iztrivam ei taq obqva...");
+                    console.log(cars[index]);
 
                     
                     carManager.deleteCar(cars[index]);
                     // divCar.parentElement.removeChild(document.getElementById("divCar" + index));
                     // deleteButton.parentElement.parentElement.removeChild(document.getElementById("divCar" + index));
-                    document.getElementById("divCar" + index).style.display = "none";
+                    // document.getElementById("divCar" + index).style.display = "none";
+                    document.getElementById("delete-icon" + index).parentElement.style.display = "none";
                 }, false)
                 divCar.appendChild(deleteIcon);
             }
