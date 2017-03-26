@@ -48,7 +48,7 @@ var carManager = (function () {
             }
         },
 
-        // Put all cars of current user into arrayq
+        // Put all cars of current user into array
         getAllCarsOfCurrentUser: function (user) {
             var carsofUser = [];
             for (var index = 0; index < cars.length; index++) {

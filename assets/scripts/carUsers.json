@@ -466,7 +466,7 @@
             "cars": [
                 {
                     "brand": "Opel",
-                    "model": "Combo ",
+                    "model": "Combo",
                     "region": "София",
                     "gearBox": "Ръчна",
                     "euroStand": "",
@@ -498,7 +498,7 @@
                     "mileage": 77000,
                     "color": "Сив",
                     "price": 3490,
-                    "month": "април ",
+                    "month": "април",
                     "year": "2004",
                     "engine": "Дизелов",
                     "extras": [
@@ -606,7 +606,7 @@
                     "owner": "penka"
                 },
                 {
-                    "brand": "Acura ",
+                    "brand": "Acura",
                     "model": "TI",
                     "region": "Павликени",
                     "gearBox": "Автоматична",
@@ -639,7 +639,7 @@
                     "owner": "penka"
                 },
                 {
-                    "brand": "Acura VW",
+                    "brand": "Acura",
                     "model": "Rsx",
                     "region": "София",
                     "gearBox": "Автоматична",
@@ -649,7 +649,7 @@
                     "mileage": 140000,
                     "color": "Сив",
                     "price": 10000,
-                    "month": "януари ",
+                    "month": "януари",
                     "year": "2003",
                     "engine": "Бензинов",
                     "extras": [
@@ -1100,7 +1100,7 @@
                     "color": "Бял",
                     "price": 69116,
                     "month": "януари",
-                    "year": " 1969",
+                    "year": "1969",
                     "engine": "Бензинов",
                     "extras": [
                         "GPS система за проследяване",
