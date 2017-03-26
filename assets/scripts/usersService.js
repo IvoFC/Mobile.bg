@@ -8,26 +8,27 @@ function User(firstName, lastName, town, email, password, cars) {
 }
 
 var userModel = (function () {
-    // var usersStorage = JSON.parse(window.localStorage.getItem('users'));
+    var usersStorage = JSON.parse(window.localStorage.getItem('users'));
     var users = [];
-    // if (Array.isArray(usersStorage)) {
-    //     for (var index = 0; index < usersStorage.length; index++) {
-    //         var flag = true;
-    //         for (var index1 = 0; index1 < users.length; index1++) {
-    //             if (usersStorage[index].firstName == users[index1].firstName &&
-    //                 usersStorage[index].lastName == users[index1].lastName &&
-    //                 usersStorage[index].email == users[index1].email) {
-    //                 flag = false;
-    //             }
-    //         }
-    //         if (flag) {
-    //             users.push(usersStorage[index]);
-    //         }
-    //     }
-    // }
+    if (Array.isArray(usersStorage)) {
+        for (var index = 0; index < usersStorage.length; index++) {
+            var flag = true;
+            for (var index1 = 0; index1 < users.length; index1++) {
+                if (usersStorage[index].firstName == users[index1].firstName &&
+                    usersStorage[index].lastName == users[index1].lastName &&
+                    usersStorage[index].email == users[index1].email) {
+                    flag = false;
+                }
+            }
+            if (flag) {
+                users.push(usersStorage[index]);
+            }
+        }
+    }
 
     return {
         peoples: users,
+        storageUsers: usersStorage,
         // Get some info for current user to display it later ->            
         // getUserInfo: function() {
         //     return users[users.length - 1].firstName;
@@ -36,7 +37,7 @@ var userModel = (function () {
         addUser: function (user) {
             if (user instanceof User) {
                 users.push(user);
-                // window.localStorage.setItem('users', JSON.stringify(users));
+                window.localStorage.setItem('users', JSON.stringify(users));
             }
         },
 

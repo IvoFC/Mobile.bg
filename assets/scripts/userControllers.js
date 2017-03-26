@@ -24,31 +24,31 @@ if(window.localStorage.getItem("currentUser") === null) {
             var allInfo = JSON.parse(xhr.responseText);
 
             var user = allInfo.users;
+            if (!Array.isArray(userModel.storageUsers)) {
+                for (let index = 0; index < user.length; index++) {
 
-            for (let index = 0; index < user.length; index++) {
+                    // carsOfUser[currentCar].image
+                    //     var currentImage = new File(carsOfUser[currentCar].image, 'sample.txt', {
+                    //     lastModified: new Date(0), // optional - default = now
+                    //     type: "File" // optional - default = ''
+                    // });
+                    var carsOfUser = user[index].cars;
+                    for (var currentCar = 0; currentCar < carsOfUser.length; currentCar++) {
+                        carManager.addCar(new Car(
+                            carsOfUser[currentCar].image, carsOfUser[currentCar].brand, carsOfUser[currentCar].model,
+                            carsOfUser[currentCar].region, carsOfUser[currentCar].gearBox, carsOfUser[currentCar].euroStand,
+                            carsOfUser[currentCar].horsePower, carsOfUser[currentCar].category, carsOfUser[currentCar].mileage,
+                            carsOfUser[currentCar].color, carsOfUser[currentCar].price, carsOfUser[currentCar].month,
+                            carsOfUser[currentCar].year, carsOfUser[currentCar].engine, carsOfUser[currentCar].extras, carsOfUser[currentCar].owner))
+                    }
 
-                // carsOfUser[currentCar].image
-                //     var currentImage = new File(carsOfUser[currentCar].image, 'sample.txt', {
-                //     lastModified: new Date(0), // optional - default = now
-                //     type: "File" // optional - default = ''
-                // });
-                var carsOfUser = user[index].cars;
-                for (var currentCar = 0; currentCar < carsOfUser.length; currentCar++) {
-                    carManager.addCar(new Car(
-                        carsOfUser[currentCar].image, carsOfUser[currentCar].brand, carsOfUser[currentCar].model,
-                        carsOfUser[currentCar].region, carsOfUser[currentCar].gearBox, carsOfUser[currentCar].euroStand,
-                        carsOfUser[currentCar].horsePower, carsOfUser[currentCar].category, carsOfUser[currentCar].mileage,
-                        carsOfUser[currentCar].color, carsOfUser[currentCar].price, carsOfUser[currentCar].month,
-                        carsOfUser[currentCar].year, carsOfUser[currentCar].engine, carsOfUser[currentCar].extras, carsOfUser[currentCar].owner))
+                    userModel.addUser(new User(user[index].firstname, user[index].lastname, user[index].town, user[index].email, user[index].password, user[index].cars));
+                    // console.log("The cars of this user are: ");
+                    // console.log(user[index].cars);
                 }
+                // console.log(allInfo);
 
-                userModel.addUser(new User(user[index].firstname, user[index].lastname, user[index].town, user[index].email, user[index].password, user[index].cars));
-                // console.log("The cars of this user are: ");
-                // console.log(user[index].cars);
             }
-            // console.log(allInfo);
-
-
         }, false)
     })();
 
